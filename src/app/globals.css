@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #efe9dc;
-  --cream-soft: #efe9dc;
-  --cream-deep: #e8e0cd;
-  --paper: #f6f1e7;
-  --ink: #14110d;
-  --ink-soft: #2a2620;
-  --muted: #6b645a;
-  --line: #d9cfb9;
-  --accent: #9b3a1f;
-  --accent-soft: #c4724f;
+  --cream: #f6f0ea;
+  --cream-soft: #f6f0ea;
+  --cream-deep: #ede1d2;
+  --paper: #fbf7f2;
+  --ink: #26211c;
+  --ink-soft: #45403a;
+  --muted: #8b7156;
+  --line: #ddd0c0;
+  --accent: #9b4f04;
+  --accent-soft: #c0834a;
   --good: #2f6b4f;
   --bad: #a23b2c;
 
@@ -148,7 +148,7 @@ p {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(14px);
-  background: rgba(239, 233, 220, 0.85);
+  background: rgba(246, 240, 234, 0.85);
   border-bottom: 1px solid transparent;
   transition:
     border-color 0.2s,
@@ -329,8 +329,8 @@ p {
   background: linear-gradient(
     to right,
     var(--cream) 0%,
-    rgba(239, 233, 220, 0.6) 30%,
-    rgba(239, 233, 220, 0) 60%
+    rgba(246, 240, 234, 0.6) 30%,
+    rgba(246, 240, 234, 0) 60%
   );
 }
 .cred-section {
@@ -349,8 +349,8 @@ p {
   background: linear-gradient(
     to left,
     var(--cream) 0%,
-    rgba(239, 233, 220, 0.6) 30%,
-    rgba(239, 233, 220, 0) 60%
+    rgba(246, 240, 234, 0.6) 30%,
+    rgba(246, 240, 234, 0) 60%
   );
 }
 .cred-section .wrap {
@@ -673,7 +673,7 @@ p {
 }
 .method-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 24px 48px -28px rgba(20, 17, 13, 0.18);
+  box-shadow: 0 24px 48px -28px rgba(38, 33, 28, 0.18);
   border-color: var(--ink);
 }
 .method-num {
@@ -783,7 +783,7 @@ p {
 }
 .offer-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 40px -22px rgba(20, 17, 13, 0.18);
+  box-shadow: 0 18px 40px -22px rgba(38, 33, 28, 0.18);
 }
 .offer-card.featured {
   background: var(--ink);
@@ -795,7 +795,7 @@ p {
   color: var(--cream);
 }
 .offer-card.featured .desc {
-  color: rgba(246, 241, 231, 0.75);
+  color: rgba(251, 247, 242, 0.75);
 }
 .offer-card.featured .feat-tag {
   background: var(--accent);
@@ -834,7 +834,7 @@ p {
   color: var(--muted);
 }
 .offer-card.featured .price .small {
-  color: rgba(246, 241, 231, 0.6);
+  color: rgba(251, 247, 242, 0.6);
 }
 .offer-features {
   list-style: none;
@@ -993,7 +993,7 @@ p {
   color: var(--cream);
 }
 .foerderung p {
-  color: rgba(246, 241, 231, 0.75);
+  color: rgba(251, 247, 242, 0.75);
 }
 .foerderung .eyebrow {
   color: var(--accent-soft);
@@ -1021,9 +1021,9 @@ p {
 }
 .foer-list li {
   padding: 14px 0;
-  border-bottom: 1px solid rgba(246, 241, 231, 0.12);
+  border-bottom: 1px solid rgba(251, 247, 242, 0.12);
   font-size: var(--fs-s);
-  color: rgba(246, 241, 231, 0.85);
+  color: rgba(251, 247, 242, 0.85);
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -1141,7 +1141,7 @@ p {
   font-size: var(--fs-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(246, 241, 231, 0.55);
+  color: rgba(251, 247, 242, 0.55);
   margin-bottom: 16px;
 }
 .site-footer ul {
@@ -1152,7 +1152,7 @@ p {
   font-size: var(--fs-s);
 }
 .site-footer ul a {
-  color: rgba(246, 241, 231, 0.8);
+  color: rgba(251, 247, 242, 0.8);
 }
 .site-footer ul a:hover {
   color: var(--cream);
@@ -1163,18 +1163,18 @@ p {
   margin-bottom: 14px;
 }
 .site-footer .brand-block p {
-  color: rgba(246, 241, 231, 0.65);
+  color: rgba(251, 247, 242, 0.65);
   font-size: var(--fs-s);
   max-width: 38ch;
 }
 .site-footer .legal {
   margin-top: 56px;
   padding-top: 24px;
-  border-top: 1px solid rgba(246, 241, 231, 0.12);
+  border-top: 1px solid rgba(251, 247, 242, 0.12);
   display: flex;
   justify-content: space-between;
   font-size: var(--fs-xs);
-  color: rgba(246, 241, 231, 0.5);
+  color: rgba(251, 247, 242, 0.5);
   gap: 18px;
   flex-wrap: wrap;
 }

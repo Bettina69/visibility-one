@@ -66,7 +66,7 @@ export function NetworkBg({ side = "right" }: { side?: "left" | "right" }) {
         {edges.map(([i, j], k) => {
           const a = nodes[i];
           const b = nodes[j];
-          const op = 0.5 + Math.min(a.depth, b.depth) * 0.5;
+          const op = 0.22 + Math.min(a.depth, b.depth) * 0.35;
           return (
             <line
               key={k}
@@ -74,22 +74,25 @@ export function NetworkBg({ side = "right" }: { side?: "left" | "right" }) {
               y1={a.y}
               x2={b.x}
               y2={b.y}
-              stroke="#000"
+              stroke="var(--muted)"
               strokeWidth="1"
               opacity={op}
             />
           );
         })}
-        {nodes.map((p, i) => (
-          <circle
-            key={i}
-            cx={p.x}
-            cy={p.y}
-            r={2.4 + p.depth * 2}
-            fill="#000"
-            opacity={0.7 + p.depth * 0.3}
-          />
-        ))}
+        {nodes.map((p, i) => {
+          const isAccent = p.depth > 0.85;
+          return (
+            <circle
+              key={i}
+              cx={p.x}
+              cy={p.y}
+              r={isAccent ? 3.2 + p.depth * 1.6 : 2.2 + p.depth * 1.6}
+              fill={isAccent ? "var(--accent)" : "var(--muted)"}
+              opacity={isAccent ? 0.85 + p.depth * 0.15 : 0.5 + p.depth * 0.3}
+            />
+          );
+        })}
       </g>
     </svg>
   );

@@ -66,7 +66,7 @@ export function Offers() {
                 className="desc"
                 style={{
                   fontSize: 14,
-                  color: o.featured ? "rgba(246,241,231,.75)" : "var(--muted)",
+                  color: o.featured ? "rgba(251,247,242,.75)" : "var(--muted)",
                 }}
               >
                 {o.desc}
