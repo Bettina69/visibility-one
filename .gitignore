@@ -33,3 +33,5 @@ next-env.d.ts
 
 # local dev-server config (machine-specific absolute paths)
 /.claude/
+
+.vercel
