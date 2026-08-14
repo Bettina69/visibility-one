@@ -3,12 +3,6 @@ import { Reveal } from "./reveal";
 
 const TEASERS = [
   {
-    href: "/das-problem",
-    eyebrow: "Das Problem",
-    title: "Deine Klicks verschwinden – nicht deine Rankings.",
-    desc: "Warum KI-Antworten Traffic kosten, auch wenn dein SEO stimmt.",
-  },
-  {
     href: "/meine-methode",
     eyebrow: "Meine Methode",
     title: "Ein Arbeitsschritt, doppelter Nutzen.",

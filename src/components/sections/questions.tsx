@@ -1,6 +1,3 @@
-import Link from "next/link";
-import { Reveal } from "./reveal";
-
 const ITEMS = [
   "Warum sinkt mein Traffic – obwohl meine Rankings gleich geblieben sind?",
   "Wie werde ich von ChatGPT, Google AI & Co. empfohlen statt übergangen?",
@@ -12,24 +9,21 @@ const ITEMS = [
 
 export function Questions() {
   return (
-    <Reveal className="section">
-      <div className="wrap">
-        <div className="section-head">
-          <span className="eyebrow">Kennst du das?</span>
-          <h2>
-            Diese Fragen kenne ich – <em>weil ich sie selbst hatte.</em>
-          </h2>
-        </div>
-        <div className="q-list">
-          {ITEMS.map((q, i) => (
-            <Link href="/kontakt" key={i} className="q-item">
-              <span className="q-num">{String(i + 1).padStart(2, "0")}</span>
-              <span className="q-text">{q}</span>
-              <span className="q-arrow">→</span>
-            </Link>
-          ))}
-        </div>
+    <>
+      <div className="question-intro">
+        <span className="eyebrow">Kennst du das?</span>
+        <h2>
+          Diese Fragen kenne ich – <em>weil ich sie selbst hatte.</em>
+        </h2>
       </div>
-    </Reveal>
+      <div className="question-grid">
+        {ITEMS.map((q, i) => (
+          <div key={i} className="question-card">
+            <span className="question-num">{String(i + 1).padStart(2, "0")}</span>
+            <span className="question-text">{q}</span>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

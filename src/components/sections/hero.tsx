@@ -6,24 +6,19 @@ export function Hero() {
     <section className="hero">
       <NetworkBg />
       <div className="hero-inner">
-        <div className="hero-pretitle">
-          <span className="dot"></span>
-          <span>Wer in KI nicht vorkommt, verliert Reichweite.</span>
-        </div>
         <h1 className="hero-title">
-          Sichtbar <span className="it">in der<br />neuen</span>{" "}
-          <span className="bold">Suche.</span>
+          SEO &amp; KI-Sichtbarkeit <span className="it">für kleine Unternehmen</span>
         </h1>
+        <p className="hero-keymessage">Sichtbar bei Google. Gefunden in der KI-Suche.</p>
         <p className="hero-sub">
-          Google und KI-Assistenten wie ChatGPT entscheiden, wer gefunden wird –
-          und wer nicht. Ich zeige dir was fehlt und was du konkret tun kannst.
+          SEO ist die Grundlage – die Optimierung für KI-Systeme ist die Ergänzung.
         </p>
         <div className="hero-actions">
           <Link href="/kontakt" className="btn btn-primary">
-            Kostenlose KI-Analyse anfragen →
+            KI-Sichtbarkeit kostenlos testen →
           </Link>
-          <Link href="/das-problem" className="btn btn-ghost">
-            Was gerade passiert
+          <Link href="/angebote" className="btn btn-ghost">
+            Leistungen ansehen
           </Link>
         </div>
         <div className="bafa-strip">

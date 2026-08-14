@@ -13,7 +13,6 @@ export type NavItem = {
 };
 
 export const mainNavigation: NavItem[] = [
-  { label: "Das Problem", href: "/das-problem" },
   { label: "Meine Methode", href: "/meine-methode" },
   { label: "Angebote", href: "/angebote" },
   { label: "Über mich", href: "/ueber-mich" },
