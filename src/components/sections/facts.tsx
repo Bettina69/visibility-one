@@ -1,32 +1,28 @@
 const FACTS = [
   {
     num: "− 25 %",
-    label: "weniger klassische Suchanfragen bis 2026 durch KI-Chatbots und virtuelle Assistenten",
-    extra: "Gartner-Prognose",
-    sourceLabel: "Gartner",
+    label: "weniger klassische Suchanfragen bis 2026 durch KI-Assistenten",
+    sourceLabel: "Gartner (Prognose)",
     href: "https://www.gartner.com/en/newsroom/press-releases/2024-02-19-gartner-predicts-search-engine-volume-will-drop-25-percent-by-2026-due-to-ai-chatbots-and-other-virtual-agents",
     neg: true,
   },
   {
     num: "− 58 %",
-    label: "weniger Klickrate auf Position 1, wenn Google eine AI Overview anzeigt",
-    extra: "Analyse von 300.000 Keywords",
-    sourceLabel: "Ahrefs",
+    label: "weniger Klickrate auf Position 1 bei Google AI Overviews",
+    sourceLabel: "Ahrefs · 300.000 Keywords",
     href: "https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/",
     neg: true,
   },
   {
     num: "8 % statt 15 %",
-    label: "Klickrate auf klassische Google-Suchergebnisse mit vs. ohne KI-Zusammenfassung",
-    extra: null,
+    label: "Klickrate auf Google-Ergebnisse mit vs. ohne KI-Zusammenfassung",
     sourceLabel: "Pew Research Center",
     href: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/",
     neg: true,
   },
   {
     num: "2–5×",
-    label: "höhere organische Klickrate, wenn eine Marke in Googles AI Overview zitiert wird",
-    extra: null,
+    label: "höhere Klickrate bei Zitation in Google AI Overviews",
     sourceLabel: "Seer Interactive",
     href: "https://www.seerinteractive.com/insights/aio-impact-on-google-ctr-2026-update",
     neg: false,
@@ -42,7 +38,6 @@ export function Facts() {
           <div key={i} className="fact">
             <span className={`fact-num ${f.neg ? "neg" : ""}`}>{f.num}</span>
             <div className="fact-label">{f.label}</div>
-            {f.extra && <div className="fact-extra">{f.extra}</div>}
             <a
               className="fact-source"
               href={f.href}

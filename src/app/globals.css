@@ -543,7 +543,7 @@ p {
   border-bottom: 1px solid var(--line);
 }
 .fact {
-  padding: 24px 24px;
+  padding: 10px 24px;
   border-left: 1px solid var(--line);
 }
 .fact:first-child {
@@ -562,22 +562,15 @@ p {
   color: var(--bad);
 }
 .fact-label {
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: var(--fs-xs);
   color: var(--muted);
-  line-height: 1.45;
-  max-width: 26ch;
-}
-.fact-extra {
-  margin-top: 4px;
-  font-size: 11px;
-  color: var(--muted);
-  opacity: 0.8;
   line-height: 1.4;
+  max-width: 26ch;
 }
 .fact-source {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 4px;
   font-size: 11px;
   font-weight: 400;
   color: var(--accent);
@@ -593,7 +586,7 @@ p {
   text-decoration-color: var(--accent-soft);
 }
 .facts-bridge {
-  margin-top: 24px;
+  margin-top: 8px;
   font-family: var(--font-serif);
   font-weight: 500;
   font-size: var(--fs-m);
