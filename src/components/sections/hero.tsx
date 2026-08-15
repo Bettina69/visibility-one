@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NetworkBg } from "./network-bg";
 
@@ -5,6 +6,22 @@ export function Hero() {
   return (
     <section className="hero">
       <NetworkBg />
+      <div className="hero-portrait-wrap">
+        <div className="hero-portrait">
+          <Image
+            src="/bettina-portrait.jpg"
+            alt="Bettina Teckentrup"
+            width={520}
+            height={520}
+            sizes="(min-width: 641px) 260px, 96px"
+            priority
+          />
+        </div>
+        <p className="hero-portrait-caption">
+          <strong>Bettina Teckentrup</strong>
+          SEO · E-Commerce · KI-Sichtbarkeit
+        </p>
+      </div>
       <div className="hero-inner">
         <h1 className="hero-title">
           SEO &amp; KI-Sichtbarkeit <span className="soft">für kleine Unternehmen</span>
