@@ -7,7 +7,7 @@ export function Hero() {
       <NetworkBg />
       <div className="hero-inner">
         <h1 className="hero-title">
-          SEO &amp; KI-Sichtbarkeit <span className="it">für kleine Unternehmen</span>
+          SEO &amp; KI-Sichtbarkeit <span className="soft">für kleine Unternehmen</span>
         </h1>
         <p className="hero-keymessage">Sichtbar bei Google. Gefunden in der KI-Suche.</p>
         <p className="hero-sub">

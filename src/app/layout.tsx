@@ -49,10 +49,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de">
-      <body
-        className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable} antialiased`}
-      >
+    <html
+      lang="de"
+      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="antialiased">
         <JsonLd data={organizationSchema} />
         <Header />
         <main>{children}</main>

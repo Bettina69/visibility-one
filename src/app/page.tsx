@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <Reveal className="section">
+      <Reveal className="section hero-transition">
         <div className="wrap">
           <Facts />
           <Questions />
