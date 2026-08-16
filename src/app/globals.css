@@ -552,6 +552,71 @@ p {
   }
 }
 
+/* ========== Method overview (compact, homepage) ========== */
+.process-bar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.process-step {
+  padding: 18px 16px;
+  border-left: 1px solid var(--line);
+}
+.process-step:first-child {
+  border-left: none;
+}
+.process-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+.process-label {
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.process-question {
+  margin-top: 4px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.process-link {
+  margin-top: 24px;
+  display: inline-block;
+}
+@media (max-width: 900px) {
+  .process-bar {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .process-step:nth-child(3n + 1) {
+    border-left: none;
+  }
+  .process-step:nth-child(n + 4) {
+    border-top: 1px solid var(--line);
+  }
+}
+@media (max-width: 599px) {
+  .process-bar {
+    grid-template-columns: 1fr;
+  }
+  .process-step {
+    border-left: none !important;
+    border-top: 1px solid var(--line);
+  }
+  .process-step:first-child {
+    border-top: none;
+  }
+}
+
 /* ========== Stats ========== */
 .facts-eyebrow {
   margin-top: 32px;

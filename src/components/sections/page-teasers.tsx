@@ -3,12 +3,6 @@ import { Reveal } from "./reveal";
 
 const TEASERS = [
   {
-    href: "/meine-methode",
-    eyebrow: "Meine Methode",
-    title: "Ein Arbeitsschritt, doppelter Nutzen.",
-    desc: "Strategie, Struktur, Content, Technik, Monitoring – für Google und KI zugleich.",
-  },
-  {
     href: "/angebote",
     eyebrow: "Angebote",
     title: "Einfach starten, ohne großes Commitment.",
