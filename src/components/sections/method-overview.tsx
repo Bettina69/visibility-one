@@ -11,7 +11,7 @@ const STEPS = [
 
 export function MethodOverview() {
   return (
-    <Reveal className="section">
+    <Reveal className="section method-transition">
       <div className="wrap">
         <div className="check-head">
           <span className="eyebrow">Meine Methode</span>

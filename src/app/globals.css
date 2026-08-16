@@ -517,6 +517,13 @@ p {
    everywhere else on the site. */
 .hero-transition {
   padding-top: 32px;
+  padding-bottom: 48px;
+}
+/* Compact, borderless transition from the facts bridge sentence into
+   Meine Methode — the copper eyebrow tick mark is enough of a divider. */
+.section + .section.method-transition {
+  border-top: none;
+  padding-top: 48px;
 }
 /* ========== Marquee ========== */
 .marquee {
@@ -932,6 +939,9 @@ p {
 .question-intro h2 {
   max-width: 28ch;
   font-size: clamp(26px, 3vw, 36px);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: normal;
 }
 .question-intro .lead {
   font-size: var(--fs-s);
