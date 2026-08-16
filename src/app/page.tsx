@@ -3,6 +3,7 @@ import { Facts } from "@/components/sections/facts";
 import { Questions } from "@/components/sections/questions";
 import { Reveal } from "@/components/sections/reveal";
 import { MethodOverview } from "@/components/sections/method-overview";
+import { OffersOverview } from "@/components/sections/offers-overview";
 import { Marquee } from "@/components/sections/marquee";
 import { PageTeasers } from "@/components/sections/page-teasers";
 
@@ -17,6 +18,7 @@ export default function HomePage() {
         </div>
       </Reveal>
       <MethodOverview />
+      <OffersOverview />
       <Marquee />
       <PageTeasers />
     </>

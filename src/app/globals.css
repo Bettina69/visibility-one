@@ -552,6 +552,213 @@ p {
   }
 }
 
+/* ========== Offers overview (compact, homepage) ========== */
+.offer-intro-card {
+  margin-top: 24px;
+  background: var(--ink);
+  color: var(--cream);
+  border-radius: var(--r-lg);
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.offer-intro-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.offer-intro-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid var(--accent-soft);
+}
+.offer-intro-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.offer-intro-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+}
+.offer-intro-main h3 {
+  color: var(--cream);
+  font-size: clamp(22px, 2.4vw, 28px);
+  margin-bottom: 12px;
+}
+.offer-intro-main p {
+  color: rgba(246, 240, 234, 0.8);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  max-width: 52ch;
+  margin-bottom: 10px;
+}
+.offer-intro-cta {
+  margin-top: 14px;
+}
+.offer-intro-note {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(246, 240, 234, 0.15);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(246, 240, 234, 0.6);
+  max-width: 52ch;
+}
+.offer-intro-price {
+  text-align: center;
+  padding-left: 32px;
+  border-left: 1px solid rgba(246, 240, 234, 0.15);
+}
+.offer-intro-price .amount {
+  font-family: var(--font-serif);
+  font-size: clamp(44px, 5vw, 56px);
+  font-weight: 350;
+  line-height: 1;
+  color: var(--cream);
+}
+.offer-intro-price .amount .sign {
+  color: var(--accent-soft);
+}
+.offer-intro-price .label {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(246, 240, 234, 0.55);
+}
+.offer-intro-price .sub {
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: rgba(246, 240, 234, 0.7);
+}
+@media (max-width: 760px) {
+  .offer-intro-card {
+    grid-template-columns: 1fr;
+  }
+  .offer-intro-price {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 20px;
+    border-left: none;
+    border-top: 1px solid rgba(246, 240, 234, 0.15);
+    margin-top: 4px;
+  }
+}
+
+.offer-subhead {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink);
+}
+.offer-paths {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.offer-path {
+  background: var(--cream);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.offer-path-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.offer-path h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+.offer-path p {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  max-width: none;
+}
+.offer-path ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--ink-soft);
+}
+.offer-path ul li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.offer-path ul li::before {
+  content: "•";
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.offer-path-cta {
+  margin-top: auto;
+  padding-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+}
+@media (max-width: 900px) {
+  .offer-paths {
+    grid-template-columns: 1fr;
+  }
+}
+
+.offer-hourly {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.offer-hourly h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+}
+.offer-hourly p {
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+.offer-hourly .btn-link {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 13px;
+}
+
 /* ========== Method overview (compact, homepage) ========== */
 .process-bar {
   display: grid;

@@ -3,12 +3,6 @@ import { Reveal } from "./reveal";
 
 const TEASERS = [
   {
-    href: "/angebote",
-    eyebrow: "Angebote",
-    title: "Einfach starten, ohne großes Commitment.",
-    desc: "Vom kostenlosen Quick-Check bis zur laufenden Begleitung.",
-  },
-  {
     href: "/ueber-mich",
     eyebrow: "Über mich",
     title: "18+ Jahre eigene Shop-Praxis.",
