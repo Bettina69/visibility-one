@@ -2,6 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { NetworkBg } from "./network-bg";
 
+// BAFA-Baustein bleibt vollstaendig im Code, wird aber aktuell nicht
+// ausgegeben (keine Zertifizierung vorhanden). Auf true setzen, sobald
+// die BAFA-Beratereigenschaft wieder aktiv beworben werden soll.
+const SHOW_BAFA = false;
+
 export function Hero() {
   return (
     <section className="hero">
@@ -30,23 +35,30 @@ export function Hero() {
         <p className="hero-sub">
           SEO ist die Grundlage – die Optimierung für KI-Systeme ist die Ergänzung.
         </p>
+        <p className="hero-question">Weißt du, wie KI dein Unternehmen sieht?</p>
+        <p className="hero-explainer">
+          Kunden suchen längst nicht mehr nur bei Google. Sie fragen ChatGPT, Google AI
+          oder Perplexity. Aber taucht dein Unternehmen dort überhaupt auf?
+        </p>
         <div className="hero-actions">
           <Link href="/kontakt" className="btn btn-primary">
-            KI-Sichtbarkeit kostenlos testen →
+            Kostenlose KI-Sichtbarkeitsanalyse →
           </Link>
           <Link href="/angebote" className="btn btn-ghost">
             Leistungen ansehen
           </Link>
         </div>
-        <div className="bafa-strip">
-          <span className="badge">BAFA</span>
-          <span>
-            <strong>BAFA-anerkannte Beraterin</strong> · Förderung möglich
-          </span>
-          <Link href="/foerderung" className="btn-link">
-            Mehr erfahren
-          </Link>
-        </div>
+        {SHOW_BAFA && (
+          <div className="bafa-strip">
+            <span className="badge">BAFA</span>
+            <span>
+              <strong>BAFA-anerkannte Beraterin</strong> · Förderung möglich
+            </span>
+            <Link href="/foerderung" className="btn-link">
+              Mehr erfahren
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
