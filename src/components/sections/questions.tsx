@@ -11,10 +11,10 @@ const CATEGORIES = [
   {
     label: "Beratung",
     items: [
-      "Du brauchst schnelle Hilfe – aber keine monatelange Beratung?",
+      "Du brauchst schnelle, konkrete Hilfe statt monatelanger Beratung?",
       "Du hast kein großes Marketingbudget und möchtest trotzdem etwas bewegen?",
       "Du willst keinen langfristigen Agenturvertrag abschließen?",
-      "Du möchtest überschaubare Kosten und konkrete Maßnahmen statt eines riesigen Strategiepakets?",
+      "Du möchtest überschaubare Kosten und konkrete Maßnahmen, die du wirklich umsetzen kannst?",
     ],
   },
 ];
@@ -26,8 +26,7 @@ export function Questions() {
         <span className="eyebrow">Kennst du das?</span>
         <h2>Kommt dir das bekannt vor?</h2>
         <p className="lead">
-          Sichtbarkeit verändert sich. Und gute Beratung muss zu deinem Unternehmen
-          passen.
+          Die Suche verändert sich. Und Beratung sollte zu deinem Unternehmen passen.
         </p>
       </div>
       <div className="question-columns">
