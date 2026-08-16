@@ -43,7 +43,7 @@ const PATHS = [
 
 export function OffersOverview() {
   return (
-    <Reveal className="section">
+    <Reveal className="section offers-transition">
       <div className="wrap">
         <div className="check-head">
           <span className="eyebrow">Meine Angebote</span>
@@ -90,7 +90,6 @@ export function OffersOverview() {
             </div>
             <p className="offer-intro-portrait-caption">
               <strong>Bettina Teckentrup</strong>
-              persönlich geprüft
             </p>
           </div>
         </div>

@@ -10,7 +10,7 @@ const STATS = [
 
 export function AboutTeaser() {
   return (
-    <Reveal className="section">
+    <Reveal className="section about-transition">
       <div className="wrap">
         <div className="about-teaser">
           <div className="about-teaser-text">

@@ -4,10 +4,10 @@ import { Reveal } from "./reveal";
 const PROJECTS = [
   {
     label: "SEO & GEO · Online-Shops",
-    title: "Laufende SEO-Betreuung",
+    title: "SEO-Betreuung",
     desc: "Strategische und operative Betreuung von zwei Online-Shops im DACH-Markt.",
     stats: ["287 Keywords", "141 Produkte"],
-    tag: "SEO · Struktur · KI-Sichtbarkeit",
+    tag: "SEO · Struktur · Content",
   },
   {
     label: "Amazon Handmade · Audit",
@@ -21,13 +21,13 @@ const PROJECTS = [
     title: "SEO & GEO für einen internationalen Shop",
     desc: "Strategie für einen Shopify-Shop mit B2C- und B2B-Zielgruppen und internationaler Ausrichtung.",
     stats: ["SEO + GEO", "Google + KI"],
-    tag: "Strategie · Struktur · Content",
+    tag: "Strategie · SEO · GEO · KI-Sichtbarkeit",
   },
 ];
 
 export function SocialProof() {
   return (
-    <Reveal className="section">
+    <Reveal className="section proof-transition">
       <div className="wrap">
         <div className="check-head">
           <span className="eyebrow">Aus der Praxis</span>

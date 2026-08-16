@@ -6,6 +6,7 @@ import { MethodOverview } from "@/components/sections/method-overview";
 import { OffersOverview } from "@/components/sections/offers-overview";
 import { SocialProof } from "@/components/sections/social-proof";
 import { AboutTeaser } from "@/components/sections/about-teaser";
+import { Faq } from "@/components/sections/faq";
 import { Marquee } from "@/components/sections/marquee";
 import { PageTeasers } from "@/components/sections/page-teasers";
 
@@ -19,11 +20,12 @@ export default function HomePage() {
           <Facts />
         </div>
       </Reveal>
+      <Marquee />
       <MethodOverview />
       <OffersOverview />
       <SocialProof />
       <AboutTeaser />
-      <Marquee />
+      <Faq />
       <PageTeasers />
     </>
   );

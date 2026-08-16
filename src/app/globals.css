@@ -519,10 +519,31 @@ p {
   padding-top: 32px;
   padding-bottom: 48px;
 }
-/* Compact, borderless transition from the facts bridge sentence into
-   Meine Methode — the copper eyebrow tick mark is enough of a divider. */
-.section + .section.method-transition {
+/* Compact, borderless transition into Meine Methode — the copper eyebrow
+   tick mark is enough of a divider. Unconditional (not a sibling
+   selector) since Meine Methode now follows the marquee banner, not a
+   preceding .section. */
+.method-transition {
   border-top: none;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+/* Unified compact spacing between the homepage sections below Meine
+   Methode. offers/proof drop their border (fine hairline accents inside
+   each section already mark the transition); about/faq/teasers keep the
+   default section border but still get the reduced padding. */
+.section + .section.offers-transition,
+.section + .section.proof-transition {
+  border-top: none;
+}
+.offers-transition,
+.proof-transition,
+.about-transition,
+.faq-transition {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.teasers-transition {
   padding-top: 48px;
 }
 /* ========== Marquee ========== */
@@ -614,7 +635,7 @@ p {
   gap: 10px;
 }
 .offer-intro-portrait-photo {
-  width: clamp(200px, 16vw, 260px);
+  width: clamp(160px, 13vw, 200px);
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
@@ -642,7 +663,7 @@ p {
 }
 @media (max-width: 900px) {
   .offer-intro-portrait-photo {
-    width: clamp(150px, 18vw, 190px);
+    width: clamp(130px, 16vw, 160px);
   }
 }
 @media (max-width: 599px) {
@@ -654,7 +675,7 @@ p {
     margin-top: 20px;
   }
   .offer-intro-portrait-photo {
-    width: clamp(150px, 40vw, 180px);
+    width: clamp(120px, 32vw, 150px);
   }
   .offer-intro-cta {
     flex-direction: column;
@@ -849,7 +870,8 @@ p {
 .about-teaser-text h2 {
   margin-top: 10px;
   margin-bottom: 16px;
-  max-width: 22ch;
+  max-width: 26ch;
+  font-size: clamp(26px, 3vw, 36px);
 }
 .about-teaser-text p {
   margin-bottom: 14px;
@@ -905,6 +927,51 @@ p {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+}
+
+/* ========== FAQ (compact, homepage) ========== */
+.faq-list {
+  margin-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-item summary {
+  padding: 20px 4px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  flex-shrink: 0;
+  color: var(--accent);
+  font-size: 20px;
+  line-height: 1;
+  transition: transform 0.15s;
+}
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+.faq-item p {
+  padding: 0 4px 20px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 68ch;
 }
 
 /* ========== Method overview (compact, homepage) ========== */
@@ -1080,9 +1147,6 @@ p {
 .question-intro h2 {
   max-width: 28ch;
   font-size: clamp(26px, 3vw, 36px);
-  font-family: var(--font-sans);
-  font-weight: 600;
-  letter-spacing: normal;
 }
 .question-intro .lead {
   font-size: var(--fs-s);

@@ -18,7 +18,7 @@ const TEASERS = [
 
 export function PageTeasers() {
   return (
-    <Reveal className="section">
+    <Reveal className="section teasers-transition">
       <div className="wrap">
         <div className="method-list">
           {TEASERS.map((t) => (

@@ -8,7 +8,6 @@ const routes = [
   "/angebote",
   "/ueber-mich",
   "/qualifikationen",
-  "/foerderung",
   "/kontakt",
   "/impressum",
   "/datenschutz",
