@@ -44,9 +44,6 @@ export function Hero() {
           <Link href="/kontakt" className="btn btn-primary">
             Kostenlose KI-Sichtbarkeitsanalyse →
           </Link>
-          <Link href="/angebote" className="btn btn-ghost">
-            Leistungen ansehen
-          </Link>
         </div>
         {SHOW_BAFA && (
           <div className="bafa-strip">
