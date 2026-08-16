@@ -1,6 +1,6 @@
 import { Reveal } from "./reveal";
 
-const FAQ = [
+const FAQ_LEFT = [
   {
     q: "Was ist der Unterschied zwischen SEO und GEO?",
     a: "SEO verbessert deine Sichtbarkeit in klassischen Suchmaschinen wie Google. GEO (Generative Engine Optimization) ergänzt das um die Sichtbarkeit und Auffindbarkeit in KI-Systemen und KI-generierten Antworten – zum Beispiel bei ChatGPT, Google AI und Perplexity. SEO bleibt dabei die Grundlage: GEO ersetzt SEO nicht, sondern baut darauf auf.",
@@ -17,6 +17,9 @@ const FAQ = [
     q: "Brauche ich überhaupt GEO, wenn meine Website bei Google schon gut rankt?",
     a: "Ein gutes Google-Ranking ist eine gute Ausgangsbasis, aber keine Garantie für Sichtbarkeit in KI-Antworten. ChatGPT, Google AI und Perplexity werten Inhalte teils anders aus als die klassische Google-Suche. Ob und wie stark GEO für dich relevant ist, hängt von deiner Branche und deiner Zielgruppe ab – das schauen wir uns gemeinsam an.",
   },
+];
+
+const FAQ_RIGHT = [
   {
     q: "Muss ich selbst viel mitarbeiten?",
     a: "Etwas Mitarbeit ist sinnvoll, vor allem bei Freigaben, Produktwissen und Inhalten, die nur du liefern kannst. Wie viel Zeit du investierst, hängt vom gewählten Umfang ab – von punktueller Beratung bis zur laufenden Begleitung. Ich stimme das vorher konkret mit dir ab.",
@@ -35,6 +38,19 @@ const FAQ = [
   },
 ];
 
+function FaqColumn({ items }: { items: { q: string; a: string }[] }) {
+  return (
+    <div className="faq-col">
+      {items.map((item) => (
+        <details key={item.q} className="faq-item">
+          <summary>{item.q}</summary>
+          <p>{item.a}</p>
+        </details>
+      ))}
+    </div>
+  );
+}
+
 export function Faq() {
   return (
     <Reveal className="section faq-transition">
@@ -43,13 +59,9 @@ export function Faq() {
           <span className="eyebrow">Häufige Fragen</span>
           <h2>Was du wissen möchtest.</h2>
         </div>
-        <div className="faq-list">
-          {FAQ.map((item) => (
-            <details key={item.q} className="faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
-            </details>
-          ))}
+        <div className="faq-columns">
+          <FaqColumn items={FAQ_LEFT} />
+          <FaqColumn items={FAQ_RIGHT} />
         </div>
       </div>
     </Reveal>

@@ -7,8 +7,8 @@ import { OffersOverview } from "@/components/sections/offers-overview";
 import { SocialProof } from "@/components/sections/social-proof";
 import { AboutTeaser } from "@/components/sections/about-teaser";
 import { Faq } from "@/components/sections/faq";
+import { ClosingCta } from "@/components/sections/closing-cta";
 import { Marquee } from "@/components/sections/marquee";
-import { PageTeasers } from "@/components/sections/page-teasers";
 
 export default function HomePage() {
   return (
@@ -26,7 +26,7 @@ export default function HomePage() {
       <SocialProof />
       <AboutTeaser />
       <Faq />
-      <PageTeasers />
+      <ClosingCta />
     </>
   );
 }

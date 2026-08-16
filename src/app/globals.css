@@ -519,23 +519,11 @@ p {
   padding-top: 32px;
   padding-bottom: 48px;
 }
-/* Compact, borderless transition into Meine Methode — the copper eyebrow
-   tick mark is enough of a divider. Unconditional (not a sibling
-   selector) since Meine Methode now follows the marquee banner, not a
-   preceding .section. */
-.method-transition {
-  border-top: none;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-/* Unified compact spacing between the homepage sections below Meine
-   Methode. offers/proof drop their border (fine hairline accents inside
-   each section already mark the transition); about/faq/teasers keep the
-   default section border but still get the reduced padding. */
-.section + .section.offers-transition,
-.section + .section.proof-transition {
-  border-top: none;
-}
+/* Unified compact, borderless spacing between every homepage section from
+   Meine Methode through the closing contact block — each section's own
+   eyebrow/hairline accents already mark the transition, so no large
+   horizontal section dividers are needed. */
+.method-transition,
 .offers-transition,
 .proof-transition,
 .about-transition,
@@ -543,8 +531,16 @@ p {
   padding-top: 48px;
   padding-bottom: 48px;
 }
-.teasers-transition {
+.contact-transition {
   padding-top: 48px;
+}
+.section.method-transition,
+.section.offers-transition,
+.section.proof-transition,
+.section.about-transition,
+.section.faq-transition,
+.section.contact-transition {
+  border-top: none;
 }
 /* ========== Marquee ========== */
 .marquee {
@@ -930,15 +926,21 @@ p {
 }
 
 /* ========== FAQ (compact, homepage) ========== */
-.faq-list {
+.faq-columns {
   margin-top: 24px;
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 56px;
+}
+.faq-col {
+  display: flex;
+  flex-direction: column;
 }
 .faq-item {
-  border-bottom: 1px solid var(--line);
+  padding: 22px 0;
 }
 .faq-item summary {
-  padding: 20px 4px;
+  padding: 0;
   cursor: pointer;
   list-style: none;
   display: flex;
@@ -966,12 +968,53 @@ p {
   transform: rotate(45deg);
 }
 .faq-item p {
-  padding: 0 4px 20px;
+  margin-top: 12px;
   font-family: var(--font-sans);
   font-size: 14px;
   line-height: 1.6;
   color: var(--ink-soft);
-  max-width: 68ch;
+  width: 100%;
+  max-width: none;
+}
+@media (max-width: 640px) {
+  .faq-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========== Closing contact (compact, homepage) ========== */
+.cta-options {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.cta-option:last-child {
+  padding-left: 48px;
+  border-left: 1px solid var(--line);
+}
+.cta-option h3 {
+  font-size: clamp(20px, 2.2vw, 24px);
+  max-width: 26ch;
+  margin-bottom: 10px;
+}
+.cta-option p {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  max-width: 42ch;
+  margin-bottom: 18px;
+}
+@media (max-width: 760px) {
+  .cta-options {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .cta-option:last-child {
+    padding-left: 0;
+    padding-top: 32px;
+    border-left: none;
+    border-top: 1px solid var(--line);
+  }
 }
 
 /* ========== Method overview (compact, homepage) ========== */
