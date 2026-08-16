@@ -3,6 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 
 const routes = [
   "",
+  "/sichtbarkeitscheck",
   "/meine-methode",
   "/angebote",
   "/ueber-mich",

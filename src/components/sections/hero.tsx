@@ -41,8 +41,8 @@ export function Hero() {
           oder Perplexity. Aber taucht dein Unternehmen dort überhaupt auf?
         </p>
         <div className="hero-actions">
-          <Link href="/kontakt" className="btn btn-primary">
-            Kostenlose KI-Sichtbarkeitsanalyse →
+          <Link href="/sichtbarkeitscheck" className="btn btn-primary">
+            SEO &amp; KI-Sichtbarkeit kostenlos prüfen →
           </Link>
         </div>
         {SHOW_BAFA && (
