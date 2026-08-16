@@ -33,7 +33,7 @@ export function Hero() {
         </h1>
         <p className="hero-keymessage">Sichtbar bei Google. Gefunden in der KI-Suche.</p>
         <p className="hero-sub">
-          SEO ist die Grundlage – die Optimierung für KI-Systeme ist die Ergänzung.
+          SEO ist die Grundlage – Optimierung für KI-Systeme ist die Ergänzung.
         </p>
         <p className="hero-question">Weißt du, wie KI dein Unternehmen sieht?</p>
         <p className="hero-explainer">
