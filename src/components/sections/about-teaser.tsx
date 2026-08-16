@@ -8,6 +8,50 @@ const STATS = [
   { num: "6 Kanäle", lbl: "Shop & Marktplätze" },
 ];
 
+function WordPressIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M6.2 9.3l2.3 7 1.9-5 1.9 5 2.3-7" />
+    </svg>
+  );
+}
+
+function ShopifyIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M6 8h12l-1 12H7L6 8z" />
+      <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+    </svg>
+  );
+}
+
+function AmazonIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M4 8l8-4 8 4-8 4-8-4z" />
+      <path d="M4 8v8l8 4 8-4V8" />
+      <path d="M12 12v8" />
+    </svg>
+  );
+}
+
+function EtsyIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M11 4h6a2 2 0 0 1 2 2v6L11.5 20.5a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8L11 4z" />
+      <circle cx="15.5" cy="8.5" r="1.1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
+const PLATFORMS = [
+  { name: "WordPress / WooCommerce", Icon: WordPressIcon },
+  { name: "Shopify", Icon: ShopifyIcon },
+  { name: "Amazon", Icon: AmazonIcon },
+  { name: "Etsy", Icon: EtsyIcon },
+];
+
 export function AboutTeaser() {
   return (
     <Reveal className="section about-transition">
@@ -34,6 +78,14 @@ export function AboutTeaser() {
                 </div>
               ))}
             </div>
+            <ul className="about-teaser-stack">
+              {PLATFORMS.map(({ name, Icon }) => (
+                <li key={name}>
+                  <Icon />
+                  <span>{name}</span>
+                </li>
+              ))}
+            </ul>
             <Link href="/ueber-mich" className="btn-link about-teaser-cta">
               Mehr über mich →
             </Link>

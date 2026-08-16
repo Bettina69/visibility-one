@@ -893,6 +893,32 @@ p {
   font-size: var(--fs-xs);
   color: var(--muted);
 }
+.about-teaser-stack {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 28px;
+}
+.about-teaser-stack li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.about-teaser-stack svg {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.about-teaser-stack span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
 .about-teaser-cta {
   margin-top: 24px;
   display: inline-block;
@@ -962,10 +988,9 @@ p {
   color: var(--accent);
   font-size: 20px;
   line-height: 1;
-  transition: transform 0.15s;
 }
 .faq-item[open] summary::after {
-  transform: rotate(45deg);
+  content: "−";
 }
 .faq-item p {
   margin-top: 12px;
