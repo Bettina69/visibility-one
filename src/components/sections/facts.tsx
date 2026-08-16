@@ -32,7 +32,7 @@ const FACTS = [
 export function Facts() {
   return (
     <>
-      <span className="eyebrow">Was gerade passiert</span>
+      <span className="eyebrow facts-eyebrow">Warum das gerade passiert</span>
       <div className="facts-bar">
         {FACTS.map((f, i) => (
           <div key={i} className="fact">
@@ -50,8 +50,8 @@ export function Facts() {
         ))}
       </div>
       <p className="facts-bridge">
-        Nicht weil dein SEO schlechter wurde. Sondern weil KI die Antwort liefert – und
-        deine Website übersprungen wird.
+        Dein SEO muss nicht schlechter geworden sein. Die Suche selbst verändert sich –
+        und KI entscheidet zunehmend mit, welche Unternehmen sichtbar werden.
       </p>
     </>
   );

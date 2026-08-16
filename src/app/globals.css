@@ -553,6 +553,9 @@ p {
 }
 
 /* ========== Stats ========== */
+.facts-eyebrow {
+  margin-top: 32px;
+}
 .facts-bar {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -651,7 +654,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-top: 32px;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 .question-intro h2 {

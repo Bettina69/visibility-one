@@ -11,8 +11,8 @@ export default function HomePage() {
       <Hero />
       <Reveal className="section hero-transition">
         <div className="wrap">
-          <Facts />
           <Questions />
+          <Facts />
         </div>
       </Reveal>
       <Marquee />
