@@ -59,32 +59,39 @@ export function OffersOverview() {
         </div>
 
         <div className="offer-intro-card">
-          <div className="offer-intro-top">
-            <div className="offer-intro-avatar">
+          <div className="offer-intro-main">
+            <span className="offer-intro-label">Kostenlos · Schnell · Unverbindlich</span>
+            <h3>Wie sichtbar ist deine Website bei Google und KI?</h3>
+            <p>
+              Schick mir deine URL. Ich schaue mir an, wie dein Unternehmen bei Google
+              aufgestellt ist und ob es in KI-Systemen wie ChatGPT, Google AI oder
+              Perplexity auftaucht.
+            </p>
+            <p>
+              Du bekommst 2–3 konkrete Beobachtungen zu deiner SEO- und KI-Sichtbarkeit –
+              kostenlos und unverbindlich.
+            </p>
+            <div className="offer-intro-cta">
+              <Link href="/sichtbarkeitscheck" className="btn btn-primary">
+                SEO &amp; KI-Sichtbarkeit kostenlos prüfen →
+              </Link>
+              <span className="offer-intro-hint">0 € · kein Auftrag · keine Verpflichtung</span>
+            </div>
+          </div>
+          <div className="offer-intro-portrait">
+            <div className="offer-intro-portrait-photo">
               <Image
                 src="/bettina-portrait.jpg"
                 alt="Bettina Teckentrup"
-                width={112}
-                height={112}
+                width={520}
+                height={520}
+                sizes="(min-width: 900px) 260px, 180px"
               />
             </div>
-            <span className="offer-intro-label">Kostenlos · Schnell · Unverbindlich</span>
-          </div>
-          <h3>Wie sichtbar ist deine Website bei Google und KI?</h3>
-          <p>
-            Schick mir deine URL. Ich schaue mir an, wie dein Unternehmen bei Google
-            aufgestellt ist und ob es in KI-Systemen wie ChatGPT, Google AI oder
-            Perplexity auftaucht.
-          </p>
-          <p>
-            Du bekommst 2–3 konkrete Beobachtungen zu deiner SEO- und KI-Sichtbarkeit –
-            kostenlos und unverbindlich.
-          </p>
-          <div className="offer-intro-cta">
-            <Link href="/sichtbarkeitscheck" className="btn btn-primary">
-              SEO &amp; KI-Sichtbarkeit kostenlos prüfen →
-            </Link>
-            <span className="offer-intro-hint">0 € · kein Auftrag · keine Verpflichtung</span>
+            <p className="offer-intro-portrait-caption">
+              <strong>Bettina Teckentrup</strong>
+              persönlich geprüft
+            </p>
           </div>
         </div>
 

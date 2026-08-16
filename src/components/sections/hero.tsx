@@ -14,7 +14,7 @@ export function Hero() {
       <div className="hero-portrait-wrap">
         <div className="hero-portrait">
           <Image
-            src="/bettina-portrait.jpg"
+            src="/bettina-portrait-hero.jpg"
             alt="Bettina Teckentrup"
             width={520}
             height={520}
