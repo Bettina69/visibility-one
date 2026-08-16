@@ -12,13 +12,7 @@ const TEASERS = [
     href: "/qualifikationen",
     eyebrow: "Qualifikationen",
     title: "Belegt, praxiserprobt.",
-    desc: "BAFA, Google, IHK, Shopify und weitere Zertifizierungen.",
-  },
-  {
-    href: "/foerderung",
-    eyebrow: "Förderung",
-    title: "Bis zu 80% gefördert.",
-    desc: "Als BAFA-anerkannte Beraterin kläre ich deine Förderfähigkeit.",
+    desc: "Google, IHK, Shopify und weitere Zertifizierungen.",
   },
 ];
 

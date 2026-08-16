@@ -4,6 +4,8 @@ import { Questions } from "@/components/sections/questions";
 import { Reveal } from "@/components/sections/reveal";
 import { MethodOverview } from "@/components/sections/method-overview";
 import { OffersOverview } from "@/components/sections/offers-overview";
+import { SocialProof } from "@/components/sections/social-proof";
+import { AboutTeaser } from "@/components/sections/about-teaser";
 import { Marquee } from "@/components/sections/marquee";
 import { PageTeasers } from "@/components/sections/page-teasers";
 
@@ -19,6 +21,8 @@ export default function HomePage() {
       </Reveal>
       <MethodOverview />
       <OffersOverview />
+      <SocialProof />
+      <AboutTeaser />
       <Marquee />
       <PageTeasers />
     </>
