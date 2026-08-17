@@ -534,6 +534,9 @@ export function ChatgptSichtbarkeitPage() {
           <Link href="/ki-sichtbarkeit" className="btn-link detail-secondary-link">
             Was bedeutet KI-Sichtbarkeit? →
           </Link>
+          <Link href="/geo" className="btn-link detail-secondary-link">
+            Was ist GEO? →
+          </Link>
         </div>
       </Reveal>
 

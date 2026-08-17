@@ -202,6 +202,9 @@ export function KiSichtbarkeitPage() {
               sondern mit der bestehenden SEO-Basis.
             </p>
           </div>
+          <Link href="/geo" className="btn-link detail-secondary-link">
+            Vertiefend: Was ist GEO? →
+          </Link>
         </div>
       </Reveal>
 
