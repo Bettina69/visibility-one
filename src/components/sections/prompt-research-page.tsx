@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { AuthorModule } from "./author-module";
 
 const PROMPT_CONTEXT = [
   "Unternehmensgröße",
@@ -375,6 +376,10 @@ export function PromptResearchPage() {
               </details>
             ))}
           </div>
+          <AuthorModule />
+          <Link href="/wissen" className="btn-link detail-secondary-link">
+            Alle Themen im Wissensbereich →
+          </Link>
         </div>
       </Reveal>
     </>

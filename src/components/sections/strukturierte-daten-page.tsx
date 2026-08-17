@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { AuthorModule } from "./author-module";
 
 const WHAT_IS_LIST = [
   "standardisierte Kennzeichnung von Inhalten",
@@ -377,6 +378,10 @@ export function StrukturierteDatenPage() {
               </details>
             ))}
           </div>
+          <AuthorModule />
+          <Link href="/wissen" className="btn-link detail-secondary-link">
+            Alle Themen im Wissensbereich →
+          </Link>
         </div>
       </Reveal>
     </>

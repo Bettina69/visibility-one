@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { AuthorModule } from "./author-module";
 
 const SEO_QUESTIONS = [
   "Für welche Keywords rankt meine Website?",
@@ -721,6 +722,10 @@ export function GeoPage() {
           </p>
           <Link href="/chatgpt-sichtbarkeit" className="btn-link detail-secondary-link">
             Bei ChatGPT gefunden werden →
+          </Link>
+          <AuthorModule />
+          <Link href="/wissen" className="btn-link detail-secondary-link">
+            Alle Themen im Wissensbereich →
           </Link>
         </div>
       </Reveal>

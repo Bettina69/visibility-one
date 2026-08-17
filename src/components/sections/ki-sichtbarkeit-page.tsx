@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { AuthorModule } from "./author-module";
 
 const TERMS = [
   {
@@ -424,6 +425,10 @@ export function KiSichtbarkeitPage() {
           <p className="check-trust">
             unverbindlich · persönlich geprüft · 2–3 konkrete Hinweise
           </p>
+          <AuthorModule />
+          <Link href="/wissen" className="btn-link detail-secondary-link">
+            Alle Themen im Wissensbereich →
+          </Link>
         </div>
       </Reveal>
     </>

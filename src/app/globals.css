@@ -2450,6 +2450,68 @@ p {
   background: var(--paper);
 }
 
+/* ========== Author module (knowledge pages) ========== */
+.author-module {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.author-module-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+.author-module-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.author-module-name {
+  font-family: var(--font-serif);
+  font-size: var(--fs-m);
+  font-weight: 400;
+  color: var(--ink);
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.author-module-text {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+.author-module-text + .author-module-text {
+  margin-top: 6px;
+}
+.author-module-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.author-module-links .btn-link {
+  font-size: 13px;
+}
+.author-module-date {
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+@media (max-width: 480px) {
+  .author-module {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
 /* ========== Accessibility utilities ========== */
 .sr-only {
   position: absolute;

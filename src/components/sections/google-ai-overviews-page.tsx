@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { AuthorModule } from "./author-module";
 
 const AI_OVERVIEWS_LIST = [
   "generierte Antwort innerhalb der Google-Suche",
@@ -362,6 +363,10 @@ export function GoogleAiOverviewsPage() {
               </details>
             ))}
           </div>
+          <AuthorModule />
+          <Link href="/wissen" className="btn-link detail-secondary-link">
+            Alle Themen im Wissensbereich →
+          </Link>
         </div>
       </Reveal>
     </>

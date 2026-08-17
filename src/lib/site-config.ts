@@ -15,6 +15,7 @@ export type NavItem = {
 export const mainNavigation: NavItem[] = [
   { label: "Meine Methode", href: "/meine-methode" },
   { label: "Angebote", href: "/angebote" },
+  { label: "Wissen", href: "/wissen" },
   { label: "Über mich", href: "/ueber-mich" },
   { label: "Qualifikationen", href: "/qualifikationen" },
   { label: "Kostenlose Tools", href: "/tools" },
