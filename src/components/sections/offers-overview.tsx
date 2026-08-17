@@ -75,7 +75,7 @@ export function OffersOverview() {
               <Link href="/sichtbarkeitscheck" className="btn btn-primary">
                 SEO &amp; KI-Sichtbarkeit kostenlos prüfen →
               </Link>
-              <span className="offer-intro-hint">0 € · kein Auftrag · keine Verpflichtung</span>
+              <span className="offer-intro-hint">unverbindlich · persönlich geprüft · 2–3 konkrete Hinweise</span>
             </div>
           </div>
           <div className="offer-intro-portrait">
