@@ -317,6 +317,9 @@ export function ChatgptSichtbarkeitPage() {
               Ebene der Nachfrageanalyse.
             </p>
           </div>
+          <Link href="/prompt-research" className="btn-link detail-secondary-link">
+            Mehr über Prompt Research →
+          </Link>
         </div>
       </Reveal>
 

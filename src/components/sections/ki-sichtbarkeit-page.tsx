@@ -260,6 +260,9 @@ export function KiSichtbarkeitPage() {
               vor – und wie werde ich dabei eingeordnet?&ldquo;
             </p>
           </div>
+          <Link href="/prompt-research" className="btn-link detail-secondary-link">
+            Mehr über Prompt Research →
+          </Link>
         </div>
       </Reveal>
 

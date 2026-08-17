@@ -361,6 +361,9 @@ export function GeoPage() {
               künstliche Variationen derselben Frage.
             </p>
           </div>
+          <Link href="/prompt-research" className="btn-link detail-secondary-link">
+            Mehr über Prompt Research →
+          </Link>
         </div>
       </Reveal>
 
