@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
-import { Offers } from "@/components/sections/offers";
+import { OffersHero } from "@/components/sections/offers-hero";
+import { OffersFreeCheck } from "@/components/sections/offers-free-check";
+import { OffersMain } from "@/components/sections/offers-main";
+import { OffersPackages } from "@/components/sections/offers-packages";
 
 export const metadata: Metadata = {
   title: "Angebote",
-  description: "Vom kostenlosen Quick-Check bis zur laufenden GEO-Begleitung.",
+  description:
+    "Verstehen, optimieren, begleiten: SEO- & KI-Sichtbarkeit so umfassend, wie du sie brauchst.",
 };
 
 export default function AngebotePage() {
-  return <Offers />;
+  return (
+    <>
+      <OffersHero />
+      <OffersFreeCheck />
+      <OffersMain />
+      <OffersPackages />
+    </>
+  );
 }
