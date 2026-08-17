@@ -277,6 +277,9 @@ export function AboutPage() {
               </span>
             </div>
           </div>
+          <Link href="/ki-bilder-kennzeichnen" className="btn-link detail-secondary-link">
+            Mehr über KI-Bilder &amp; Kennzeichnung →
+          </Link>
         </div>
       </Reveal>
 

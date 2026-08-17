@@ -122,6 +122,9 @@ export function ToolsPage() {
             Kostenlos nutzbar · Bilder werden spätestens nach 60 Minuten
             gelöscht · keine Rechtsberatung
           </p>
+          <Link href="/ki-bilder-kennzeichnen" className="btn-link detail-secondary-link">
+            Wann und wie KI-Bilder kennzeichnen? →
+          </Link>
         </div>
       </Reveal>
 

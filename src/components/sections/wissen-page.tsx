@@ -2,10 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 
-// /ki-bilder-kennzeichnen/ does not exist yet. Set this to the route once
-// that article is published - the card below activates the link
-// automatically and shows a placeholder note until then.
-const KI_BILDER_ARTICLE_HREF: string | undefined = undefined;
+const KI_BILDER_ARTICLE_HREF: string | undefined = "/ki-bilder-kennzeichnen";
 
 const GENERATIVE_SEARCH_CARDS = [
   {
