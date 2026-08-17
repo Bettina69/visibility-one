@@ -149,6 +149,9 @@ export function KiSichtbarkeitPage() {
           <p className="check-note" style={{ maxWidth: "62ch" }}>
             Eine Erwähnung allein ist deshalb noch keine gute KI-Sichtbarkeit.
           </p>
+          <Link href="/chatgpt-sichtbarkeit" className="btn-link detail-secondary-link">
+            Vertiefend: Sichtbarkeit bei ChatGPT →
+          </Link>
         </div>
       </Reveal>
 

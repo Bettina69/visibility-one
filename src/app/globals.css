@@ -1592,8 +1592,11 @@ p {
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 80px 1fr;
+  grid-template-columns: 80px minmax(0, 1fr);
   gap: 24px;
+}
+.phase-item > div {
+  min-width: 0;
 }
 .phase-item .phase-num {
   font-family: var(--font-mono);
