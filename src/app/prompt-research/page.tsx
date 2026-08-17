@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Prompt Research: Keywords für KI-Suche erweitern",
   description:
-    "Was ist Prompt Research? Erfahre, wie relevante Prompts für KI-Sichtbarkeit, GEO, Wettbewerbsanalyse und Monitoring entwickelt werden.",
+    "Keywords bleiben wichtig, KI-Fragen enthalten aber mehr Kontext. Prompt Research zeigt, wie sich relevante Entscheidungssituationen für GEO identifizieren lassen.",
 };
 
 const pillarUrl = `${siteConfig.url}/ki-sichtbarkeit/`;
@@ -17,7 +17,7 @@ const webPageSchema = {
   "@type": "WebPage",
   name: "Was ist Prompt Research?",
   description:
-    "Was ist Prompt Research? Erfahre, wie relevante Prompts für KI-Sichtbarkeit, GEO, Wettbewerbsanalyse und Monitoring entwickelt werden.",
+    "Keywords bleiben wichtig, KI-Fragen enthalten aber mehr Kontext. Prompt Research zeigt, wie sich relevante Entscheidungssituationen für GEO identifizieren lassen.",
   url: pageUrl,
   inLanguage: "de-DE",
   isPartOf: {

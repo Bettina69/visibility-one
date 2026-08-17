@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Was ist GEO? Generative Engine Optimization erklärt",
   description:
-    "Was bedeutet GEO? Erfahre, wie Generative Engine Optimization SEO ergänzt und welche Rolle Prompts, Citations, Empfehlungen, Sentiment und E-E-A-T spielen.",
+    "GEO ergänzt SEO um die Frage, wie Unternehmen in KI-Antworten verstanden werden – mit Prompts, Citations, Empfehlungen, Sentiment und E-E-A-T als zentralen Bausteinen.",
 };
 
 const pillarUrl = `${siteConfig.url}/ki-sichtbarkeit/`;
@@ -17,7 +17,7 @@ const webPageSchema = {
   "@type": "WebPage",
   name: "Was ist GEO? Generative Engine Optimization verständlich erklärt",
   description:
-    "Was bedeutet GEO? Erfahre, wie Generative Engine Optimization SEO ergänzt und welche Rolle Prompts, Citations, Empfehlungen, Sentiment und E-E-A-T spielen.",
+    "GEO ergänzt SEO um die Frage, wie Unternehmen in KI-Antworten verstanden werden – mit Prompts, Citations, Empfehlungen, Sentiment und E-E-A-T als zentralen Bausteinen.",
   url: pageUrl,
   inLanguage: "de-DE",
   isPartOf: {

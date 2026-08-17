@@ -588,6 +588,24 @@ export function ChatgptSichtbarkeitPage() {
       </Reveal>
 
       <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
+            <span className="eyebrow">Quellen</span>
+            <h2>Weiterführende Primärquellen</h2>
+          </div>
+          <a
+            href="https://help.openai.com/en/articles/9237897-chatgpt-search"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            OpenAI Help Center: ChatGPT Search →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
         <div className="wrap">
           <div className="check-head">
             <span className="eyebrow">SEO + GEO</span>

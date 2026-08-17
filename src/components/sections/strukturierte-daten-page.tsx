@@ -324,6 +324,32 @@ export function StrukturierteDatenPage() {
       <Reveal className="section">
         <div className="wrap-narrow">
           <div className="check-head">
+            <span className="eyebrow">Quellen</span>
+            <h2>Weiterführende Primärquellen</h2>
+          </div>
+          <a
+            href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Google Search Central: Introduction to structured data markup →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+          <a
+            href="https://schema.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Schema.org → <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
             <span className="eyebrow">SEO + GEO</span>
             <h2>Strukturierte Daten sind ein Baustein von SEO und GEO.</h2>
           </div>

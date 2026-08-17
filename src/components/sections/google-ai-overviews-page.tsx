@@ -305,6 +305,33 @@ export function GoogleAiOverviewsPage() {
       <Reveal className="section">
         <div className="wrap-narrow">
           <div className="check-head">
+            <span className="eyebrow">Quellen</span>
+            <h2>Weiterführende Primärquellen</h2>
+          </div>
+          <a
+            href="https://developers.google.com/search/docs/appearance/ai-features"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Google Search Central: AI features and your website →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+          <a
+            href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Google Search Central: Optimizing your website for generative
+            AI features → <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
             <span className="eyebrow">SEO + GEO</span>
             <h2>Google AI verbindet klassische Suche und generative Suche.</h2>
           </div>

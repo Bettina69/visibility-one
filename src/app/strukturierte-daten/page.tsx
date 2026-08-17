@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Strukturierte Daten & Schema Markup verständlich erklärt",
   description:
-    "Was sind strukturierte Daten? Erfahre, wie Schema.org und JSON-LD SEO, Maschinenlesbarkeit und die eindeutige Einordnung von Inhalten unterstützen.",
+    "Schema.org und JSON-LD helfen Maschinen, Inhalte einzuordnen – ohne Ranking- oder Citation-Garantie. Nutzen, Grenzen und sinnvolle Schema-Typen für Unternehmen.",
 };
 
 const pillarUrl = `${siteConfig.url}/ki-sichtbarkeit/`;
@@ -17,7 +17,7 @@ const webPageSchema = {
   "@type": "WebPage",
   name: "Strukturierte Daten: Informationen für Maschinen eindeutig machen.",
   description:
-    "Was sind strukturierte Daten? Erfahre, wie Schema.org und JSON-LD SEO, Maschinenlesbarkeit und die eindeutige Einordnung von Inhalten unterstützen.",
+    "Schema.org und JSON-LD helfen Maschinen, Inhalte einzuordnen – ohne Ranking- oder Citation-Garantie. Nutzen, Grenzen und sinnvolle Schema-Typen für Unternehmen.",
   url: pageUrl,
   inLanguage: "de-DE",
   isPartOf: {

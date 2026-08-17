@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "Bei ChatGPT gefunden werden: ChatGPT-Sichtbarkeit",
   description:
-    "Wie wird ein Unternehmen bei ChatGPT sichtbar? Erfahre, welche Rolle Mentions, Citations, Empfehlungen, Sentiment, SEO und GEO spielen.",
+    "Genannt, zitiert oder empfohlen: Wie Unternehmen in ChatGPT-Antworten vorkommen können – und welche Rolle Mentions, Citations und Sentiment dabei spielen.",
 };
 
 const pillarUrl = `${siteConfig.url}/ki-sichtbarkeit/`;
@@ -17,7 +17,7 @@ const webPageSchema = {
   "@type": "WebPage",
   name: "Bei ChatGPT gefunden werden: Wie Unternehmen in KI-Antworten sichtbar werden",
   description:
-    "Wie wird ein Unternehmen bei ChatGPT sichtbar? Erfahre, welche Rolle Mentions, Citations, Empfehlungen, Sentiment, SEO und GEO spielen.",
+    "Genannt, zitiert oder empfohlen: Wie Unternehmen in ChatGPT-Antworten vorkommen können – und welche Rolle Mentions, Citations und Sentiment dabei spielen.",
   url: pageUrl,
   inLanguage: "de-DE",
   isPartOf: {

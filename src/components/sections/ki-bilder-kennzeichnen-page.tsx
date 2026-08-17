@@ -297,12 +297,21 @@ export function KiBilderKennzeichnenPage() {
             <h2>Was hat der EU AI Act mit KI-Bildern zu tun?</h2>
           </div>
           <p className="check-text">
-            Der EU AI Act enthält Transparenzanforderungen für bestimmte
-            KI-generierte oder manipulierte Inhalte.
+            Der EU AI Act (Verordnung (EU) 2024/1689) enthält in Artikel 50
+            Transparenzpflichten für bestimmte KI-generierte oder
+            manipulierte Inhalte. Diese Pflichten gelten seit dem 2. August
+            2026.
+          </p>
+          <p className="check-text" style={{ marginTop: 12 }}>
+            Artikel 50 unterscheidet dabei zwischen verschiedenen Pflichten
+            und Akteuren – etwa zwischen Anbietern von KI-Systemen und
+            Betreibern, die bestimmte Inhalte veröffentlichen. Es gibt
+            außerdem Ausnahmen und Differenzierungen, etwa bei rein
+            redaktioneller Standardbearbeitung.
           </p>
           <p className="check-text" style={{ marginTop: 12 }}>
             Welche konkrete Pflicht für ein bestimmtes Bild oder einen
-            konkreten Einsatz gilt, muss jedoch im Einzelfall geprüft
+            konkreten Einsatz gilt, muss deshalb im Einzelfall geprüft
             werden.
           </p>
         </div>
@@ -345,6 +354,42 @@ export function KiBilderKennzeichnenPage() {
           <div className="method-benefit">
             <p>KI unterstützt. Der Mensch prüft Kontext und Verwendung.</p>
           </div>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
+            <span className="eyebrow">Quellen</span>
+            <h2>Weiterführende Primärquellen</h2>
+          </div>
+          <a
+            href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            EUR-Lex: Verordnung (EU) 2024/1689, Artikel 50 →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+          <a
+            href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Europäische Kommission: Transparency obligations under Article
+            50 AI Act → <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
+          <a
+            href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            Europäische Kommission: Guidelines on transparency obligations →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
         </div>
       </Reveal>
 
