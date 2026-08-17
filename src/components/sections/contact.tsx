@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
+import { INTEREST_OPTIONS } from "@/lib/contact-options";
 import { Reveal } from "./reveal";
 
 type FormState = {
@@ -12,6 +13,7 @@ type FormState = {
   url: string;
   message: string;
   interest: string;
+  hpWebsite: string;
 };
 
 const INITIAL_STATE: FormState = {
@@ -21,28 +23,21 @@ const INITIAL_STATE: FormState = {
   url: "",
   message: "",
   interest: "",
+  hpWebsite: "",
 };
-
-const INTEREST_OPTIONS = [
-  "Kostenloser SEO- & KI-Sichtbarkeitscheck",
-  "SEO-Analyse",
-  "GEO-/KI-Sichtbarkeitsanalyse",
-  "SEO- & GEO-Optimierung",
-  "Laufende Begleitung",
-  "Punktuelle Beratung",
-  "Noch nicht sicher",
-];
 
 export function Contact() {
   const [form, setForm] = useState<FormState>(INITIAL_STATE);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
-  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const isSubmitting = useRef(false);
 
   const update = (key: keyof FormState, value: string) =>
     setForm((f) => ({ ...f, [key]: value }));
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (isSubmitting.current) return;
     const errs: Partial<Record<keyof FormState, string>> = {};
     if (!form.name.trim()) errs.name = "Bitte gib deinen Namen an.";
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
@@ -51,10 +46,21 @@ export function Contact() {
       errs.message = "Magst du kurz etwas ausführlicher schreiben (mind. 10 Zeichen)?";
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
+
+    isSubmitting.current = true;
+    setStatus("sending");
     try {
+      const res = await fetch("/api/kontakt", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("send_failed");
       setStatus("sent");
     } catch {
       setStatus("error");
+    } finally {
+      isSubmitting.current = false;
     }
   };
 
@@ -125,6 +131,9 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={submit} noValidate>
+                <div role="status" aria-live="polite" className="sr-only">
+                  {status === "sending" ? "Nachricht wird gesendet." : ""}
+                </div>
                 {status === "error" && (
                   <p className="field-error" style={{ marginBottom: 18 }}>
                     Das hat leider nicht funktioniert. Versuch es bitte noch
@@ -138,6 +147,22 @@ export function Contact() {
                     .
                   </p>
                 )}
+                <div
+                  className="sr-only"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px" }}
+                >
+                  <label htmlFor="hpWebsite">Bitte dieses Feld leer lassen</label>
+                  <input
+                    id="hpWebsite"
+                    name="hpWebsite"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.hpWebsite}
+                    onChange={(e) => update("hpWebsite", e.target.value)}
+                  />
+                </div>
                 <div className="field">
                   <div className="row">
                     <div>
@@ -245,8 +270,10 @@ export function Contact() {
                   type="submit"
                   className="btn btn-primary"
                   style={{ width: "100%", justifyContent: "center" }}
+                  disabled={status === "sending"}
+                  aria-busy={status === "sending"}
                 >
-                  Anfrage senden →
+                  {status === "sending" ? "Wird gesendet …" : "Anfrage senden →"}
                 </button>
                 <p className="check-trust" style={{ textAlign: "center", marginTop: 14 }}>
                   unverbindlich · persönlich gelesen · keine automatische
