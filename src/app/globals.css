@@ -2071,6 +2071,101 @@ p {
   }
 }
 
+/* ========== Check result report (reusable template) ========== */
+.result-domain {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+}
+.result-stats {
+  display: grid;
+  grid-template-columns: repeat(var(--result-cols, 3), 1fr);
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.result-stat {
+  padding: 10px 24px;
+  border-left: 1px solid var(--line);
+}
+.result-stat:first-child {
+  border-left: none;
+}
+.result-stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 2.6vw, 42px);
+  font-weight: 350;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  display: block;
+}
+.result-stat-label {
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  color: var(--muted);
+  line-height: 1.4;
+}
+@media (max-width: 700px) {
+  .result-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .result-stat:nth-child(2n + 1) {
+    border-left: none;
+  }
+  .result-stat:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+@media (max-width: 480px) {
+  .result-stats {
+    grid-template-columns: 1fr;
+  }
+  .result-stat {
+    border-left: none !important;
+    border-top: 1px solid var(--line);
+  }
+  .result-stat:first-child {
+    border-top: none;
+  }
+}
+.result-keywords {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.result-keywords li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
+.result-keywords li:last-child {
+  border-bottom: none;
+}
+.result-keywords .kw {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--ink);
+}
+.result-keywords .pos {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 /* ========== Offer detail pages (Verstehen/Optimieren/Begleiten) ========== */
 .detail-price {
   font-family: var(--font-serif);
