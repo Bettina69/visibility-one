@@ -8,11 +8,6 @@ const ITEMS = [
     desc: "Ich weiß, wie es sich anfühlt, wenn Traffic einbricht – aus eigener Erfahrung.",
   },
   {
-    num: "✓",
-    title: "Erfolgreich abgeschlossene GEO-Projekte",
-    desc: "Für Online-Shops und KMU – konkrete Ergebnisse, keine Theorie.",
-  },
-  {
     num: "2008",
     title: "Seit wann ich E-Commerce betreibe",
     desc: "WooCommerce, Etsy, Amazon, Shopify, Dropshipping – ich kenne alle Seiten.",

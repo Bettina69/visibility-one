@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Method } from "@/components/sections/method";
-import { WorkflowPhases } from "@/components/sections/workflow-phases";
+import { MethodPage } from "@/components/sections/method-page";
 
 export const metadata: Metadata = {
   title: "Meine Methode",
   description:
-    "Strategie, Struktur, Content, Technik, Monitoring – wie ich Websites für Google und KI-Sichtbarkeit gleichzeitig optimiere.",
+    "Analysieren, verstehen, priorisieren, umsetzen, messen – wie ich SEO und KI-Sichtbarkeit gemeinsam betrachte, Schritt für Schritt.",
 };
 
-export default function MeineMethodePage() {
-  return (
-    <>
-      <Method />
-      <WorkflowPhases />
-    </>
-  );
+export default function Page() {
+  return <MethodPage />;
 }

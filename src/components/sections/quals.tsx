@@ -1,33 +1,59 @@
 import { Reveal } from "./reveal";
 
 const QUALS = [
-  { label: "BAFA", name: "Anerkannte Unternehmensberaterin", meta: "Förderfähige Beratung" },
-  { label: "IHK", name: "Geprüfte E-Commerce-Managerin", meta: "Seit 2018" },
-  { label: "Google", name: "Analytics & Search Console", meta: "Zertifizierte Auswertung" },
-  { label: "Google", name: "GA4", meta: "Zertifiziert" },
-  { label: "HubSpot", name: "HubSpot-Zertifizierung", meta: "Zertifikat vorhanden" },
-  { label: "SEMrush", name: "SEMrush-Zertifizierung", meta: "Zertifikat vorhanden" },
-  { label: "Shopify", name: "Partner-Programm", meta: "Shop-Optimierung" },
-  { label: "OMR", name: "Speakerin & Workshop-Leiterin", meta: "KI-Sichtbarkeit für Shops" },
-  { label: "Eigene", name: "Shop-Erfahrung seit 2008", meta: "18+ Jahre Praxis" },
+  {
+    title: "SISTRIX Seminar",
+    institution: "SISTRIX GmbH",
+    desc: "Fachschulung im führenden SEO-Analyse-Tool für den deutschsprachigen Markt. Grundlage für datenbasierte SEO- und KI-Sichtbarkeitsanalysen.",
+    status: "✓ Zertifikat vorhanden",
+  },
+  {
+    title: "SEO Certification Course",
+    institution: "HubSpot Academy",
+    desc: "Zertifizierung in Suchmaschinenoptimierung – Keyword-Strategie, On-Page-Optimierung, technisches SEO und Content-Planung.",
+    status: "✓ Zertifikat vorhanden",
+  },
+  {
+    title: "SEO Fundamentals",
+    institution: "Semrush Academy",
+    desc: "Zertifizierung in SEO-Grundlagen, Keyword-Recherche, Ranking-Analyse und technischer Optimierung.",
+    status: "✓ Zertifikat vorhanden",
+  },
+  {
+    title: "Google Zukunftswerkstatt",
+    institution: "Google Deutschland",
+    desc: "Trainings in Online-Marketing, SEO, Google Ads & Analytics, E-Commerce und digitalen Geschäftsmodellen.",
+    status: "✓ Zertifikat vorhanden",
+  },
+  {
+    title: "Google Analytics 4 (GA4)",
+    institution: "Google",
+    desc: "Zertifizierung in Google Analytics 4 – Analyse von Website-Traffic, Nutzerverhalten, Akquisition und Conversions als Grundlage für datenbasierte SEO- und E-Commerce-Entscheidungen.",
+    status: "✓ Zertifikat vorhanden",
+  },
+  {
+    title: "18+ Jahre E-Commerce-Praxis",
+    institution: "Glückspilz-Shop · seit 2008",
+    desc: "Operative E-Commerce-Erfahrung im eigenen Multi-Channel-Shop mit eigenem Onlineshop und verschiedenen Marktplätzen – verbunden mit praktischer SEO- und GEO-Umsetzung.",
+    status: "✓ Nachgewiesene Praxis",
+  },
 ];
 
 export function Quals() {
   return (
     <Reveal className="section">
       <div className="wrap">
-        <div className="section-head">
-          <span className="eyebrow">Qualifikationen</span>
-          <h2>
-            Belegt. <em>Praxiserprobt.</em>
-          </h2>
+        <div className="check-head">
+          <span className="eyebrow">Qualifikationen im Überblick</span>
+          <h2>Zertifikate und praktische Erfahrung im Überblick.</h2>
         </div>
         <div className="qual-grid">
-          {QUALS.map((q, i) => (
-            <div key={i} className="qual-card">
-              <span className="label">{q.label}</span>
-              <div className="name">{q.name}</div>
-              <div className="meta">{q.meta}</div>
+          {QUALS.map((q) => (
+            <div key={q.title} className="qual-card">
+              <span className="label">{q.institution}</span>
+              <div className="name">{q.title}</div>
+              <p className="qual-card-desc">{q.desc}</p>
+              <span className="qual-card-status">{q.status}</span>
             </div>
           ))}
         </div>

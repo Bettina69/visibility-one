@@ -1068,10 +1068,10 @@ p {
   }
 }
 @media (max-width: 640px) {
-  .about-final-cta .detail-cta-row {
+  .final-cta .detail-cta-row {
     min-width: 0;
   }
-  .about-final-cta .detail-cta-row .btn {
+  .final-cta .detail-cta-row .btn {
     white-space: normal;
     min-width: 0;
   }
@@ -1408,7 +1408,7 @@ p {
 /* ========== Credibility ========== */
 .cred-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   margin-top: 64px;
 }
@@ -1440,9 +1440,15 @@ p {
   color: var(--muted);
   line-height: 1.5;
 }
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .cred-grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .cred-section .network-bg {
+    width: 32%;
+    opacity: 0.35;
   }
 }
 
@@ -1548,6 +1554,25 @@ p {
 .method-tag::before {
   content: "↗";
   color: var(--accent);
+}
+.method-benefit {
+  margin-top: 20px;
+  padding-left: 18px;
+  border-left: 2px solid var(--accent);
+  max-width: 62ch;
+}
+.method-benefit-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.method-benefit p {
+  font-size: var(--fs-s);
+  color: var(--ink-soft);
 }
 
 /* ========== Workflow phases (detail) ========== */
@@ -1793,6 +1818,22 @@ p {
 .qual-card .meta {
   color: var(--muted);
   font-size: var(--fs-xs);
+}
+.qual-card-desc {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  margin-top: 2px;
+}
+.qual-card-status {
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 @media (min-width: 640px) {
   .qual-grid {

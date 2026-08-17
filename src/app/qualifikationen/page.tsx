@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
-import { Credibility } from "@/components/sections/credibility";
-import { Quals } from "@/components/sections/quals";
+import { QualifikationenPage } from "@/components/sections/qualifikationen-page";
 
 export const metadata: Metadata = {
   title: "Qualifikationen",
   description:
-    "BAFA-Anerkennung, Google-, HubSpot- und SEMrush-Zertifizierungen sowie 18+ Jahre eigene E-Commerce-Praxis.",
+    "SISTRIX-, HubSpot-, Semrush- und Google-Zertifizierungen sowie 18+ Jahre eigene E-Commerce-Praxis seit 2008.",
 };
 
-export default function QualifikationenPage() {
-  return (
-    <>
-      <Credibility />
-      <Quals />
-    </>
-  );
+export default function Page() {
+  return <QualifikationenPage />;
 }

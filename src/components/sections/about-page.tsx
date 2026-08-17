@@ -319,7 +319,7 @@ export function AboutPage() {
         </div>
       </Reveal>
 
-      <Reveal className="section about-final-cta">
+      <Reveal className="section final-cta">
         <div className="wrap-narrow">
           <div className="check-head">
             <span className="eyebrow">Nächster Schritt</span>
