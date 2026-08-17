@@ -1901,10 +1901,14 @@ p {
 }
 
 /* ========== Contact ========== */
+.contact-section {
+  padding: 72px 0;
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+  align-items: start;
 }
 .contact-form {
   background: var(--paper);
@@ -1950,6 +1954,11 @@ p {
 .field textarea {
   min-height: 110px;
   resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+  opacity: 1;
 }
 .field .row {
   display: grid;

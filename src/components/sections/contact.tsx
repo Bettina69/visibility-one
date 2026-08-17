@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { Reveal } from "./reveal";
 
@@ -19,13 +20,23 @@ const INITIAL_STATE: FormState = {
   company: "",
   url: "",
   message: "",
-  interest: "Quick-Check",
+  interest: "",
 };
+
+const INTEREST_OPTIONS = [
+  "Kostenloser SEO- & KI-Sichtbarkeitscheck",
+  "SEO-Analyse",
+  "GEO-/KI-Sichtbarkeitsanalyse",
+  "SEO- & GEO-Optimierung",
+  "Laufende Begleitung",
+  "Punktuelle Beratung",
+  "Noch nicht sicher",
+];
 
 export function Contact() {
   const [form, setForm] = useState<FormState>(INITIAL_STATE);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
 
   const update = (key: keyof FormState, value: string) =>
     setForm((f) => ({ ...f, [key]: value }));
@@ -33,63 +44,79 @@ export function Contact() {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const errs: Partial<Record<keyof FormState, string>> = {};
-    if (!form.name.trim()) errs.name = "Bitte Namen angeben";
+    if (!form.name.trim()) errs.name = "Bitte gib deinen Namen an.";
     if (!form.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      errs.email = "Bitte gültige E-Mail";
+      errs.email = "Bitte gib eine gültige E-Mail-Adresse an.";
     if (!form.message.trim() || form.message.length < 10)
-      errs.message = "Kurze Nachricht (min. 10 Zeichen)";
+      errs.message = "Magst du kurz etwas ausführlicher schreiben (mind. 10 Zeichen)?";
     setErrors(errs);
-    if (Object.keys(errs).length === 0) {
-      setSent(true);
+    if (Object.keys(errs).length > 0) return;
+    try {
+      setStatus("sent");
+    } catch {
+      setStatus("error");
     }
   };
 
   return (
-    <Reveal className="section">
+    <Reveal className="section contact-section">
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">Kontakt</span>
-          <h2>
-            Reden wir <em>15 Minuten?</em>
-          </h2>
+          <h1 className="hero-title" style={{ marginTop: 16 }}>
+            Lass uns schauen, wo du stehst.
+          </h1>
         </div>
         <div className="contact-grid">
           <div>
-            <p style={{ fontSize: 18, marginBottom: 32 }}>
-              Schreib mir, wo du gerade stehst. Ich melde mich innerhalb von 24 Stunden
-              mit einem konkreten nächsten Schritt.
+            <p style={{ fontSize: "var(--fs-m)", marginBottom: 32 }}>
+              Du bist dir nicht sicher, was dein Unternehmen bei SEO oder
+              KI-Sichtbarkeit gerade braucht? Schreib mir kurz, worum es geht.
+              Ich schaue mir deine Anfrage persönlich an und melde mich mit
+              einem sinnvollen nächsten Schritt.
             </p>
             <div style={{ borderTop: "1px solid var(--line)", paddingTop: 24 }}>
-              <div style={{ display: "flex", flexDirection: "column", gap: 14, fontSize: 15 }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 14,
+                  fontSize: 15,
+                }}
+              >
                 <div>
-                  <strong>E-Mail</strong> · {siteConfig.email}
+                  <strong>E-Mail</strong> ·{" "}
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    style={{ textDecoration: "underline" }}
+                  >
+                    {siteConfig.email}
+                  </a>
                 </div>
                 <div>
-                  <strong>Antwort</strong> · innerhalb 24 Std., Mo–Fr
+                  <strong>Antwort</strong> · in der Regel innerhalb von 24
+                  Std., Mo–Fr
                 </div>
                 <div>
-                  <strong>Standort</strong> · Deutschland · Remote
+                  <strong>Zusammenarbeit</strong> · deutschlandweit · remote
                 </div>
               </div>
             </div>
-            <div className="bafa-strip" style={{ marginTop: 32 }}>
-              <span className="badge">BAFA</span>
-              <span style={{ fontSize: 13 }}>Förderfähig – ich kläre das für dich.</span>
-            </div>
           </div>
           <div className="contact-form">
-            {sent ? (
+            {status === "sent" ? (
               <div className="success-state">
                 <div className="check">✓</div>
-                <h3>Danke, {form.name.split(" ")[0]}.</h3>
+                <h3>Danke{form.name.split(" ")[0] ? `, ${form.name.split(" ")[0]}` : ""}.</h3>
                 <p style={{ marginTop: 12, color: "var(--muted)" }}>
-                  Ich melde mich innerhalb von 24 Stunden bei dir – meist viel schneller.
+                  Ich schaue mir deine Anfrage persönlich an und melde mich in
+                  der Regel innerhalb von 24 Stunden, Mo–Fr.
                 </p>
                 <button
                   className="btn btn-ghost"
                   style={{ marginTop: 24 }}
                   onClick={() => {
-                    setSent(false);
+                    setStatus("idle");
                     setForm(INITIAL_STATE);
                   }}
                 >
@@ -98,6 +125,19 @@ export function Contact() {
               </div>
             ) : (
               <form onSubmit={submit} noValidate>
+                {status === "error" && (
+                  <p className="field-error" style={{ marginBottom: 18 }}>
+                    Das hat leider nicht funktioniert. Versuch es bitte noch
+                    einmal oder schreib mir direkt an{" "}
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      style={{ textDecoration: "underline" }}
+                    >
+                      {siteConfig.email}
+                    </a>
+                    .
+                  </p>
+                )}
                 <div className="field">
                   <div className="row">
                     <div>
@@ -108,6 +148,7 @@ export function Contact() {
                         onChange={(e) => update("name", e.target.value)}
                         placeholder="Vorname Nachname"
                         required
+                        aria-required="true"
                         autoComplete="name"
                         aria-invalid={errors.name ? "true" : undefined}
                         aria-describedby={errors.name ? "name-error" : undefined}
@@ -127,6 +168,7 @@ export function Contact() {
                         onChange={(e) => update("email", e.target.value)}
                         placeholder="dein@shop.de"
                         required
+                        aria-required="true"
                         autoComplete="email"
                         aria-invalid={errors.email ? "true" : undefined}
                         aria-describedby={errors.email ? "email-error" : undefined}
@@ -152,37 +194,44 @@ export function Contact() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="url">Shop-URL</label>
+                      <label htmlFor="url">Website / Shop-URL</label>
                       <input
                         id="url"
+                        type="url"
                         value={form.url}
                         onChange={(e) => update("url", e.target.value)}
                         placeholder="https://"
+                        autoComplete="url"
                       />
                     </div>
                   </div>
                 </div>
                 <div className="field">
-                  <label htmlFor="interest">Was interessiert dich?</label>
+                  <label htmlFor="interest">Wobei kann ich dich unterstützen?</label>
                   <select
                     id="interest"
                     value={form.interest}
                     onChange={(e) => update("interest", e.target.value)}
                   >
-                    <option>Quick-Check</option>
-                    <option>GEO-Strategie-Workshop</option>
-                    <option>GEO-Begleitung</option>
-                    <option>Erstmal nur reden</option>
+                    <option value="" disabled>
+                      Bitte auswählen
+                    </option>
+                    {INTEREST_OPTIONS.map((opt) => (
+                      <option key={opt} value={opt}>
+                        {opt}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="field">
-                  <label htmlFor="message">Worum geht&apos;s? *</label>
+                  <label htmlFor="message">Erzähl mir kurz, worum es geht. *</label>
                   <textarea
                     id="message"
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
-                    placeholder="Was passiert gerade mit deinem Traffic? Was hast du schon versucht?"
+                    placeholder="Was möchtest du verbessern? Gibt es ein konkretes Problem oder eine Entwicklung, die dir aufgefallen ist?"
                     required
+                    aria-required="true"
                     aria-invalid={errors.message ? "true" : undefined}
                     aria-describedby={errors.message ? "message-error" : undefined}
                   ></textarea>
@@ -199,16 +248,23 @@ export function Contact() {
                 >
                   Anfrage senden →
                 </button>
+                <p className="check-trust" style={{ textAlign: "center", marginTop: 14 }}>
+                  unverbindlich · persönlich gelesen · keine automatische
+                  Terminbuchung
+                </p>
                 <p
                   style={{
                     fontSize: 12,
                     color: "var(--muted)",
-                    marginTop: 14,
+                    marginTop: 10,
                     textAlign: "center",
                   }}
                 >
-                  Mit dem Senden stimmst du der Datenverarbeitung gemäß
-                  Datenschutzerklärung zu.
+                  Mit dem Senden stimmst du der Datenverarbeitung gemäß{" "}
+                  <Link href="/datenschutz" style={{ textDecoration: "underline" }}>
+                    Datenschutzerklärung
+                  </Link>{" "}
+                  zu.
                 </p>
               </form>
             )}
