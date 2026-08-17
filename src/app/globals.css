@@ -1023,6 +1023,60 @@ p {
   }
 }
 
+/* ========== About page (ueber-mich) ========== */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.about-hero-photo {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 2 / 3;
+  margin: 0 auto;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.about-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.about-hero-scroll {
+  margin-top: 20px;
+  display: inline-block;
+}
+.about-platform-label {
+  display: block;
+  margin-top: 28px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.about-platform-label + .about-teaser-stack {
+  margin-top: 10px;
+}
+@media (min-width: 900px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr 360px;
+    gap: 56px;
+  }
+}
+@media (max-width: 640px) {
+  .about-final-cta .detail-cta-row {
+    min-width: 0;
+  }
+  .about-final-cta .detail-cta-row .btn {
+    white-space: normal;
+    min-width: 0;
+  }
+}
+
 /* ========== FAQ (compact, homepage) ========== */
 .faq-columns {
   margin-top: 24px;
