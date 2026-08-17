@@ -15,8 +15,8 @@ const FAQ = [
     a: "Ja. Ich beobachte, ob Wettbewerber bei wichtigen Themen, Citations oder Empfehlungen stärker werden, um Verschiebungen früh zu erkennen.",
   },
   {
-    q: "Was sind Brand Mentions, Citations und Recommendations?",
-    a: "Brand Mentions zeigen, ob deine Marke erwähnt wird. Citations zeigen, welche Quellen KI-Systeme bei relevanten Antworten heranziehen. Recommendations zeigen, ob du bei konkreten Entscheidungsfragen empfohlen wirst.",
+    q: "Was sind Brand Mentions, Citations, Recommendations und Sentiment?",
+    a: "Brand Mentions zeigen, ob deine Marke erwähnt wird. Citations zeigen, welche Quellen KI-Systeme bei relevanten Antworten heranziehen. Recommendations zeigen, ob du bei konkreten Entscheidungsfragen empfohlen wirst. Sentiment zeigt, ob dabei eher positiv, neutral oder kritisch über dich gesprochen wird.",
   },
   {
     q: "Sind Optimierungen im Monatspreis enthalten?",
@@ -101,6 +101,7 @@ export function OfferBegleitung() {
                 <li>Brand Mentions</li>
                 <li>Citations</li>
                 <li>Recommendations</li>
+                <li>Sentiment-Entwicklung</li>
                 <li>Themenentwicklung</li>
                 <li>Wettbewerbsentwicklung</li>
               </ul>
@@ -119,11 +120,19 @@ export function OfferBegleitung() {
                 Entscheidungsfragen empfohlen?
               </p>
               <p className="term">
+                <strong>Sentiment:</strong> Wird über deine Marke eher positiv, neutral
+                oder kritisch gesprochen?
+              </p>
+              <p className="term">
                 <strong>Share of Voice:</strong> Wie groß ist deine Sichtbarkeit im
                 Vergleich zu Wettbewerbern?
               </p>
             </div>
           </div>
+          <p className="check-note">
+            Nicht nur beobachten, ob deine Marke genannt wird, sondern auch, ob sich die
+            Darstellung positiv, neutral oder kritisch entwickelt.
+          </p>
         </div>
       </Reveal>
 
@@ -148,8 +157,8 @@ export function OfferBegleitung() {
           <ul className="detail-list">
             <li>Monitoring der wichtigsten SEO-Kennzahlen</li>
             <li>Beobachtung relevanter KI-Prompts</li>
-            <li>Mentions / Citations / Recommendations</li>
-            <li>Wettbewerbsvergleich</li>
+            <li>Veränderungen bei Mentions, Citations, Recommendations und Sentiment</li>
+            <li>auffällige Entwicklungen bei Wettbewerbern</li>
             <li>kurze monatliche Zusammenfassung</li>
             <li>Top-Entwicklungen</li>
             <li>priorisierte nächste Schritte</li>

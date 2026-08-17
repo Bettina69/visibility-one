@@ -21,12 +21,14 @@ const BAUSTEINE = [
     price: "ab 690 €",
     title: "Inhalte, die Menschen verstehen – und Maschinen einordnen können.",
     points: [
-      "bestehende Kernseiten optimieren",
-      "Title, H1 und Meta-Daten",
+      "bestehende Kernseiten nach Suchintention optimieren",
+      "Title, H1–H3 und Meta-Daten",
       "klare Entitäten und Zusammenhänge",
       "zitierfähige Definitionen und Antworten",
       "FAQ-Inhalte",
-      "E-E-A-T-Signale",
+      "Mission & Werte, wo relevant für Empfehlungen",
+      "Bildoptimierung (Alt-Texte, Dateigröße)",
+      "E-E-A-T-Signale (Erfahrung, Fachwissen, Vertrauenssignale)",
       "Content Gaps schließen",
       "menschliche Endredaktion",
     ],
@@ -39,6 +41,7 @@ const BAUSTEINE = [
     points: [
       "technischer SEO-Check",
       "Indexierbarkeit, Canonicals, Sitemap, robots.txt, Redirects, Breadcrumbs",
+      "technische Zugänglichkeit für KI-Crawler",
       "PageSpeed / Core Web Vitals analysieren und Optimierungsmaßnahmen definieren",
       "strukturierte Daten / Schema.org / JSON-LD (Organization, Person, ggf. Product, BreadcrumbList)",
       "strukturierte Daten validieren",
@@ -71,6 +74,14 @@ const FAQ = [
   {
     q: "Kann ich meine Texte selbst schreiben?",
     a: "Ja. Ich kann Texte selbst schreiben, gemeinsam mit dir entwickeln oder deine vorhandenen Texte redigieren und für SEO und KI-Sichtbarkeit optimieren.",
+  },
+  {
+    q: "Was bedeutet E-E-A-T?",
+    a: "E-E-A-T steht für Experience, Expertise, Authoritativeness und Trustworthiness – also Erfahrung, Fachwissen, Autorität und Vertrauenswürdigkeit. Diese Signale helfen dabei, Kompetenz und Glaubwürdigkeit nachvollziehbar zu machen. Dazu gehören zum Beispiel echte Erfahrung, klare Autorenschaft, verlässliche Quellen und konsistente Unternehmensinformationen.",
+  },
+  {
+    q: "Was bedeutet Human in the Loop?",
+    a: "Human in the Loop bedeutet: KI unterstützt, aber der Mensch bleibt Teil des Prozesses. Analysen, Empfehlungen und KI-unterstützte Inhalte werden fachlich geprüft, eingeordnet und bei Bedarf korrigiert. Entscheidungen werden nicht ungeprüft einer KI überlassen.",
   },
 ];
 
@@ -134,11 +145,23 @@ export function OfferOptimierung() {
             <li>Können relevante Antworten leicht extrahiert werden?</li>
             <li>Gibt es klare Quellen und Nachweise?</li>
             <li>Ist die Website strukturiert und maschinenlesbar?</li>
+            <li>Sind deine Unternehmensinformationen auf Website und externen Profilen konsistent?</li>
             <li>Wo fehlen Inhalte gegenüber sichtbaren Wettbewerbern?</li>
           </ul>
           <p className="check-text" style={{ marginTop: 20 }}>
             Strukturierte Daten und klare Inhalte helfen Suchmaschinen und anderen
             maschinellen Systemen, Informationen eindeutiger zu verstehen.
+          </p>
+          <p className="check-text" style={{ marginTop: 12 }}>
+            Dazu gehören auch Vertrauenssignale: Erfahrung, Fachwissen, Autorität und
+            Vertrauenswürdigkeit (E-E-A-T) beschreiben, wie nachvollziehbar Kompetenz
+            und Glaubwürdigkeit sichtbar werden – etwa durch klare Autorenschaft,
+            verlässliche Quellen und konsistente Unternehmensinformationen.
+          </p>
+          <p className="check-text" style={{ marginTop: 12 }}>
+            KI unterstützt meine Arbeit dabei – sie ersetzt nicht die fachliche Prüfung.
+            Jeder relevante Inhalt und jede Empfehlung wird von mir persönlich
+            kontrolliert und eingeordnet (Human in the Loop).
           </p>
         </div>
       </Reveal>

@@ -22,6 +22,10 @@ const FAQ = [
     q: "Was passiert nach der Analyse?",
     a: "Du bekommst eine priorisierte Liste konkreter Maßnahmen und ein Gespräch dazu. Ob und wie die Umsetzung danach erfolgt, entscheidest du – selbst, mit deinem Team oder gemeinsam mit mir.",
   },
+  {
+    q: "Was bedeutet Sentiment bei KI-Sichtbarkeit?",
+    a: "Sentiment beschreibt, wie eine Marke, ein Unternehmen oder ein Produkt in KI-Antworten dargestellt wird – zum Beispiel positiv, neutral oder kritisch. Deshalb reicht es nicht nur zu prüfen, ob dein Unternehmen genannt wird. Wichtig ist auch, in welchem Zusammenhang und mit welcher Bewertung es erscheint.",
+  },
 ];
 
 export function OfferAnalyse() {
@@ -90,34 +94,41 @@ export function OfferAnalyse() {
               <ul>
                 <li>relevante Such- und Fragekontexte</li>
                 <li>Prompt-Sichtbarkeit</li>
-                <li>Sichtbarkeit nach Themenfeldern</li>
+                <li>Entity- und Themenumfeld</li>
                 <li>Share of Voice</li>
                 <li>Präsenz in relevanten KI-Antworten</li>
               </ul>
             </div>
             <div className="check-item">
               <span className="check-num">03</span>
-              <h3>Brand Mentions, Citations &amp; Recommendations</h3>
+              <h3>Mentions, Citations, Recommendations &amp; Sentiment</h3>
               <p className="term" style={{ marginTop: 6 }}>
                 Das ist ein wichtiger Teil meiner GEO-Analyse (Generative Engine
                 Optimization – Sichtbarkeit in KI-generierten Antworten).
               </p>
               <p className="term">
-                <strong>Brand Mentions:</strong> Wo und in welchem Kontext wird deine
-                Marke in KI-Antworten erwähnt?
+                <strong>Mentions – „Wirst du genannt?“:</strong> Wo und in welchem
+                Kontext wird deine Marke in KI-Antworten erwähnt?
               </p>
               <p className="term">
-                <strong>Citations:</strong> Welche Quellen werden bei relevanten Themen
-                zitiert – und welche davon stärken deine Wettbewerber?
+                <strong>Citations – „Wirst du als Quelle verwendet?“:</strong> Welche
+                Domains bzw. Quellen werden von KI-Systemen bei relevanten Themen
+                herangezogen?
               </p>
               <p className="term">
-                <strong>Recommendations:</strong> Bei welchen kauf- oder
-                entscheidungsnahen Fragen werden Unternehmen konkret empfohlen?
+                <strong>Recommendations – „Wirst du empfohlen?“:</strong> Bei welchen
+                kauf- oder entscheidungsnahen Fragen wird dein Unternehmen konkret
+                empfohlen?
+              </p>
+              <p className="term">
+                <strong>Sentiment – „Wie wird über dich gesprochen?“:</strong> Wird dein
+                Unternehmen in KI-Antworten eher positiv, neutral oder kritisch
+                dargestellt?
               </p>
               <ul style={{ marginTop: 10 }}>
                 <li>Vergleich mit relevanten Wettbewerbern</li>
-                <li>Unterschiede bei Mentions, Citations und Recommendations</li>
-                <li>Citation-/Authority-Gaps identifizieren</li>
+                <li>Unterschiede bei Mentions, Citations, Recommendations und Sentiment</li>
+                <li>Quellen-/Citation-Gaps identifizieren</li>
               </ul>
             </div>
             <div className="check-item">
@@ -144,7 +155,7 @@ export function OfferAnalyse() {
           <ul className="detail-list">
             <li>kompakte Analyse deiner SEO- und KI-Sichtbarkeit</li>
             <li>Wettbewerbsvergleich</li>
-            <li>Einordnung von Brand Mentions, Citations und Recommendations</li>
+            <li>Einordnung von Mentions, Citations, Recommendations und Sentiment</li>
             <li>erkennbare Content-, Struktur- und Technik-Gaps</li>
             <li>priorisierte Handlungsfelder</li>
             <li>konkrete Empfehlung für die nächsten Schritte</li>
@@ -202,6 +213,11 @@ export function OfferAnalyse() {
           </ul>
           <p className="check-text" style={{ marginTop: 16 }}>
             Die Analyse beantwortet: Was solltest du tun – und in welcher Reihenfolge?
+          </p>
+          <p className="check-text" style={{ marginTop: 12 }}>
+            KI unterstützt mich dabei bei Recherche und Strukturierung – die fachliche
+            Bewertung und Priorisierung erfolgt durch mich persönlich (Human in the
+            Loop).
           </p>
         </div>
       </Reveal>
