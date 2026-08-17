@@ -152,6 +152,9 @@ export function KiSichtbarkeitPage() {
           <Link href="/chatgpt-sichtbarkeit" className="btn-link detail-secondary-link">
             Vertiefend: Sichtbarkeit bei ChatGPT →
           </Link>
+          <Link href="/google-ai-overviews" className="btn-link detail-secondary-link">
+            Vertiefend: Google AI Overviews &amp; AI Mode →
+          </Link>
         </div>
       </Reveal>
 
@@ -230,6 +233,9 @@ export function KiSichtbarkeitPage() {
               </div>
             ))}
           </div>
+          <Link href="/strukturierte-daten" className="btn-link detail-secondary-link">
+            Mehr über strukturierte Daten →
+          </Link>
         </div>
       </Reveal>
 

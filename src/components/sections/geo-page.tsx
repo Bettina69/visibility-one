@@ -287,6 +287,12 @@ export function GeoPage() {
               </div>
             ))}
           </div>
+          <Link href="/google-ai-overviews" className="btn-link detail-secondary-link">
+            Vertiefend: Google AI Overviews &amp; AI Mode →
+          </Link>
+          <Link href="/strukturierte-daten" className="btn-link detail-secondary-link">
+            Mehr über strukturierte Daten →
+          </Link>
         </div>
       </Reveal>
 

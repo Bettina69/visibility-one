@@ -540,6 +540,9 @@ export function ChatgptSichtbarkeitPage() {
           <Link href="/geo" className="btn-link detail-secondary-link">
             Was ist GEO? →
           </Link>
+          <Link href="/strukturierte-daten" className="btn-link detail-secondary-link">
+            Mehr über strukturierte Daten →
+          </Link>
         </div>
       </Reveal>
 
@@ -678,6 +681,9 @@ export function ChatgptSichtbarkeitPage() {
           </p>
           <Link href="/ki-sichtbarkeit" className="btn-link detail-secondary-link">
             Was bedeutet KI-Sichtbarkeit für Unternehmen? →
+          </Link>
+          <Link href="/google-ai-overviews" className="btn-link detail-secondary-link">
+            Google AI Overviews &amp; AI Mode →
           </Link>
         </div>
       </Reveal>
