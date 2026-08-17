@@ -11,7 +11,7 @@ const ITEMS = [
 export function Marquee() {
   const all = [...ITEMS, ...ITEMS];
   return (
-    <div className="marquee">
+    <div className="marquee" aria-hidden="true">
       <div className="marquee-track">
         {all.map((t, i) => (
           <span key={i}>

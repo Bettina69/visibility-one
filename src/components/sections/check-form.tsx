@@ -82,8 +82,16 @@ export function CheckForm() {
                       value={form.name}
                       onChange={(e) => update("name", e.target.value)}
                       placeholder="Vorname Nachname"
+                      required
+                      autoComplete="name"
+                      aria-invalid={errors.name ? "true" : undefined}
+                      aria-describedby={errors.name ? "name-error" : undefined}
                     />
-                    {errors.name && <div className="field-error">{errors.name}</div>}
+                    {errors.name && (
+                      <div className="field-error" id="name-error">
+                        {errors.name}
+                      </div>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="email">E-Mail *</label>
@@ -93,8 +101,16 @@ export function CheckForm() {
                       value={form.email}
                       onChange={(e) => update("email", e.target.value)}
                       placeholder="dein@shop.de"
+                      required
+                      autoComplete="email"
+                      aria-invalid={errors.email ? "true" : undefined}
+                      aria-describedby={errors.email ? "email-error" : undefined}
                     />
-                    {errors.email && <div className="field-error">{errors.email}</div>}
+                    {errors.email && (
+                      <div className="field-error" id="email-error">
+                        {errors.email}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -107,6 +123,7 @@ export function CheckForm() {
                       value={form.company}
                       onChange={(e) => update("company", e.target.value)}
                       placeholder="Mein Shop GmbH"
+                      autoComplete="organization"
                     />
                   </div>
                   <div>
@@ -116,8 +133,15 @@ export function CheckForm() {
                       value={form.domain}
                       onChange={(e) => update("domain", e.target.value)}
                       placeholder="https://deine-website.de"
+                      required
+                      aria-invalid={errors.domain ? "true" : undefined}
+                      aria-describedby={errors.domain ? "domain-error" : undefined}
                     />
-                    {errors.domain && <div className="field-error">{errors.domain}</div>}
+                    {errors.domain && (
+                      <div className="field-error" id="domain-error">
+                        {errors.domain}
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>

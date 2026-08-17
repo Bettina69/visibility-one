@@ -42,7 +42,7 @@ export function SocialProof() {
           {PROJECTS.map((p) => (
             <div key={p.title} className="proof-card">
               <span className="proof-label">{p.label}</span>
-              <h4>{p.title}</h4>
+              <h3>{p.title}</h3>
               <p>{p.desc}</p>
               <div className="proof-stats">
                 {p.stats.map((s) => (

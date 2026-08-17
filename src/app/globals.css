@@ -7,10 +7,12 @@
   --paper: #fbf7f2;
   --ink: #26211c;
   --ink-soft: #45403a;
-  --muted: #8b7156;
+  --muted: #816950;
   --line: #ddd0c0;
+  --border-input: #8b8379;
   --accent: #9b4f04;
   --accent-soft: #c0834a;
+  --accent-soft-text: #926438;
   --good: #2f6b4f;
   --bad: #a23b2c;
 
@@ -425,6 +427,9 @@ p {
     display: flex;
     flex-direction: column;
   }
+  .hero-inner {
+    min-width: 0;
+  }
   .hero-portrait-wrap {
     position: static;
     transform: none;
@@ -437,6 +442,10 @@ p {
   }
   .hero-portrait-caption {
     display: none;
+  }
+  .hero-actions .btn {
+    white-space: normal;
+    min-width: 0;
   }
 }
 .hero-title {
@@ -570,9 +579,18 @@ p {
 .marquee-track .sep {
   color: var(--accent-soft);
 }
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
 @keyframes scroll {
   to {
     transform: translateX(-50%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
   }
 }
 
@@ -808,7 +826,7 @@ p {
   text-transform: uppercase;
   color: var(--accent);
 }
-.proof-card h4 {
+.proof-card h3 {
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 15px;
@@ -1041,6 +1059,15 @@ p {
     border-top: 1px solid var(--line);
   }
 }
+@media (max-width: 640px) {
+  .cta-option {
+    min-width: 0;
+  }
+  .cta-option .btn {
+    white-space: normal;
+    min-width: 0;
+  }
+}
 
 /* ========== Method overview (compact, homepage) ========== */
 .process-bar {
@@ -1110,6 +1137,7 @@ p {
 /* ========== Stats ========== */
 .facts-eyebrow {
   margin-top: 32px;
+  line-height: 1.55;
 }
 .facts-bar {
   display: grid;
@@ -1158,8 +1186,8 @@ p {
     text-decoration-color 0.15s;
 }
 .fact-source:hover {
-  color: var(--accent-soft);
-  text-decoration-color: var(--accent-soft);
+  color: var(--accent-soft-text);
+  text-decoration-color: var(--accent-soft-text);
 }
 .facts-bridge {
   margin-top: 8px;
@@ -1755,14 +1783,15 @@ p {
 .field select {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--border-input);
   border-radius: var(--r-sm);
   background: var(--cream);
   font: inherit;
   color: var(--ink);
   transition:
     border-color 0.15s,
-    background 0.15s;
+    background 0.15s,
+    box-shadow 0.15s;
 }
 .field input:focus,
 .field textarea:focus,
@@ -1770,6 +1799,7 @@ p {
   outline: none;
   border-color: var(--ink);
   background: var(--paper);
+  box-shadow: 0 0 0 3px rgba(155, 79, 4, 0.18);
 }
 .field textarea {
   min-height: 110px;
@@ -2040,7 +2070,7 @@ p {
   display: flex;
   justify-content: space-between;
   font-size: var(--fs-xs);
-  color: rgba(251, 247, 242, 0.5);
+  color: rgba(251, 247, 242, 0.55);
   gap: 18px;
   flex-wrap: wrap;
 }

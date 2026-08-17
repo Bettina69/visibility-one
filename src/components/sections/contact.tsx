@@ -107,8 +107,16 @@ export function Contact() {
                         value={form.name}
                         onChange={(e) => update("name", e.target.value)}
                         placeholder="Vorname Nachname"
+                        required
+                        autoComplete="name"
+                        aria-invalid={errors.name ? "true" : undefined}
+                        aria-describedby={errors.name ? "name-error" : undefined}
                       />
-                      {errors.name && <div className="field-error">{errors.name}</div>}
+                      {errors.name && (
+                        <div className="field-error" id="name-error">
+                          {errors.name}
+                        </div>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="email">E-Mail *</label>
@@ -118,8 +126,16 @@ export function Contact() {
                         value={form.email}
                         onChange={(e) => update("email", e.target.value)}
                         placeholder="dein@shop.de"
+                        required
+                        autoComplete="email"
+                        aria-invalid={errors.email ? "true" : undefined}
+                        aria-describedby={errors.email ? "email-error" : undefined}
                       />
-                      {errors.email && <div className="field-error">{errors.email}</div>}
+                      {errors.email && (
+                        <div className="field-error" id="email-error">
+                          {errors.email}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -132,6 +148,7 @@ export function Contact() {
                         value={form.company}
                         onChange={(e) => update("company", e.target.value)}
                         placeholder="Mein Shop GmbH"
+                        autoComplete="organization"
                       />
                     </div>
                     <div>
@@ -165,8 +182,15 @@ export function Contact() {
                     value={form.message}
                     onChange={(e) => update("message", e.target.value)}
                     placeholder="Was passiert gerade mit deinem Traffic? Was hast du schon versucht?"
+                    required
+                    aria-invalid={errors.message ? "true" : undefined}
+                    aria-describedby={errors.message ? "message-error" : undefined}
                   ></textarea>
-                  {errors.message && <div className="field-error">{errors.message}</div>}
+                  {errors.message && (
+                    <div className="field-error" id="message-error">
+                      {errors.message}
+                    </div>
+                  )}
                 </div>
                 <button
                   type="submit"

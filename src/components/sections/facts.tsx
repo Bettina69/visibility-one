@@ -32,7 +32,7 @@ const FACTS = [
 export function Facts() {
   return (
     <>
-      <span className="eyebrow facts-eyebrow">Warum das gerade passiert</span>
+      <h3 className="eyebrow facts-eyebrow">Warum das gerade passiert</h3>
       <div className="facts-bar">
         {FACTS.map((f, i) => (
           <div key={i} className="fact">

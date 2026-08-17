@@ -82,7 +82,7 @@ export function OffersOverview() {
             <div className="offer-intro-portrait-photo">
               <Image
                 src="/bettina-portrait.jpg"
-                alt="Bettina Teckentrup"
+                alt=""
                 width={520}
                 height={520}
                 sizes="(min-width: 900px) 260px, 180px"
