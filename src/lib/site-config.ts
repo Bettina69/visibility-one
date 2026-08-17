@@ -17,6 +17,7 @@ export const mainNavigation: NavItem[] = [
   { label: "Angebote", href: "/angebote" },
   { label: "Über mich", href: "/ueber-mich" },
   { label: "Qualifikationen", href: "/qualifikationen" },
+  { label: "Kostenlose Tools", href: "/tools" },
 ];
 
 export const footerNavigation: NavItem[] = [
