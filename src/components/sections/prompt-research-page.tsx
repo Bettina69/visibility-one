@@ -337,6 +337,7 @@ export function PromptResearchPage() {
               Bei ChatGPT gefunden werden →
             </Link>
           </div>
+          <AuthorModule />
         </div>
       </Reveal>
 
@@ -376,7 +377,6 @@ export function PromptResearchPage() {
               </details>
             ))}
           </div>
-          <AuthorModule />
           <Link href="/wissen" className="btn-link detail-secondary-link">
             Alle Themen im Wissensbereich →
           </Link>

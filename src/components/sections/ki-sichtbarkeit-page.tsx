@@ -403,6 +403,7 @@ export function KiSichtbarkeitPage() {
               </details>
             ))}
           </div>
+          <AuthorModule />
         </div>
       </Reveal>
 
@@ -425,7 +426,6 @@ export function KiSichtbarkeitPage() {
           <p className="check-trust">
             unverbindlich · persönlich geprüft · 2–3 konkrete Hinweise
           </p>
-          <AuthorModule />
           <Link href="/wissen" className="btn-link detail-secondary-link">
             Alle Themen im Wissensbereich →
           </Link>

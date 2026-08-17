@@ -324,6 +324,7 @@ export function GoogleAiOverviewsPage() {
               Was ist Prompt Research? →
             </Link>
           </div>
+          <AuthorModule />
         </div>
       </Reveal>
 
@@ -363,7 +364,6 @@ export function GoogleAiOverviewsPage() {
               </details>
             ))}
           </div>
-          <AuthorModule />
           <Link href="/wissen" className="btn-link detail-secondary-link">
             Alle Themen im Wissensbereich →
           </Link>

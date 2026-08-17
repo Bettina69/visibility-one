@@ -338,6 +338,7 @@ export function StrukturierteDatenPage() {
               Google AI Overviews &amp; AI Mode →
             </Link>
           </div>
+          <AuthorModule />
         </div>
       </Reveal>
 
@@ -378,7 +379,6 @@ export function StrukturierteDatenPage() {
               </details>
             ))}
           </div>
-          <AuthorModule />
           <Link href="/wissen" className="btn-link detail-secondary-link">
             Alle Themen im Wissensbereich →
           </Link>

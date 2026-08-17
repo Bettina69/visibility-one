@@ -647,6 +647,7 @@ export function GeoPage() {
               Wie funktioniert Sichtbarkeit bei ChatGPT? →
             </Link>
           </div>
+          <AuthorModule />
         </div>
       </Reveal>
 
@@ -723,7 +724,6 @@ export function GeoPage() {
           <Link href="/chatgpt-sichtbarkeit" className="btn-link detail-secondary-link">
             Bei ChatGPT gefunden werden →
           </Link>
-          <AuthorModule />
           <Link href="/wissen" className="btn-link detail-secondary-link">
             Alle Themen im Wissensbereich →
           </Link>
