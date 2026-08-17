@@ -49,7 +49,7 @@ export function WorkflowPhases() {
             <div key={i} className="phase-item">
               <span className="phase-num">{String(i + 1).padStart(2, "0")}</span>
               <div>
-                <h4>{p.title}</h4>
+                <h3>{p.title}</h3>
                 <p>{p.desc}</p>
                 <span className="tools">{p.tools}</span>
               </div>
