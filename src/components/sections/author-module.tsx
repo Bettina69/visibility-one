@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/site-config";
 
 export function AuthorModule({ checkedDate }: { checkedDate?: string }) {
   return (
     <div className="author-module">
       <div className="author-module-avatar">
         <Image
-          src="/bettina-portrait-about.jpg"
+          src={`${basePath}/bettina-portrait-about.jpg`}
           alt=""
           width={112}
           height={112}

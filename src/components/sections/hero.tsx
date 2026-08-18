@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/site-config";
 import { NetworkBg } from "./network-bg";
 
 // BAFA-Baustein bleibt vollstaendig im Code, wird aber aktuell nicht
@@ -14,7 +15,7 @@ export function Hero() {
       <div className="hero-portrait-wrap">
         <div className="hero-portrait">
           <Image
-            src="/bettina-portrait-hero.jpg"
+            src={`${basePath}/bettina-portrait-hero.jpg`}
             alt=""
             width={520}
             height={520}

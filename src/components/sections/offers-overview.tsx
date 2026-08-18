@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/site-config";
 import { Reveal } from "./reveal";
 
 const PATHS = [
@@ -81,7 +82,7 @@ export function OffersOverview() {
           <div className="offer-intro-portrait">
             <div className="offer-intro-portrait-photo">
               <Image
-                src="/bettina-portrait.jpg"
+                src={`${basePath}/bettina-portrait.jpg`}
                 alt=""
                 width={520}
                 height={520}

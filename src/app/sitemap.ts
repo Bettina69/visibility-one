@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 
+export const dynamic = "force-static";
+
 const routes = [
   "",
   "/sichtbarkeitscheck",

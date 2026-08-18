@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { basePath } from "@/lib/site-config";
 import { Reveal } from "./reveal";
 
 const STATS = [
@@ -138,7 +139,7 @@ export function AboutPage() {
             </div>
             <div className="about-hero-photo">
               <Image
-                src="/bettina-portrait-about.jpg"
+                src={`${basePath}/bettina-portrait-about.jpg`}
                 alt="Bettina Teckentrup"
                 width={900}
                 height={1350}

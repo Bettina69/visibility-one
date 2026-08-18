@@ -7,6 +7,12 @@ export const siteConfig = {
   email: "info@visibility-one.de",
 } as const;
 
+// Temporärer Deployment-Unterpfad für die GitHub-Pages-Vorschau
+// (https://bettina69.github.io/visibility-one/). Muss mit `basePath` in
+// next.config.ts übereinstimmen. next/image prefixt lokale Bild-Pfade bei
+// `images.unoptimized: true` nicht automatisch, daher hier manuell nötig.
+export const basePath = "/visibility-one";
+
 export type NavItem = {
   label: string;
   href: string;
