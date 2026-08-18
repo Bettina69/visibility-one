@@ -3,6 +3,7 @@ import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 import { NetworkBg } from "./network-bg";
 import { RelatedReading } from "./related-reading";
+import { RelationshipFlow } from "./relationship-flow";
 
 const SEO_QUESTIONS = [
   "Für welche Keywords rankt meine Website?",
@@ -582,6 +583,18 @@ export function GeoPage() {
             Eine sinnvolle Analyse kann beispielsweise mit der bestehenden
             SEO-Situation beginnen. Danach werden relevante
             KI-Sichtbarkeitssignale betrachtet.
+          </p>
+          <RelationshipFlow
+            stages={[
+              { title: "SEO-Ausgangslage", text: "Rankings, Technik, Inhalte" },
+              { title: "Prompt- & Themenumfeld", text: "Welche Fragen sind relevant?" },
+              { title: "KI-Signale", text: "Mentions, Citations, Sentiment" },
+              { title: "Ursachen", text: "Warum diese Unterschiede?" },
+              { title: "Priorisierung", text: "Was lohnt sich wirklich?" },
+            ]}
+          />
+          <p className="check-note" style={{ marginTop: 16, maxWidth: "62ch" }}>
+            Die folgende Übersicht zeigt diese Schritte im Detail.
           </p>
           <div className="analysis-grid" style={{ marginTop: 24 }}>
             {PRACTICE_STEPS.map((s) => (

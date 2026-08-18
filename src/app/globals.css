@@ -2454,9 +2454,26 @@ p {
   flex-wrap: wrap;
 }
 .detail-secondary-link {
+  /* display:table (not block): stays on its own line like a block element,
+     but shrinks to its content width so the inherited .btn-link
+     border-bottom underlines only the link text - not the full content
+     column. Previously this was full-width (916px) regardless of text
+     length, which read as a long divider line, especially where several
+     of these links stack (Weiterlesen/Quellen blocks). */
   margin-top: 14px;
-  display: block;
+  display: table;
   font-size: 13px;
+}
+/* External primary-source links: same compact underline, but quieter
+   than an internal recommendation - reads as a reference, not a "read
+   this next" pitch. */
+.source-link {
+  color: var(--muted);
+  border-bottom-color: var(--line);
+}
+.source-link:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 .detail-hero-price {
   margin-top: 18px;

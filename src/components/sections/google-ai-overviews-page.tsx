@@ -313,7 +313,7 @@ export function GoogleAiOverviewsPage() {
             href="https://developers.google.com/search/docs/appearance/ai-features"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Google Search Central: AI features and your website →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -322,7 +322,7 @@ export function GoogleAiOverviewsPage() {
             href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Google Search Central: Optimizing your website for generative
             AI features → <span className="sr-only">(öffnet in neuem Tab)</span>

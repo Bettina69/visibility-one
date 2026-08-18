@@ -367,7 +367,7 @@ export function KiBilderKennzeichnenPage() {
             href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             EUR-Lex: Verordnung (EU) 2024/1689, Artikel 50 →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -376,7 +376,7 @@ export function KiBilderKennzeichnenPage() {
             href="https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Europäische Kommission: Transparency obligations under Article
             50 AI Act → <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -385,7 +385,7 @@ export function KiBilderKennzeichnenPage() {
             href="https://digital-strategy.ec.europa.eu/en/library/guidelines-transparency-obligations-providers-and-deployers-ai-systems"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Europäische Kommission: Guidelines on transparency obligations →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>

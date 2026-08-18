@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 import { RelatedReading } from "./related-reading";
+import { RelationshipFlow } from "./relationship-flow";
 
 const TERMS = [
   {
@@ -312,6 +313,24 @@ export function ChatgptSichtbarkeitPage() {
             sie, ob ChatGPT deine Inhalte im besten Fall überhaupt in
             Betracht ziehen kann.
           </p>
+          <RelationshipFlow
+            stages={[
+              { title: "Website", text: "Technisch erreichbar und crawlbar" },
+              {
+                title: "Crawlability / OAI-SearchBot",
+                text: "Bot kann Inhalte abrufen und einordnen",
+              },
+              {
+                title: "Search / Retrieval",
+                text: "Inhalt wird für eine konkrete Frage herangezogen",
+              },
+              {
+                title: "Mögliche Citation / Recommendation",
+                text: "Nennung, Quelle oder Empfehlung in der Antwort",
+                uncertain: true,
+              },
+            ]}
+          />
           <div className="analysis-grid" style={{ marginTop: 24 }}>
             {TECH_TERMS.map((t) => (
               <div key={t.label} className="check-item">
@@ -679,7 +698,7 @@ export function ChatgptSichtbarkeitPage() {
             href="https://help.openai.com/en/articles/9237897-chatgpt-search"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             OpenAI Help Center: ChatGPT Search →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -688,7 +707,7 @@ export function ChatgptSichtbarkeitPage() {
             href="https://developers.openai.com/api/docs/bots"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             OpenAI Developer Docs: OpenAI crawlers (OAI-SearchBot, GPTBot,
             ChatGPT-User) →{" "}

@@ -350,7 +350,7 @@ export function StrukturierteDatenPage() {
             href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Google Search Central: Introduction to structured data markup →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>
@@ -359,7 +359,7 @@ export function StrukturierteDatenPage() {
             href="https://schema.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-link detail-secondary-link"
+            className="btn-link detail-secondary-link source-link"
           >
             Schema.org → <span className="sr-only">(öffnet in neuem Tab)</span>
           </a>
