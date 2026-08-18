@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { NetworkBg } from "./network-bg";
+import { SeoToAiVisibilityFlow } from "./seo-ai-visibility-flow";
+import { RelatedReading } from "./related-reading";
 
 const TERMS = [
   {
@@ -118,7 +121,8 @@ export function KiSichtbarkeitPage() {
         </div>
       </section>
 
-      <Reveal className="section">
+      <Reveal className="section network-accent">
+        <NetworkBg side="right" />
         <div className="wrap-narrow">
           <div className="check-head">
             <span className="eyebrow">Grundlagen</span>
@@ -177,6 +181,11 @@ export function KiSichtbarkeitPage() {
           </p>
           <p className="check-text" style={{ marginTop: 12 }}>
             Die beiden Disziplinen stehen nicht gegeneinander.
+          </p>
+          <SeoToAiVisibilityFlow />
+          <p className="check-note" style={{ marginTop: 16, maxWidth: "62ch" }}>
+            Jede Stufe schafft eine Voraussetzung für die nächste. Keine
+            Stufe garantiert die nächste.
           </p>
 
           <h3 style={{ marginTop: 32 }}>SEO schafft die Grundlage</h3>
@@ -403,6 +412,26 @@ export function KiSichtbarkeitPage() {
               </details>
             ))}
           </div>
+          <RelatedReading
+            items={[
+              {
+                href: "/geo",
+                title: "Was ist GEO?",
+                context: "Die Methodik hinter KI-Sichtbarkeit im Detail.",
+              },
+              {
+                href: "/chatgpt-sichtbarkeit",
+                title: "Bei ChatGPT gefunden werden",
+                context: "Ein konkreter Kanal, tiefer erklärt.",
+              },
+              {
+                href: "/prompt-research",
+                title: "Was ist Prompt Research?",
+                context:
+                  "Wie sich relevante Fragen für die Analyse identifizieren lassen.",
+              },
+            ]}
+          />
           <AuthorModule />
         </div>
       </Reveal>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { RelatedReading } from "./related-reading";
 
 const WHAT_IS_LIST = [
   "standardisierte Kennzeichnung von Inhalten",
@@ -353,17 +354,26 @@ export function StrukturierteDatenPage() {
             <span className="eyebrow">SEO + GEO</span>
             <h2>Strukturierte Daten sind ein Baustein von SEO und GEO.</h2>
           </div>
-          <div className="detail-cta-row" style={{ gap: 12 }}>
-            <Link href="/geo" className="btn-link">
-              Was ist GEO? →
-            </Link>
-            <Link href="/ki-sichtbarkeit" className="btn-link">
-              Was bedeutet KI-Sichtbarkeit? →
-            </Link>
-            <Link href="/google-ai-overviews" className="btn-link">
-              Google AI Overviews &amp; AI Mode →
-            </Link>
-          </div>
+          <RelatedReading
+            items={[
+              {
+                href: "/google-ai-overviews",
+                title: "Google AI Overviews & AI Mode",
+                context:
+                  "Der Kanal, bei dem strukturierte Daten am direktesten relevant werden.",
+              },
+              {
+                href: "/geo",
+                title: "Was ist GEO?",
+                context: "Die größere Methodik, in die Schema Markup nur ein Baustein ist.",
+              },
+              {
+                href: "/ki-sichtbarkeit",
+                title: "Was bedeutet KI-Sichtbarkeit für Unternehmen?",
+                context: "Der Überblick über das gesamte Thema.",
+              },
+            ]}
+          />
           <AuthorModule />
         </div>
       </Reveal>

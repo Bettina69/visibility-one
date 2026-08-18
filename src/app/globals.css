@@ -403,6 +403,59 @@ p {
     width: 75%;
   }
 }
+
+/* Reusable fade-in mount point for NetworkBg outside the hero/credibility
+   sections - same gradient-mask technique, parameterised by side. Use
+   sparingly: only where the network motif genuinely supports the content
+   (relationships, sources, signals). */
+.network-accent {
+  position: relative;
+  overflow: hidden;
+}
+.network-accent > .wrap,
+.network-accent > .wrap-narrow {
+  position: relative;
+  z-index: 2;
+}
+.network-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--cream) 0%,
+    rgba(246, 240, 234, 0.6) 30%,
+    rgba(246, 240, 234, 0) 60%
+  );
+}
+.network-accent--left::before {
+  right: auto;
+  left: 0;
+  background: linear-gradient(
+    to left,
+    var(--cream) 0%,
+    rgba(246, 240, 234, 0.6) 30%,
+    rgba(246, 240, 234, 0) 60%
+  );
+}
+.network-accent .network-bg {
+  opacity: 0.5;
+}
+@media (max-width: 900px) {
+  .network-accent::before {
+    width: 70%;
+  }
+}
+@media (max-width: 640px) {
+  .network-accent .network-bg {
+    display: none;
+  }
+}
 .hero-portrait-wrap {
   position: absolute;
   top: 58%;
@@ -2336,10 +2389,15 @@ p {
 .analysis-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
+  gap: 28px 40px;
   margin-top: 24px;
+}
+/* Editorial info-grid instead of a table/spreadsheet look: a single hairline
+   rule above each item, no cell fill, no grid-line background bleed. */
+.analysis-grid > .check-item {
+  background: none;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--line);
 }
 /* Odd item count: let the last card span both columns instead of leaving
    an empty trailing cell (applies to every .analysis-grid, not just GEO). */
@@ -2381,6 +2439,7 @@ p {
 @media (max-width: 640px) {
   .analysis-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
 .detail-cta-row {
@@ -2567,4 +2626,185 @@ p {
 .reveal.in {
   opacity: 1;
   transform: none;
+}
+
+/* ========== Related reading (knowledge pages) ========== */
+.related-reading {
+  margin-top: 48px;
+}
+.related-reading-list {
+  list-style: none;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.related-reading-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.related-reading-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.related-reading-title {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+.related-reading-item:hover .related-reading-title,
+.related-reading-item:focus-visible .related-reading-title {
+  color: var(--accent);
+}
+.related-reading-context {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 52ch;
+}
+.related-reading-arrow {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  color: var(--accent);
+  transition: transform 0.15s ease;
+}
+.related-reading-item:hover .related-reading-arrow,
+.related-reading-item:focus-visible .related-reading-arrow {
+  transform: translateX(3px);
+}
+@media (max-width: 640px) {
+  .related-reading-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+
+/* ========== Keyword vs. Prompt info graphic (Prompt Research) ========== */
+.kp-visual {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr auto 1.6fr;
+  align-items: center;
+  gap: 20px;
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+}
+.kp-visual-col {
+  min-width: 0;
+}
+.kp-visual-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.kp-visual-keyword {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--cream-deep);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+.kp-visual-arrow {
+  color: var(--accent);
+  font-size: 20px;
+}
+.kp-visual-prompt {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.kp-visual-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.kp-visual-tags li {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: var(--accent-soft-text);
+  background: rgba(155, 79, 4, 0.08);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+@media (max-width: 640px) {
+  .kp-visual {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 14px;
+  }
+  .kp-visual-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* ========== SEO -> possible AI visibility relationship graphic ========== */
+.seo-ai-flow {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 16px;
+}
+.seo-ai-flow-stage {
+  flex: 1 1 200px;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.seo-ai-flow-stage--uncertain {
+  border-style: dashed;
+}
+.seo-ai-flow-title {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  color: var(--ink);
+}
+.seo-ai-flow-text {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.seo-ai-flow-connector {
+  align-self: center;
+  color: var(--accent);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.seo-ai-flow-connector--uncertain {
+  color: var(--muted);
+}
+@media (max-width: 768px) {
+  .seo-ai-flow {
+    flex-direction: column;
+  }
+  .seo-ai-flow-connector {
+    align-self: flex-start;
+    margin-left: 20px;
+    transform: rotate(90deg);
+  }
 }

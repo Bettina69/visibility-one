@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { RelatedReading } from "./related-reading";
 
 const AI_OVERVIEWS_LIST = [
   "generierte Antwort innerhalb der Google-Suche",
@@ -340,17 +341,27 @@ export function GoogleAiOverviewsPage() {
               <li key={s}>{s}</li>
             ))}
           </ul>
-          <div className="detail-cta-row" style={{ gap: 12 }}>
-            <Link href="/ki-sichtbarkeit" className="btn-link">
-              Was bedeutet KI-Sichtbarkeit? →
-            </Link>
-            <Link href="/geo" className="btn-link">
-              Was ist GEO? →
-            </Link>
-            <Link href="/prompt-research" className="btn-link">
-              Was ist Prompt Research? →
-            </Link>
-          </div>
+          <RelatedReading
+            items={[
+              {
+                href: "/ki-sichtbarkeit",
+                title: "Was bedeutet KI-Sichtbarkeit für Unternehmen?",
+                context: "Der Überblick über das gesamte Thema.",
+              },
+              {
+                href: "/geo",
+                title: "Was ist GEO?",
+                context:
+                  "Die Methodik, in die Google AI als ein Kanal eingeordnet ist.",
+              },
+              {
+                href: "/strukturierte-daten",
+                title: "Strukturierte Daten & Schema Markup",
+                context:
+                  "Die technische Grundlage, die auch für Google AI relevant sein kann.",
+              },
+            ]}
+          />
           <AuthorModule />
         </div>
       </Reveal>

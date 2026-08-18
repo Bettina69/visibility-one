@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { NetworkBg } from "./network-bg";
+import { RelatedReading } from "./related-reading";
 
 const SEO_QUESTIONS = [
   "Für welche Keywords rankt meine Website?",
@@ -159,7 +161,7 @@ export function GeoPage() {
             ein Unternehmen und sein Angebot richtig einordnen können.
           </p>
           <p className="hero-explainer" style={{ marginBottom: 16 }}>
-            Genau hier setzt GEO an.
+            Darum geht es bei GEO.
           </p>
           <p className="hero-keymessage">
             GEO steht für Generative Engine Optimization.
@@ -374,7 +376,8 @@ export function GeoPage() {
         </div>
       </Reveal>
 
-      <Reveal className="section">
+      <Reveal className="section network-accent">
+        <NetworkBg side="right" />
         <div className="wrap-narrow">
           <div className="check-head">
             <span className="eyebrow">Externe Signale</span>
@@ -706,27 +709,28 @@ export function GeoPage() {
 
       <Reveal className="section">
         <div className="wrap-narrow">
-          <div className="check-head">
-            <span className="eyebrow">Weiterlesen</span>
-            <h2>GEO ist ein Teil von KI-Sichtbarkeit.</h2>
-          </div>
-          <p className="check-text">
-            Wenn du zunächst verstehen möchtest, wie KI-Sichtbarkeit
-            insgesamt gemessen und eingeordnet werden kann:
-          </p>
-          <Link href="/ki-sichtbarkeit" className="btn-link detail-secondary-link">
-            Was bedeutet KI-Sichtbarkeit für Unternehmen? →
-          </Link>
-          <p className="check-text" style={{ marginTop: 20 }}>
-            Wenn dich speziell interessiert, wie Unternehmen in
-            ChatGPT-Antworten vorkommen:
-          </p>
-          <Link href="/chatgpt-sichtbarkeit" className="btn-link detail-secondary-link">
-            Bei ChatGPT gefunden werden →
-          </Link>
-          <Link href="/wissen" className="btn-link detail-secondary-link">
-            Alle Themen im Wissensbereich →
-          </Link>
+          <RelatedReading
+            items={[
+              {
+                href: "/ki-sichtbarkeit",
+                title: "Was bedeutet KI-Sichtbarkeit für Unternehmen?",
+                context:
+                  "Der Überblick, wie KI-Sichtbarkeit insgesamt gemessen und eingeordnet werden kann.",
+              },
+              {
+                href: "/chatgpt-sichtbarkeit",
+                title: "Bei ChatGPT gefunden werden",
+                context:
+                  "Wie GEO konkret für den Kanal ChatGPT aussieht – inklusive technischer Voraussetzungen.",
+              },
+              {
+                href: "/prompt-research",
+                title: "Was ist Prompt Research?",
+                context:
+                  "Wie sich die relevanten Fragen für eine GEO-Analyse überhaupt identifizieren lassen.",
+              },
+            ]}
+          />
         </div>
       </Reveal>
     </>

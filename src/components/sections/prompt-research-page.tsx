@@ -1,17 +1,29 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { KeywordPromptVisual } from "./keyword-prompt-visual";
+import { RelatedReading } from "./related-reading";
 
-const PROMPT_CONTEXT = [
-  "Unternehmensgröße",
-  "Problem",
-  "Ziel",
-  "Zielgruppe",
-  "Produkt",
-  "Standort",
+const QUESTION_TYPES = [
+  "allgemeine Themen",
+  "spezifische Fragen",
+  "aktuelle Themen",
+  "zeitkritische Themen",
+  "Jahreszahlen",
+  "Preise & Kosten",
   "Budget",
-  "Entscheidungskriterien",
-  "gewünschte Empfehlung",
+  "Anbieter-Vergleiche",
+  "Produkt- & Leistungsvergleiche",
+  "konkrete Entscheidungssituationen",
+];
+
+const JOURNEY_STEPS = [
+  "Information",
+  "Vertiefung",
+  "Vergleich",
+  "Entscheidung",
+  "Umsetzung",
 ];
 
 const WHY_LIST = [
@@ -110,28 +122,21 @@ export function PromptResearchPage() {
             <span className="eyebrow">Keyword + Prompt</span>
             <h2>Was ist der Unterschied zwischen Keyword Research und Prompt Research?</h2>
           </div>
-          <div className="compare-columns">
-            <div>
-              <h3 className="question-col-label">Keyword</h3>
-              <p className="check-text">SEO Beratung</p>
-            </div>
-            <div>
-              <h3 className="question-col-label">Prompt</h3>
-              <p className="check-text">
-                „Welche SEO-Beratung eignet sich für einen kleinen
-                Online-Shop, der bei Google sichtbar ist, aber kaum in
-                ChatGPT vorkommt?“
-              </p>
-            </div>
-          </div>
-          <p className="check-text" style={{ marginTop: 24 }}>
-            Ein Prompt kann zusätzliche Informationen enthalten:
+          <p className="check-text">
+            Ein Keyword ist ein kompakter Suchbegriff. Ein Prompt ist eine
+            vollständig formulierte Frage – mit der Situation, dem Problem
+            und den Kriterien gleich mit dabei.
           </p>
-          <ul className="detail-list">
-            {PROMPT_CONTEXT.map((p) => (
-              <li key={p}>{p}</li>
-            ))}
-          </ul>
+          <KeywordPromptVisual
+            keyword="SEO Beratung"
+            prompt="Welche SEO-Beratung eignet sich für einen kleinen Online-Shop, der bei Google sichtbar ist, aber kaum in ChatGPT vorkommt?"
+          />
+          <p className="check-text" style={{ marginTop: 24 }}>
+            Das Keyword „SEO Beratung“ verrät relativ wenig über die
+            Situation der suchenden Person. Der Prompt daneben enthält
+            bereits Unternehmensgröße, Ausgangslage und ein konkretes
+            Entscheidungskriterium.
+          </p>
           <div className="method-benefit">
             <p>
               Prompt Research betrachtet deshalb nicht nur Begriffe,
@@ -145,15 +150,19 @@ export function PromptResearchPage() {
         <div className="wrap-narrow">
           <div className="check-head">
             <span className="eyebrow">Warum?</span>
-            <h2>Warum Prompt Research für KI-Sichtbarkeit relevant ist</h2>
+            <h2>Warum Keywords relevant bleiben – und was ein Prompt zusätzlich liefert</h2>
           </div>
           <p className="check-text">
-            Generative Systeme beantworten häufig vollständige Fragen.
+            Keyword Research zeigt weiterhin zuverlässig, wonach Menschen in
+            klassischen Suchmaschinen suchen. Diese Grundlage verschwindet
+            nicht.
           </p>
           <p className="check-text" style={{ marginTop: 12 }}>
-            Wer nur einzelne Keywords betrachtet, sieht deshalb nicht immer,
-            in welchen konkreten Entscheidungssituationen Wettbewerber
-            genannt oder empfohlen werden.
+            Generative Systeme beantworten aber häufig vollständige Fragen
+            statt einzelner Begriffe. Wer nur Keywords betrachtet, sieht
+            deshalb nicht immer, in welchen konkreten
+            Entscheidungssituationen Wettbewerber genannt oder empfohlen
+            werden.
           </p>
           <p className="check-text" style={{ marginTop: 20 }}>
             Prompt Research kann helfen zu erkennen:
@@ -163,6 +172,47 @@ export function PromptResearchPage() {
               <li key={w}>{w}</li>
             ))}
           </ul>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
+            <span className="eyebrow">Fragearten</span>
+            <h2>Welche Fragen müssen Unternehmen tatsächlich kennen?</h2>
+            <p className="lead">
+              Reale Nutzerfragen unterscheiden sich stark – vom allgemeinen
+              Thema bis zur konkreten Kaufentscheidung.
+            </p>
+          </div>
+          <div className="tool-label-chips">
+            {QUESTION_TYPES.map((q) => (
+              <span key={q} className="tool-label-chip">
+                {q}
+              </span>
+            ))}
+          </div>
+          <p className="check-text" style={{ marginTop: 24 }}>
+            Diese Fragearten tauchen zudem an unterschiedlichen Punkten der
+            Customer Journey auf:
+          </p>
+          <div className="flow-row">
+            {JOURNEY_STEPS.map((step, i) => (
+              <Fragment key={step}>
+                <span className="flow-step">{step}</span>
+                {i < JOURNEY_STEPS.length - 1 && (
+                  <span className="flow-arrow" aria-hidden="true">
+                    →
+                  </span>
+                )}
+              </Fragment>
+            ))}
+          </div>
+          <p className="check-note" style={{ marginTop: 20, maxWidth: "62ch" }}>
+            Für eine Preis- oder Budgetfrage kurz vor der Entscheidung
+            braucht ein Unternehmen andere Inhalte als für eine allgemeine
+            Themenfrage am Anfang der Journey.
+          </p>
         </div>
       </Reveal>
 
@@ -326,17 +376,27 @@ export function PromptResearchPage() {
             Zusammen entsteht ein besseres Bild davon, wonach Menschen
             suchen und wie KI-Systeme auf diese Fragen antworten.
           </p>
-          <div className="detail-cta-row" style={{ gap: 12 }}>
-            <Link href="/geo" className="btn-link">
-              Was ist GEO? →
-            </Link>
-            <Link href="/ki-sichtbarkeit" className="btn-link">
-              Was bedeutet KI-Sichtbarkeit? →
-            </Link>
-            <Link href="/chatgpt-sichtbarkeit" className="btn-link">
-              Bei ChatGPT gefunden werden →
-            </Link>
-          </div>
+          <RelatedReading
+            items={[
+              {
+                href: "/geo",
+                title: "Was ist GEO?",
+                context:
+                  "Wie Prompt Research als Analyseschritt in eine größere GEO-Methodik eingeordnet wird.",
+              },
+              {
+                href: "/chatgpt-sichtbarkeit",
+                title: "Bei ChatGPT gefunden werden",
+                context:
+                  "Ein konkreter Kanal, bei dem Prompts unmittelbar sichtbar werden.",
+              },
+              {
+                href: "/ki-sichtbarkeit",
+                title: "Was bedeutet KI-Sichtbarkeit für Unternehmen?",
+                context: "Der Überblick über das gesamte Thema.",
+              },
+            ]}
+          />
           <AuthorModule />
         </div>
       </Reveal>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { RelatedReading } from "./related-reading";
 
 const TERMS = [
   {
@@ -52,6 +53,25 @@ const GOOGLE_VS_CHATGPT = [
   "Citations",
   "Empfehlungen",
   "Marken- und Unternehmenssignale",
+];
+
+const TECH_TERMS = [
+  {
+    label: "Crawlability",
+    text: "Kann ein Bot deine Seite technisch abrufen? Das ist die Grundvoraussetzung für jede Form automatisierter Verarbeitung, unabhängig vom System.",
+  },
+  {
+    label: "OAI-SearchBot",
+    text: "OpenAIs eigener Crawler für die ChatGPT-Suche. Er lässt sich unabhängig von anderen OpenAI-Bots über robots.txt steuern.",
+  },
+  {
+    label: "Bing / Suchindizes",
+    text: "Für die Websuche in ChatGPT besteht unter anderem eine öffentlich bekannte technische Partnerschaft mit Microsoft Bing. Klassische Suchmaschinen-Sichtbarkeit kann deshalb relevant sein, ist aber kein alleiniger Faktor.",
+  },
+  {
+    label: "Retrieval",
+    text: "Für eine konkrete Frage wird nur ein kleiner Ausschnitt verfügbarer Inhalte tatsächlich herangezogen. Welcher, hängt von Formulierung, Kontext und Aktualität der Frage ab.",
+  },
 ];
 
 const FACTORS = [
@@ -154,6 +174,14 @@ const FAQ = [
   {
     q: "Kann man garantieren, dass ChatGPT mein Unternehmen empfiehlt?",
     a: "Nein. Seriöse GEO- oder SEO-Beratung kann Voraussetzungen und Signale verbessern, aber keine konkrete Empfehlung durch ein generatives KI-System garantieren.",
+  },
+  {
+    q: "Muss meine Website bei Bing indexiert sein, damit ChatGPT mich findet?",
+    a: "Nicht zwingend. ChatGPT nutzt für die Websuche unter anderem eine Partnerschaft mit Microsoft Bing, betreibt mit OAI-SearchBot aber auch einen eigenen, unabhängig über robots.txt steuerbaren Crawler. Eine Bing-Indexierung kann ein relevanter Faktor sein, ist aber keine zwingende Einzelvoraussetzung und keine Garantie für eine Nennung.",
+  },
+  {
+    q: "Was passiert, wenn ich OAI-SearchBot blockiere?",
+    a: "Laut OpenAI erscheint deine Website dann nicht mehr in ChatGPT-Suchantworten, kann aber weiterhin als reiner Navigationslink auftauchen. Das betrifft nur die Sichtbarkeit in der Suche, nicht automatisch das Training der KI-Modelle – dafür ist der separate GPTBot zuständig.",
   },
   {
     q: "Was ist der Unterschied zwischen ChatGPT SEO und GEO?",
@@ -267,6 +295,60 @@ export function ChatgptSichtbarkeitPage() {
           <p className="check-text" style={{ marginTop: 12 }}>
             Zusätzlich wird interessant: Bei welchen Fragen und Themen wird
             mein Unternehmen von einem KI-System berücksichtigt?
+          </p>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
+            <span className="eyebrow">Technische Grundlagen</span>
+            <h2>Was muss technisch stimmen, damit ChatGPT deine Website überhaupt findet?</h2>
+          </div>
+          <p className="check-text">
+            Bevor irgendetwas mit Mentions, Citations oder Recommendations
+            passiert, muss eine Website überhaupt technisch erreichbar
+            sein. Diese Grundlage wird oft übersprungen. Dabei entscheidet
+            sie, ob ChatGPT deine Inhalte im besten Fall überhaupt in
+            Betracht ziehen kann.
+          </p>
+          <div className="analysis-grid" style={{ marginTop: 24 }}>
+            {TECH_TERMS.map((t) => (
+              <div key={t.label} className="check-item">
+                <span className="check-num">{t.label}</span>
+                <p>{t.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="method-benefit">
+            <p>
+              Wird OAI-SearchBot in der robots.txt blockiert, taucht eine
+              Website laut OpenAI nicht mehr in ChatGPT-Suchantworten auf,
+              kann aber weiterhin als reiner Navigationslink erscheinen.
+              Änderungen an der robots.txt wirken sich laut OpenAI nicht
+              sofort aus, sondern nach etwa 24 Stunden.
+            </p>
+          </div>
+          <p className="check-text" style={{ marginTop: 24 }}>
+            Technisch erreichbar zu sein bedeutet aber noch nicht, genannt,
+            zitiert oder empfohlen zu werden. Diese drei Ebenen habe ich
+            weiter oben bereits unterschieden. Crawlability entscheidet nur
+            darüber, ob eine Website überhaupt in Betracht kommen kann.
+          </p>
+          <p className="check-text" style={{ marginTop: 12 }}>
+            Ob ein Inhalt in einer konkreten Antwort tatsächlich verwendet
+            wird, hängt zusätzlich von Aktualität, Spezifität,
+            Quellenqualität ab und davon, wie genau er zur gestellten
+            Frage passt. Technik schafft die Möglichkeit. Sie entscheidet
+            nicht allein über das Ergebnis.
+          </p>
+          <p className="check-note" style={{ marginTop: 20, maxWidth: "62ch" }}>
+            Häufig liest man, eine Bing-Indexierung sei zwingende
+            Voraussetzung für ChatGPT-Sichtbarkeit. Das ist zu pauschal:
+            ChatGPT nutzt für die Websuche unter anderem eine Partnerschaft
+            mit Bing, betreibt mit OAI-SearchBot aber auch einen eigenen,
+            unabhängig steuerbaren Crawler. Beide Wege können relevant
+            sein. Keiner davon garantiert eine Nennung.
           </p>
         </div>
       </Reveal>
@@ -602,6 +684,16 @@ export function ChatgptSichtbarkeitPage() {
             OpenAI Help Center: ChatGPT Search →{" "}
             <span className="sr-only">(öffnet in neuem Tab)</span>
           </a>
+          <a
+            href="https://developers.openai.com/api/docs/bots"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-link detail-secondary-link"
+          >
+            OpenAI Developer Docs: OpenAI crawlers (OAI-SearchBot, GPTBot,
+            ChatGPT-User) →{" "}
+            <span className="sr-only">(öffnet in neuem Tab)</span>
+          </a>
         </div>
       </Reveal>
 
@@ -693,17 +785,30 @@ export function ChatgptSichtbarkeitPage() {
             <h2>KI-Sichtbarkeit besteht nicht nur aus ChatGPT.</h2>
           </div>
           <p className="check-text">
-            Diese Seite betrachtet gezielt ChatGPT. Wenn du verstehen
-            möchtest, wie KI-Sichtbarkeit insgesamt funktioniert –
-            einschließlich Google AI, Citations, Recommendations, Sentiment
-            und weiterer Systeme –, lies als Nächstes:
+            Diese Seite betrachtet gezielt ChatGPT. Für den größeren
+            Zusammenhang:
           </p>
-          <Link href="/ki-sichtbarkeit" className="btn-link detail-secondary-link">
-            Was bedeutet KI-Sichtbarkeit für Unternehmen? →
-          </Link>
-          <Link href="/google-ai-overviews" className="btn-link detail-secondary-link">
-            Google AI Overviews &amp; AI Mode →
-          </Link>
+          <RelatedReading
+            items={[
+              {
+                href: "/ki-sichtbarkeit",
+                title: "Was bedeutet KI-Sichtbarkeit für Unternehmen?",
+                context:
+                  "Der Überblick über Google AI, Citations, Recommendations, Sentiment und weitere Systeme.",
+              },
+              {
+                href: "/google-ai-overviews",
+                title: "Google AI Overviews & AI Mode",
+                context: "Der andere große Kanal neben ChatGPT.",
+              },
+              {
+                href: "/geo",
+                title: "Was ist GEO?",
+                context:
+                  "Die Methodik, in die ChatGPT-Sichtbarkeit als ein Baustein eingeordnet ist.",
+              },
+            ]}
+          />
           <AuthorModule />
         </div>
       </Reveal>
