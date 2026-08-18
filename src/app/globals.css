@@ -31,6 +31,32 @@
   --r-sm: 6px;
   --r-md: 14px;
   --r-lg: 22px;
+
+  /* Vertical rhythm between content sections. --section-space-md is the
+     default for ordinary sections; -sm is used where sections intentionally
+     flow together without a divider (see .method-transition etc.); -lg is
+     reserved for the rare section that should deliberately breathe more
+     than the default (hero has its own tight, bespoke padding and doesn't
+     use these tokens at all). */
+  --section-space-lg: 96px;
+  --section-space-md: 64px;
+  --section-space-sm: 48px;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --section-space-lg: 72px;
+    --section-space-md: 48px;
+    --section-space-sm: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --section-space-lg: 56px;
+    --section-space-md: 40px;
+    --section-space-sm: 32px;
+  }
 }
 
 html {
@@ -78,7 +104,7 @@ button {
 }
 
 .section {
-  padding: 96px 0;
+  padding: var(--section-space-md) 0;
   position: relative;
 }
 .section + .section {
@@ -534,7 +560,7 @@ p {
    everywhere else on the site. */
 .hero-transition {
   padding-top: 32px;
-  padding-bottom: 48px;
+  padding-bottom: var(--section-space-sm);
 }
 /* Unified compact, borderless spacing between every homepage section from
    Meine Methode through the closing contact block — each section's own
@@ -545,11 +571,11 @@ p {
 .proof-transition,
 .about-transition,
 .faq-transition {
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: var(--section-space-sm);
+  padding-bottom: var(--section-space-sm);
 }
 .contact-transition {
-  padding-top: 48px;
+  padding-top: var(--section-space-sm);
 }
 .section.method-transition,
 .section.offers-transition,
@@ -766,12 +792,12 @@ p {
 .offer-path-price--hint {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  font-family: var(--font-sans);
-  font-size: 12.5px;
-  font-weight: 500;
-  letter-spacing: normal;
-  color: var(--ink-soft);
+  gap: 4px;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 350;
+  letter-spacing: -0.01em;
+  color: var(--ink);
 }
 .offer-path-badge {
   align-self: flex-start;
@@ -1339,7 +1365,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 .section-head h2 {
   max-width: 22ch;
@@ -2314,6 +2340,11 @@ p {
   background: var(--line);
   border: 1px solid var(--line);
   margin-top: 24px;
+}
+/* Odd item count: let the last card span both columns instead of leaving
+   an empty trailing cell (applies to every .analysis-grid, not just GEO). */
+.analysis-grid > .check-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
 .check-item ul {
   list-style: none;
