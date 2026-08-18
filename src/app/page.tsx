@@ -1,5 +1,5 @@
 import { Hero } from "@/components/sections/hero";
-import { Facts } from "@/components/sections/facts";
+import { SearchShift } from "@/components/sections/search-shift";
 import { Questions } from "@/components/sections/questions";
 import { Reveal } from "@/components/sections/reveal";
 import { MethodOverview } from "@/components/sections/method-overview";
@@ -17,7 +17,7 @@ export default function HomePage() {
       <Reveal className="section hero-transition">
         <div className="wrap">
           <Questions />
-          <Facts />
+          <SearchShift />
         </div>
       </Reveal>
       <Marquee />
