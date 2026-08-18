@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 import { RelatedReading } from "./related-reading";
+import { RelationshipFlow } from "./relationship-flow";
 
 const WHAT_IS_LIST = [
   "standardisierte Kennzeichnung von Inhalten",
@@ -238,7 +239,24 @@ export function StrukturierteDatenPage() {
               <li key={g}>{g}</li>
             ))}
           </ul>
-          <p className="check-text" style={{ marginTop: 16 }}>
+          <RelationshipFlow
+            stages={[
+              {
+                title: "Inhalt",
+                text: "Redaktioneller Text, Produkte, Informationen auf der Seite",
+              },
+              {
+                title: "Maschinenlesbare Struktur",
+                text: "Schema.org / JSON-LD ordnet Bedeutung eindeutiger zu",
+              },
+              {
+                title: "Mögliche bessere Einordnung",
+                text: "Durch Such- und KI-Systeme",
+                uncertain: true,
+              },
+            ]}
+          />
+          <p className="check-text" style={{ marginTop: 24 }}>
             Schema sorgt nicht dafür, dass ChatGPT dich zitiert.
           </p>
           <div className="method-benefit">

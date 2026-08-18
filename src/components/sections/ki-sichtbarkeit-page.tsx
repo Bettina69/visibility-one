@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 import { NetworkBg } from "./network-bg";
-import { SeoToAiVisibilityFlow } from "./seo-ai-visibility-flow";
+import { RelationshipFlow } from "./relationship-flow";
 import { RelatedReading } from "./related-reading";
 
 const TERMS = [
@@ -182,7 +182,23 @@ export function KiSichtbarkeitPage() {
           <p className="check-text" style={{ marginTop: 12 }}>
             Die beiden Disziplinen stehen nicht gegeneinander.
           </p>
-          <SeoToAiVisibilityFlow />
+          <RelationshipFlow
+            stages={[
+              {
+                title: "SEO-Sichtbarkeit",
+                text: "Technische Auffindbarkeit, thematische Relevanz",
+              },
+              {
+                title: "Verständlichkeit",
+                text: "Klare Einordnung durch Such- und KI-Systeme",
+              },
+              {
+                title: "Mögliche KI-Sichtbarkeit",
+                text: "Mention · Citation · Recommendation",
+                uncertain: true,
+              },
+            ]}
+          />
           <p className="check-note" style={{ marginTop: 16, maxWidth: "62ch" }}>
             Jede Stufe schafft eine Voraussetzung für die nächste. Keine
             Stufe garantiert die nächste.

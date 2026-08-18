@@ -1670,14 +1670,13 @@ p {
 .phase-item {
   padding: 28px 0;
   border-bottom: 1px solid var(--line);
-  display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
-  gap: 24px;
 }
 .phase-item > div {
   min-width: 0;
 }
 .phase-item .phase-num {
+  display: block;
+  margin-bottom: 10px;
   font-family: var(--font-mono);
   font-size: var(--fs-xs);
   color: var(--muted);
@@ -2757,7 +2756,7 @@ p {
   }
 }
 
-/* ========== SEO -> possible AI visibility relationship graphic ========== */
+/* ========== Relationship-chain info graphic (reused across pages) ========== */
 .seo-ai-flow {
   margin-top: 32px;
   display: flex;
