@@ -1,3 +1,18 @@
+const SOURCE_URL = "https://www.semrush.com/blog/ai-search-seo-traffic-study/";
+
+function SourceLink() {
+  return (
+    <a
+      className="btn-link detail-secondary-link source-link shift-card-source"
+      href={SOURCE_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Quelle: Semrush →<span className="sr-only"> (öffnet in neuem Tab)</span>
+    </a>
+  );
+}
+
 export function SearchShift() {
   return (
     <>
@@ -9,83 +24,87 @@ export function SearchShift() {
         auswählen.
       </p>
 
-      <div className="search-shift-grid">
-        <div className="search-shift-chart-card">
+      <div className="shift-modules">
+        {/* Modul 1: Die Bewegung */}
+        <div className="shift-card">
+          <h3 className="shift-card-title">KI-Suche wächst.</h3>
+          <p className="shift-card-label">2025 → 2029</p>
+          <div className="shift-card-visual shift-trend-rows" aria-hidden="true">
+            <div className="shift-trend-row">
+              <span className="shift-trend-arrow shift-trend-arrow--muted">↘</span>
+              Klassische organische Suche
+            </div>
+            <div className="shift-trend-row">
+              <span className="shift-trend-arrow">↗</span>
+              KI-Suche
+            </div>
+          </div>
+          <p className="shift-card-text">
+            Semrush erwartet, dass KI-Suche deutlich an Bedeutung gewinnt,
+            während sich der Anteil klassischer organischer Suche verändert.
+          </p>
+          <SourceLink />
+        </div>
+
+        {/* Modul 2: Der mögliche Schnittpunkt */}
+        <div className="shift-card">
+          <h3 className="shift-card-title">2028*</h3>
+          <p className="shift-card-label">Möglicher Schnittpunkt</p>
           <svg
-            className="search-shift-chart"
-            viewBox="0 0 600 260"
-            role="img"
-            aria-labelledby="search-shift-chart-title search-shift-chart-desc"
+            className="shift-card-visual shift-cross-chart"
+            viewBox="0 0 160 90"
+            aria-hidden="true"
           >
-            <title id="search-shift-chart-title">
-              Trend 2025–2029: klassische organische Suche und KI-Suche
-            </title>
-            <desc id="search-shift-chart-desc">
-              Konzeptionelle Darstellung ohne Achsenwerte. Traditionelle
-              organische Suche zeigt einen fallenden Trend, KI-Suche einen
-              steigenden Trend. Semrush prognostiziert auf Basis einer
-              Untersuchung von mehr als 500 Themen und Unterthemen einen
-              möglichen Schnittpunkt um 2028.
-            </desc>
-            <line
-              x1="430"
-              y1="24"
-              x2="430"
-              y2="216"
-              className="search-shift-marker-line"
-            />
             <polyline
-              points="40,50 560,190"
+              points="10,15 150,65"
               className="search-shift-line search-shift-line--organic"
             />
             <polyline
-              points="40,220 560,133"
+              points="10,70 150,20"
               className="search-shift-line search-shift-line--ai"
             />
-            <circle cx="430" cy="155" r="5" className="search-shift-marker-dot" />
-            <text x="430" y="16" textAnchor="middle" className="search-shift-marker-label">
-              2028*
-            </text>
-            <text x="40" y="238" className="search-shift-year-label">
-              2025
-            </text>
-            <text x="560" y="238" textAnchor="end" className="search-shift-year-label">
-              2029
-            </text>
+            <circle cx="87" cy="43" r="4" className="search-shift-marker-dot" />
           </svg>
-          <ul className="search-shift-legend">
-            <li>
-              <span className="search-shift-swatch search-shift-swatch--organic" aria-hidden="true"></span>
-              Traditionelle organische Suche ↘
-            </li>
-            <li>
-              <span className="search-shift-swatch search-shift-swatch--ai" aria-hidden="true"></span>
-              KI-Suche ↗
-            </li>
-          </ul>
-          <p className="search-shift-caption">
-            KI-Suchtraffic könnte klassischen organischen Suchtraffic
-            überholen.
+          <p className="shift-card-text">
+            Semrush prognostiziert für die untersuchten Themen, dass
+            KI-Suchtraffic klassischen organischen Suchtraffic Anfang 2028
+            überholen könnte.
           </p>
-          <p className="check-note">
-            * Semrush prognostiziert auf Basis einer Untersuchung von mehr
-            als 500 Themen und Unterthemen aus Digital Marketing und SEO
-            einen möglichen Schnittpunkt um 2028. Die Prognose ist nicht
-            als allgemeingültiger Zeitpunkt für jede Branche zu verstehen.
+          <p className="check-note shift-card-footnote">
+            * Prognose auf Basis von mehr als 500 untersuchten Themen und
+            Unterthemen aus Digital Marketing und SEO. Nicht als
+            allgemeingültiger Zeitpunkt für jede Branche zu verstehen.
           </p>
+          <SourceLink />
         </div>
 
-        <div className="search-shift-stat">
-          <span className="search-shift-stat-num">4,4×</span>
-          <p className="search-shift-stat-label">
-            höherer Conversion-basierter Wert eines AI-Search-Besuchers
-          </p>
-          <p className="search-shift-stat-text">
+        {/* Modul 3: Qualität des Traffics */}
+        <div className="shift-card">
+          <h3 className="shift-card-title">4,4×</h3>
+          <p className="shift-card-label">Höherer Conversion-basierter Wert</p>
+          <div className="shift-card-visual shift-bar-rows" aria-hidden="true">
+            <div className="shift-bar-row">
+              <span className="shift-bar-label">Organic Search</span>
+              <span className="shift-bar-track">
+                <span className="shift-bar-fill" style={{ width: "18%" }} />
+              </span>
+              <span className="shift-bar-value">1×</span>
+            </div>
+            <div className="shift-bar-row">
+              <span className="shift-bar-label">AI Search</span>
+              <span className="shift-bar-track">
+                <span className="shift-bar-fill shift-bar-fill--ai" style={{ width: "80%" }} />
+              </span>
+              <span className="shift-bar-value">4,4×</span>
+            </div>
+          </div>
+          <p className="shift-card-text">
             Semrush ermittelte für Besucher aus Nicht-Google-LLM-Suchen wie
             ChatGPT einen durchschnittlich 4,4-fach höheren
             Conversion-basierten Wert gegenüber traditionellem Organic
             Search.
           </p>
+          <SourceLink />
         </div>
       </div>
 
@@ -96,15 +115,6 @@ export function SearchShift() {
         </p>
       </div>
 
-      <a
-        className="btn-link detail-secondary-link source-link"
-        href="https://www.semrush.com/blog/ai-search-seo-traffic-study/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Semrush: We Studied the Impact of AI Search on SEO Traffic →{" "}
-        <span className="sr-only">(öffnet in neuem Tab)</span>
-      </a>
       <a
         className="btn-link detail-secondary-link source-link"
         href="https://www.semrush.com/blog/traffic-channel-mix-study/"
