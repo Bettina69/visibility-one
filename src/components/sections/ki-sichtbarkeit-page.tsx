@@ -3,7 +3,6 @@ import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
 import { NetworkBg } from "./network-bg";
 import { RelationshipFlow } from "./relationship-flow";
-import { RelatedReading } from "./related-reading";
 
 const TERMS = [
   {
@@ -428,26 +427,6 @@ export function KiSichtbarkeitPage() {
               </details>
             ))}
           </div>
-          <RelatedReading
-            items={[
-              {
-                href: "/geo",
-                title: "Was ist GEO?",
-                context: "Die Methodik hinter KI-Sichtbarkeit im Detail.",
-              },
-              {
-                href: "/chatgpt-sichtbarkeit",
-                title: "Bei ChatGPT gefunden werden",
-                context: "Ein konkreter Kanal, tiefer erklärt.",
-              },
-              {
-                href: "/prompt-research",
-                title: "Was ist Prompt Research?",
-                context:
-                  "Wie sich relevante Fragen für die Analyse identifizieren lassen.",
-              },
-            ]}
-          />
           <AuthorModule />
         </div>
       </Reveal>

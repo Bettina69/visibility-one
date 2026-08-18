@@ -97,21 +97,26 @@ button {
   margin: 0 auto;
   padding: 0 32px;
 }
+/* .wrap-narrow shares the exact same outer box (and therefore the same
+   left edge) as .wrap and .hero-inner - only its direct content is capped
+   to a narrower reading measure. Previously it had its own smaller
+   max-width and was independently centered via margin:auto, which gave it
+   a different left edge from .wrap/.hero-inner on the same page whenever
+   both appeared (the two boxes centered to different widths). The 916px
+   cap below preserves the exact same rendered content width as before
+   (980px box minus 2x32px padding); only the left position changed. */
 .wrap-narrow {
-  max-width: 980px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 32px;
+}
+.wrap-narrow > * {
+  max-width: 916px;
 }
 
 .section {
   padding: var(--section-space-md) 0;
   position: relative;
-}
-.section + .section {
-  border-top: 1px solid var(--line);
-}
-main > .section:first-child {
-  border-top: none;
 }
 
 .eyebrow {
