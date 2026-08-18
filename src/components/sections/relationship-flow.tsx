@@ -8,7 +8,7 @@ type FlowStage = {
 
 export function RelationshipFlow({ stages }: { stages: FlowStage[] }) {
   return (
-    <div className="seo-ai-flow">
+    <div className={`seo-ai-flow seo-ai-flow--${stages.length}`}>
       {stages.map((s, i) => (
         <Fragment key={s.title}>
           {i > 0 && (
