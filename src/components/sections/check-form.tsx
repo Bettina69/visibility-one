@@ -57,8 +57,8 @@ export function CheckForm() {
               <div className="check">✓</div>
               <h3>Danke, {form.name.split(" ")[0]}.</h3>
               <p style={{ marginTop: 12, color: "var(--muted)" }}>
-                Ich schaue mir deine Website an und melde mich innerhalb von 24 Stunden
-                mit deiner Einschätzung.
+                Ich schaue mir deine Website persönlich an und melde mich in
+                der Regel innerhalb von 2 Werktagen mit deiner Einschätzung.
               </p>
               <button
                 className="btn btn-ghost"

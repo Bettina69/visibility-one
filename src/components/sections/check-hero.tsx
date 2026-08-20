@@ -25,7 +25,10 @@ export function CheckHero() {
             Jetzt Website eintragen ↓
           </Link>
         </div>
-        <p className="check-trust">Kostenlos · unverbindlich · verständlich erklärt</p>
+        <p className="check-trust">
+          Kostenlos · unverbindlich · Ergebnis in der Regel innerhalb von 2
+          Werktagen
+        </p>
       </div>
     </section>
   );

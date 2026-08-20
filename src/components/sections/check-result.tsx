@@ -2,9 +2,18 @@ import { Reveal } from "./reveal";
 
 const ROWS = [
   { label: "Google-Sichtbarkeit", value: "vorhanden / gering / kaum vorhanden" },
-  { label: "KI-Erwähnungen", value: "vorhanden / vereinzelt / nicht sichtbar" },
-  { label: "Citations", value: "vorhanden / gering / keine gefunden" },
-  { label: "Recommendations", value: "vorhanden / vereinzelt / keine gefunden" },
+  {
+    label: "KI-Erwähnungen",
+    value: "gefunden / vereinzelt gefunden / in der Stichprobe nicht gefunden",
+  },
+  {
+    label: "Quellenverweise (Citations)",
+    value: "gefunden / vereinzelt gefunden / in der Stichprobe nicht gefunden",
+  },
+  {
+    label: "Empfehlungen in KI-Antworten",
+    value: "gefunden / vereinzelt gefunden / in der Stichprobe nicht gefunden",
+  },
   { label: "Größtes Potenzial", value: "kurze individuelle Einschätzung" },
 ];
 

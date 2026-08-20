@@ -172,7 +172,7 @@ export function ToolsPage() {
           </p>
           <div className="detail-cta-row">
             <Link href="/angebote/analyse" className="btn-link">
-              SEO- &amp; KI-Sichtbarkeitsanalyse ansehen →
+              SEO- &amp; KI-Sichtbarkeits-Audit ansehen →
             </Link>
             <Link href="/angebote" className="btn-link">
               Angebote ansehen →

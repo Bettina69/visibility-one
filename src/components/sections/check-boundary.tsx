@@ -3,22 +3,22 @@ import { Reveal } from "./reveal";
 const INCLUDED = [
   "Google-/SEO-Sichtbarkeit",
   "relevante Suchthemen",
-  "KI-Erwähnungen",
-  "Citations",
-  "Recommendations",
+  "exemplarische Prüfung relevanter Fragen in KI-Systemen",
+  "erste KI-Erwähnungen",
+  "erste Quellenverweise (Citations)",
+  "erste Empfehlungen in KI-Antworten",
   "kurze Einschätzung des größten Potenzials",
 ];
 
 const DEEPER = [
-  "Ursachenanalyse",
-  "umfassende Wettbewerbsanalyse",
-  "detailliertes Keyword Research",
-  "Prompt Research",
-  "Prompt Tracking",
-  "technische SEO-Analyse",
-  "strukturierte Daten / Schema",
-  "Entity-Analyse",
-  "konkrete Maßnahmen-Roadmap",
+  "Ursachen und Prioritäten",
+  "relevante Suchbegriffe, Themen und Fragen",
+  "vertiefte Google- und KI-Sichtbarkeit",
+  "Erwähnungen und Quellenverweise",
+  "Wettbewerbsvergleich",
+  "technische Prüfung",
+  "strukturierte Daten / Entity-Klarheit, soweit relevant",
+  "konkrete Handlungsempfehlungen und Prioritäten",
 ];
 
 export function CheckBoundary() {
@@ -27,7 +27,7 @@ export function CheckBoundary() {
       <div className="wrap">
         <div className="check-head">
           <span className="eyebrow">Bewusst kompakt</span>
-          <h2>Ein erster Überblick – keine 40-seitige Analyse.</h2>
+          <h2>Ein erster Überblick – noch kein umfassendes Audit.</h2>
         </div>
         <p className="check-text">
           Der kostenlose Check zeigt dir deine aktuelle Ausgangslage. Er soll dir eine
@@ -44,7 +44,7 @@ export function CheckBoundary() {
             </ul>
           </div>
           <div>
-            <h3 className="question-col-label">Vertiefende Analyse</h3>
+            <h3 className="question-col-label">SEO- &amp; KI-Sichtbarkeits-Audit</h3>
             <ul className="compare-list deeper">
               {DEEPER.map((item) => (
                 <li key={item}>{item}</li>
@@ -53,8 +53,10 @@ export function CheckBoundary() {
           </div>
         </div>
         <p className="check-text" style={{ marginTop: 28 }}>
-          Wenn der Check zeigt, dass Handlungsbedarf besteht, entscheiden wir gemeinsam,
-          ob und welche vertiefende Analyse für dich überhaupt sinnvoll ist.
+          Wenn der Check zeigt, dass sich ein genauerer Blick lohnt, ist das
+          SEO- &amp; KI-Sichtbarkeits-Audit für 790&nbsp;€ der nächste Schritt.
+          Dort klären wir, woher Auffälligkeiten kommen und ob SEO, GEO,
+          beides – oder aktuell gar keine weitere Maßnahme – sinnvoll ist.
         </p>
 
         <div
@@ -66,10 +68,9 @@ export function CheckBoundary() {
         >
           <h3>Du entscheidest, wie es weitergeht.</h3>
           <p className="check-text" style={{ marginTop: 12 }}>
-            Wenn sich aus dem Check Handlungsbedarf ergibt, kannst du eine passende
-            Analyse oder ein Beratungspaket wählen. Und wenn du nur punktuell
-            Unterstützung brauchst, kannst du mich auch flexibel auf Stundenbasis buchen
-            – ohne langfristige Bindung.
+            Wenn sich aus dem Check Handlungsbedarf ergibt, kannst du das
+            passende Audit oder ein Beratungspaket wählen – ohne langfristige
+            Bindung.
           </p>
         </div>
       </div>

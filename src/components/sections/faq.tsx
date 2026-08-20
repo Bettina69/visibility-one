@@ -34,7 +34,7 @@ const FAQ_RIGHT = [
   },
   {
     q: "Muss ich mich langfristig binden?",
-    a: "Nein. Du kannst klein starten, zum Beispiel mit einer Analyse oder punktueller Unterstützung auf Stundenbasis. Ein langfristiger Agenturvertrag ist nicht automatisch nötig – du entscheidest, ob und wie es danach weitergeht.",
+    a: "Nein. Du kannst klein starten, zum Beispiel mit dem kostenlosen Sichtbarkeitscheck oder dem SEO- & KI-Sichtbarkeits-Audit. Ein langfristiger Agenturvertrag ist nicht automatisch nötig – du entscheidest, ob und wie es danach weitergeht.",
   },
 ];
 

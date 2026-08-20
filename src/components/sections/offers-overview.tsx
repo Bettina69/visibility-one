@@ -6,7 +6,7 @@ import { Reveal } from "./reveal";
 const PATHS = [
   {
     label: "Verstehen",
-    title: "SEO- & KI-Sichtbarkeitsanalyse",
+    title: "SEO- & KI-Sichtbarkeits-Audit",
     desc: "Du möchtest genau wissen, warum deine Sichtbarkeit nachlässt oder warum Wettbewerber bei Google und in KI-Systemen stärker auftauchen.",
     points: [
       "SEO- und KI-Sichtbarkeit",
@@ -14,7 +14,7 @@ const PATHS = [
       "Wettbewerbsvergleich",
       "Ursachen und Prioritäten",
     ],
-    cta: "Analyse ansehen →",
+    cta: "Audit ansehen →",
   },
   {
     label: "Optimieren",
@@ -112,17 +112,6 @@ export function OffersOverview() {
               </Link>
             </div>
           ))}
-        </div>
-
-        <div className="offer-hourly">
-          <h4>Du brauchst nur punktuell Unterstützung?</h4>
-          <p>
-            Du kannst mich auch flexibel auf Stundenbasis buchen – ohne Paket und ohne
-            langfristige Bindung.
-          </p>
-          <Link href="/kontakt" className="btn-link">
-            Unverbindlich anfragen →
-          </Link>
         </div>
       </div>
     </Reveal>

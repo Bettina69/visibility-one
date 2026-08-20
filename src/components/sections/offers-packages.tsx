@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Reveal } from "./reveal";
 
 const PACKAGES = [
@@ -67,17 +66,6 @@ export function OffersPackages() {
           größere technische Eingriffe. Für Projekte oberhalb von Intensiv L
           erstelle ich ein individuelles Angebot.
         </p>
-
-        <div className="offer-hourly">
-          <h4>Du brauchst nur punktuell Unterstützung?</h4>
-          <p>
-            Du kannst mich auch flexibel auf Stundenbasis buchen – ohne Paket und ohne
-            langfristige Bindung.
-          </p>
-          <Link href="/kontakt" className="btn-link">
-            Unverbindlich anfragen →
-          </Link>
-        </div>
       </div>
     </Reveal>
   );

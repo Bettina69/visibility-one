@@ -408,7 +408,7 @@ export function KiSichtbarkeitPage() {
             unverbindlich · persönlich geprüft · 2–3 konkrete Hinweise
           </p>
           <Link href="/angebote/analyse" className="btn-link detail-secondary-link">
-            Vertiefte SEO- &amp; KI-Sichtbarkeitsanalyse ansehen →
+            Vertieftes SEO- &amp; KI-Sichtbarkeits-Audit ansehen →
           </Link>
         </div>
       </Reveal>

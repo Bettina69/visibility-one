@@ -14,11 +14,11 @@ const ITEMS = [
     desc: "Taucht dein Unternehmen bzw. deine Marke in relevanten KI-Antworten auf?",
   },
   {
-    title: "Citations",
+    title: "Quellenverweise (Citations)",
     desc: "Wird deine Website von KI-Systemen als Quelle herangezogen?",
   },
   {
-    title: "Recommendations",
+    title: "Empfehlungen in KI-Antworten",
     desc: "Wird dein Unternehmen bei passenden Fragen von KI-Systemen empfohlen?",
   },
 ];
