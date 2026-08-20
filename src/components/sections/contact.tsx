@@ -66,8 +66,8 @@ export function Contact() {
                   </a>
                 </div>
                 <div>
-                  <strong>Antwort</strong> · in der Regel innerhalb von 24
-                  Std., Mo–Fr
+                  <strong>Antwort</strong> · in der Regel innerhalb von 2
+                  Werktagen
                 </div>
                 <div>
                   <strong>Zusammenarbeit</strong> · deutschlandweit · remote

@@ -1,6 +1,9 @@
+import { NetworkBg } from "./network-bg";
+
 export function OffersHero() {
   return (
     <section className="hero">
+      <NetworkBg />
       <div className="hero-inner">
         <span className="eyebrow">Angebote</span>
         <h1 className="hero-title" style={{ marginTop: 16 }}>

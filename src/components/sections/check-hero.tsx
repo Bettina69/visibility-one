@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { NetworkBg } from "./network-bg";
 
 export function CheckHero() {
   return (
     <section className="hero">
+      <NetworkBg side="right" />
       <div className="hero-inner">
         <span className="eyebrow">Du bist jetzt im Check</span>
         <h1 className="hero-title" style={{ marginTop: 16 }}>
