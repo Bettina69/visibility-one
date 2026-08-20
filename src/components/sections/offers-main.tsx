@@ -4,9 +4,9 @@ import { Reveal } from "./reveal";
 const OFFERS = [
   {
     label: "01 · Verstehen",
-    title: "SEO- & KI-Sichtbarkeitsanalyse",
-    price: "490 €",
-    desc: "Du möchtest wissen, warum deine Sichtbarkeit nachlässt, wo Wettbewerber stärker sind und wie dein Unternehmen bei Google und in KI-Systemen tatsächlich dasteht.",
+    title: "SEO- & KI-Sichtbarkeits-Audit",
+    price: "790 €",
+    desc: "Du musst vorher nicht wissen, ob du SEO, GEO oder beides brauchst. Das Audit zeigt, wo dein Unternehmen bei Google und in KI-Systemen tatsächlich steht – und ob überhaupt Handlungsbedarf besteht.",
     points: [
       "Google- und SEO-Sichtbarkeit",
       "relevante Themen und Suchanfragen",
@@ -17,21 +17,21 @@ const OFFERS = [
       "Sentiment",
       "Share of Voice",
       "Wettbewerbsvergleich",
-      "Ursachen und priorisierte Handlungsfelder",
+      "Befund: SEO, GEO, SEO + GEO oder kein Bedarf",
     ],
-    cta: "Analyse ansehen →",
+    cta: "Audit ansehen →",
     href: "/angebote/analyse",
   },
   {
     label: "02 · Optimieren",
-    title: "SEO- & KI-Optimierung",
-    priceHints: ["einzelne Bausteine ab 390 €", "operative Optimierung ab 690 €"],
-    desc: "Wenn klar ist, wo die größten Hebel liegen, optimieren wir genau die Bereiche, die für dein Unternehmen relevant sind.",
+    title: "Optimierungspaket",
+    price: "ab 590 €",
+    desc: "Nur wenn das Audit Handlungsbedarf zeigt: drei Pakete für bis zu 2, 5 oder 8 bestehende Kernseiten – SEO, GEO oder beides, je nach Befund.",
     points: [
-      "Seiten- & Inhaltsstrategie",
-      "Content-Optimierung",
-      "technisches SEO & strukturierte Daten",
-      "Vertrauenssignale & menschliche Prüfung",
+      "Kompakt S · bis zu 2 Kernseiten",
+      "Fokus M · bis zu 5 Kernseiten",
+      "Intensiv L · bis zu 8 Kernseiten",
+      "keine künstlich getrennte SEO-/GEO-Abrechnung",
     ],
     cta: "Optimierung ansehen →",
     href: "/angebote/optimierung",
@@ -40,7 +40,7 @@ const OFFERS = [
     label: "03 · Begleiten",
     title: "Monitoring & laufende Beratung",
     price: "349 € / Monat",
-    desc: "Du möchtest wissen, ob Maßnahmen wirken und was sich bei Google und in der KI-Suche verändert.",
+    desc: "Ausschließlich für Kunden, die zuvor von mir beraten oder optimiert wurden. Kein frei buchbares Einstiegsprodukt.",
     points: [
       "Google-Sichtbarkeit",
       "Prompt- und KI-Sichtbarkeit",
@@ -67,14 +67,7 @@ export function OffersMain() {
             <div key={o.title} className="offer-path">
               <span className="offer-path-label">{o.label}</span>
               <h3>{o.title}</h3>
-              {o.price && <div className="offer-path-price">{o.price}</div>}
-              {o.priceHints && (
-                <div className="offer-path-price offer-path-price--hint">
-                  {o.priceHints.map((line) => (
-                    <span key={line}>{line}</span>
-                  ))}
-                </div>
-              )}
+              <div className="offer-path-price">{o.price}</div>
               <p>{o.desc}</p>
               <ul>
                 {o.points.map((point) => (

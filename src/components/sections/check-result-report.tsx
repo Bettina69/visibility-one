@@ -133,8 +133,8 @@ export function CheckResultReport({ domain, visibilityIndex, keywordsGermany, or
             <h2>Du möchtest wissen, warum das so ist?</h2>
           </div>
           <div className="offer-path" style={{ maxWidth: 480 }}>
-            <span className="offer-path-label">SEO- &amp; KI-Sichtbarkeitsanalyse</span>
-            <div className="offer-path-price">490 €</div>
+            <span className="offer-path-label">SEO- &amp; KI-Sichtbarkeits-Audit</span>
+            <div className="offer-path-price">790 €</div>
             <p>
               Ich analysiere deine Google- und KI-Sichtbarkeit im Detail, vergleiche
               relevante Wettbewerber und zeige dir, welche Maßnahmen wirklich Priorität
@@ -153,7 +153,7 @@ export function CheckResultReport({ domain, visibilityIndex, keywordsGermany, or
               <li>priorisierte nächste Schritte</li>
             </ul>
             <Link href="/angebote/analyse" className="offer-path-cta">
-              Analyse ansehen →
+              Audit ansehen →
             </Link>
           </div>
         </div>

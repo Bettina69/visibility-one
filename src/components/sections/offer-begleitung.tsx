@@ -3,8 +3,8 @@ import { Reveal } from "./reveal";
 
 const FAQ = [
   {
-    q: "Muss ich vorher eine Analyse buchen?",
-    a: "Nein, das ist keine Voraussetzung. Sinnvoll ist Monitoring vor allem nach einer Analyse oder Optimierung, wenn es etwas gibt, dessen Entwicklung sich zu beobachten lohnt.",
+    q: "Kann ich Monitoring direkt buchen, ohne vorheriges Audit?",
+    a: "Nein. Monitoring baut auf einem vorherigen Audit oder einer Optimierung auf – nur so gibt es eine sinnvolle Ausgangslage, gegen die sich Entwicklungen einordnen lassen. Es ist kein frei buchbares Einstiegsprodukt.",
   },
   {
     q: "Welche Kennzahlen werden beobachtet?",
@@ -38,8 +38,8 @@ export function OfferBegleitung() {
             Wissen, was sich verändert – und was du als Nächstes tun solltest.
           </h1>
           <p className="hero-keymessage">
-            SEO und KI-Sichtbarkeit sind kein einmaliges Projekt. Nach der Optimierung
-            beobachten wir, was tatsächlich passiert.
+            SEO und KI-Sichtbarkeit sind kein einmaliges Projekt. Nach einem Audit
+            oder einer Optimierung beobachten wir, was tatsächlich passiert.
           </p>
           <div className="detail-hero-price">
             <Link href="/kontakt" className="btn btn-primary">
@@ -47,6 +47,10 @@ export function OfferBegleitung() {
             </Link>
             <span className="detail-price">349 € / Monat</span>
           </div>
+          <p className="check-trust">
+            Ausschließlich für Kunden, die zuvor von mir beraten oder optimiert
+            wurden – kein frei buchbares Einstiegsprodukt.
+          </p>
         </div>
       </section>
 
@@ -171,7 +175,7 @@ export function OfferBegleitung() {
         <div className="wrap-narrow">
           <p className="check-text">Geeignet:</p>
           <ul className="detail-list">
-            <li>nach einer Analyse oder Optimierung</li>
+            <li>nach einem Audit oder einer Optimierung</li>
             <li>für Online-Shops und KMU ohne eigenes SEO-Team</li>
             <li>wenn intern niemand regelmäßig SEO-/KI-Daten einordnet</li>
             <li>wenn Maßnahmen nicht einfach „laufen gelassen“ werden sollen</li>
@@ -188,19 +192,19 @@ export function OfferBegleitung() {
       <Reveal className="section">
         <div className="wrap-narrow">
           <div className="check-head">
-            <h2>Du möchtest Optimierung und Monitoring direkt kombinieren?</h2>
+            <h2>Voraussetzung für Monitoring</h2>
+            <p className="lead">
+              Monitoring ist keine eigenständige Einstiegsleistung, sondern setzt ein
+              vorheriges Audit oder eine Optimierung voraus – nur so gibt es eine
+              belastbare Ausgangslage, gegen die sich Veränderungen einordnen lassen.
+            </p>
           </div>
-          <div className="offer-path" style={{ maxWidth: 420 }}>
-            <span className="offer-path-label">All-in-One</span>
-            <div className="offer-path-price">2.990 €</div>
-            <ul>
-              <li>komplette Optimierung</li>
-              <li>3 Monate Monitoring</li>
-              <li>Nachsteuerung</li>
-              <li>Abschlussreview</li>
-            </ul>
-            <Link href="/angebote" className="offer-path-cta">
-              All-in-One ansehen →
+          <div className="detail-cta-row">
+            <Link href="/angebote/analyse" className="btn-link">
+              SEO- &amp; KI-Sichtbarkeits-Audit ansehen →
+            </Link>
+            <Link href="/angebote/optimierung" className="btn-link">
+              Optimierungspakete ansehen →
             </Link>
           </div>
         </div>

@@ -4,7 +4,7 @@ import { OfferOptimierung } from "@/components/sections/offer-optimierung";
 export const metadata: Metadata = {
   title: "SEO- & KI-Optimierung",
   description:
-    "Seiten- & Inhaltsstrategie, Content-Optimierung und technisches SEO – gezielt dort, wo es für deine Sichtbarkeit wirklich etwas bringt.",
+    "Drei Pakete für bis zu 2, 5 oder 8 bestehende Kernseiten – SEO, GEO oder beides, abhängig vom Audit-Befund.",
 };
 
 export default function OptimierungPage() {

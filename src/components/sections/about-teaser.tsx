@@ -60,16 +60,20 @@ export function AboutTeaser() {
         <div className="about-teaser">
           <div className="about-teaser-text">
             <span className="eyebrow">Über mich</span>
-            <h2>18+ Jahre E-Commerce aus eigener Erfahrung.</h2>
+            <h2>Ich kenne nicht nur die Marketingseite. Ich kenne auch deine.</h2>
             <p>
-              Ich kenne die Herausforderungen kleiner Online-Shops nicht nur aus der
-              Beratung. Seit 2008 betreibe ich selbst einen Multi-Channel-Shop – mit
-              eigenem Onlineshop und verschiedenen Marktplätzen.
+              Seit 18 Jahren betreibe ich selbst einen Onlineshop – mit rund 550
+              Produkten und über 200 Landingpages. Mit Google Analytics und der
+              Search Console habe ich immer wieder neu entschieden, wo sich Arbeit
+              tatsächlich lohnt.
             </p>
             <p>
-              Ich weiß, was es bedeutet, wenn Traffic zurückgeht, Budgets begrenzt sind
-              und nicht jede theoretisch sinnvolle Maßnahme auch wirtschaftlich sinnvoll
-              ist.
+              Ich habe erlebt, wie schnell sich Plattformen und Suchverhalten ändern
+              können – und weiß, was es bedeutet, wenn Budgets begrenzt sind und
+              nicht jede theoretisch sinnvolle Maßnahme auch wirtschaftlich sinnvoll
+              ist. Deshalb geht es mir bei SEO und KI-Sichtbarkeit nicht darum,
+              möglichst viel zu optimieren – sondern herauszufinden, was für dein
+              Unternehmen wirklich sinnvoll ist.
             </p>
             <div className="about-teaser-stats">
               {STATS.map((s) => (

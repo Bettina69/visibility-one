@@ -35,21 +35,21 @@ export function OfferAnalyse() {
         <div className="hero-inner">
           <span className="eyebrow">Verstehen</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>
-            SEO- &amp; KI-Sichtbarkeitsanalyse
+            SEO- &amp; KI-Sichtbarkeits-Audit
           </h1>
           <p className="hero-keymessage">
             Bevor du optimierst, solltest du wissen, was wirklich fehlt.
           </p>
           <p className="hero-sub">
-            Ich analysiere, wie dein Unternehmen bei Google und in KI-Systemen sichtbar
-            ist, wo Wettbewerber stärker auftreten und welche Maßnahmen für dich
-            tatsächlich Priorität haben.
+            Die fundierte Analyse deiner Sichtbarkeit bei Google und in relevanten
+            KI-Systemen: wo dein Unternehmen heute steht, wo Wettbewerber stärker
+            auftreten und welche Maßnahmen für dich tatsächlich Priorität haben.
           </p>
           <div className="detail-hero-price">
             <Link href="/kontakt" className="btn btn-primary">
-              Analyse anfragen →
+              Audit anfragen →
             </Link>
-            <span className="detail-price">490 €</span>
+            <span className="detail-price">790 €</span>
           </div>
         </div>
       </section>
@@ -97,6 +97,11 @@ export function OfferAnalyse() {
                 <li>Entity- und Themenumfeld</li>
                 <li>Share of Voice</li>
                 <li>Präsenz in relevanten KI-Antworten</li>
+                <li>
+                  ob bestehende Unternehmens-/Über-uns-/Leistungsseiten
+                  ausreichende Entity-Klarheit für KI-Systeme bieten – oder
+                  ob eine dedizierte Grounding Page sinnvoll wäre
+                </li>
               </ul>
             </div>
             <div className="check-item">
@@ -143,6 +148,57 @@ export function OfferAnalyse() {
               </ul>
             </div>
           </div>
+        </div>
+      </Reveal>
+
+      <Reveal className="section">
+        <div className="wrap-narrow">
+          <div className="check-head">
+            <h2>Du musst vorher nicht wissen, ob du SEO, GEO oder beides brauchst.</h2>
+            <p className="lead">
+              Genau das klärt das Audit. Am Ende steht einer von vier möglichen
+              Befunden:
+            </p>
+          </div>
+          <div className="analysis-grid">
+            <div className="check-item">
+              <h3>SEO-Schwerpunkt</h3>
+              <p>
+                Der größte Hebel liegt bei Google – etwa bei Struktur, Inhalten
+                oder technischer Sichtbarkeit.
+              </p>
+            </div>
+            <div className="check-item">
+              <h3>GEO-Schwerpunkt</h3>
+              <p>
+                Google-Sichtbarkeit ist vorhanden, aber KI-Systeme nennen oder
+                empfehlen dein Unternehmen kaum.
+              </p>
+            </div>
+            <div className="check-item">
+              <h3>SEO + GEO</h3>
+              <p>
+                Beide Bereiche zeigen relevanten Handlungsbedarf – zum Beispiel,
+                wenn strukturelle Schwächen sich auf Google und KI-Systeme
+                gleichermaßen auswirken.
+              </p>
+            </div>
+            <div className="check-item">
+              <h3>Kein relevanter Optimierungsbedarf</h3>
+              <p>
+                Möglich, wenn deine Sichtbarkeit bereits solide ist. Auch das ist
+                ein valides Ergebnis – nicht jedes Audit endet mit einem
+                Optimierungspaket.
+              </p>
+            </div>
+          </div>
+          <p className="check-note" style={{ marginTop: 20 }}>
+            Bei einem GEO-Befund kann dazugehören, zu prüfen, ob deine
+            bestehenden Unternehmensseiten für KI-Systeme bereits eindeutig
+            genug sind – oder ob eine ergänzende Grounding Page sinnvoll wäre.
+            Das ist keine automatische Empfehlung, sondern hängt vom jeweiligen
+            Befund ab.
+          </p>
         </div>
       </Reveal>
 
@@ -233,9 +289,9 @@ export function OfferAnalyse() {
           </div>
           <div className="detail-hero-price">
             <Link href="/kontakt" className="btn btn-primary">
-              SEO- &amp; KI-Sichtbarkeitsanalyse anfragen →
+              SEO- &amp; KI-Sichtbarkeits-Audit anfragen →
             </Link>
-            <span className="detail-price">490 €</span>
+            <span className="detail-price">790 €</span>
           </div>
           <Link href="/sichtbarkeitscheck" className="btn-link detail-secondary-link">
             Erst kostenlos prüfen →

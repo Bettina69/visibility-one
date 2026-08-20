@@ -3,51 +3,34 @@ import { Reveal } from "./reveal";
 
 const PACKAGES = [
   {
-    name: "Starter",
-    price: "1.490 €",
-    sub: "Verstehen & gezielt verbessern",
+    name: "Kompakt S",
+    price: "590 €",
+    sub: "bis zu 2 bestehende Kernseiten",
     items: [
-      "SEO- & KI-Sichtbarkeitsanalyse",
-      "Seiten- & Inhaltsstrategie",
-      "Content-Optimierung definierter Kernseiten",
-      "Abschlussgespräch",
-      "weitere Roadmap",
-    ],
-    idealFor:
-      "kleinere Websites und Unternehmen, die zunächst die wichtigsten Hebel angehen möchten.",
-  },
-  {
-    name: "Komplett",
-    price: "2.290 €",
-    sub: "SEO & KI-Sichtbarkeit ganzheitlich optimieren",
-    featured: true,
-    items: [
-      "alles aus Starter",
-      "technischer SEO-Check",
-      "strukturierte Daten / Schema",
-      "technische Entity-/GEO-Signale",
-      "Validierung",
-      "Abschluss-Check",
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
     ],
   },
   {
-    name: "All-in-One",
-    price: "2.990 €",
-    sub: "Optimierung + 3 Monate Begleitung",
+    name: "Fokus M",
+    price: "1.190 €",
+    sub: "bis zu 5 bestehende Kernseiten",
     items: [
-      "alles aus Komplett",
-      "3 Monate Monitoring",
-      "Prompt Tracking",
-      "Brand Mentions",
-      "Citations",
-      "Recommendations",
-      "Share of Voice",
-      "Wettbewerbsentwicklung",
-      "Nachsteuerung",
-      "Abschlussreview",
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
     ],
-    idealFor:
-      "Unternehmen, die nicht nur optimieren, sondern auch sehen möchten, was sich tatsächlich verändert.",
+  },
+  {
+    name: "Intensiv L",
+    price: "1.790 €",
+    sub: "bis zu 8 bestehende Kernseiten",
+    items: [
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
+    ],
   },
 ];
 
@@ -56,29 +39,34 @@ export function OffersPackages() {
     <Reveal className="section">
       <div className="wrap">
         <div className="check-head">
-          <span className="eyebrow">Pakete</span>
-          <h2>Du möchtest mehrere Schritte kombinieren?</h2>
+          <span className="eyebrow">Optimierungspakete</span>
+          <h2>Welches Paket zu dir passt, klärt das Audit.</h2>
           <p className="lead">
-            Die Pakete verbinden Analyse, Optimierung und bei Bedarf Monitoring zu
-            einem klar definierten Projekt.
+            Die Paketgröße richtet sich nach der Anzahl deiner bestehenden
+            Kernseiten. Ob SEO, GEO oder beides optimiert wird, entscheidet der
+            Befund aus dem Audit – nicht das Paket selbst.
           </p>
         </div>
         <div className="offer-paths offer-paths--packages">
           {PACKAGES.map((p) => (
-            <div key={p.name} className={`offer-path ${p.featured ? "featured" : ""}`}>
-              {p.featured && <span className="offer-path-badge">Empfohlen</span>}
+            <div key={p.name} className="offer-path">
+              <span className="offer-path-label">{p.sub}</span>
               <h3>{p.name}</h3>
               <div className="offer-path-price">{p.price}</div>
-              <p className="offer-path-sub">{p.sub}</p>
               <ul>
                 {p.items.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-              {p.idealFor && <p className="offer-path-idealfor">Ideal für: {p.idealFor}</p>}
             </div>
           ))}
         </div>
+        <p className="check-note" style={{ marginTop: 24 }}>
+          Nicht automatisch enthalten: vollständige Neuerstellung umfangreicher
+          Seiten, umfangreiche zusätzliche Texterstellung, Programmierung oder
+          größere technische Eingriffe. Für Projekte oberhalb von Intensiv L
+          erstelle ich ein individuelles Angebot.
+        </p>
 
         <div className="offer-hourly">
           <h4>Du brauchst nur punktuell Unterstützung?</h4>

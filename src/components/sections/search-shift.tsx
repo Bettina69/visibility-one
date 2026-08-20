@@ -1,10 +1,11 @@
-const SOURCE_URL = "https://www.semrush.com/blog/ai-search-seo-traffic-study/";
+const TREND_SOURCE_URL = "https://www.semrush.com/blog/ai-search-seo-traffic-study/";
+const CHANNEL_MIX_SOURCE_URL = "https://www.semrush.com/blog/traffic-channel-mix-study/";
 
-function SourceLink() {
+function SourceLink({ href }: { href: string }) {
   return (
     <a
       className="btn-link detail-secondary-link source-link shift-card-source"
-      href={SOURCE_URL}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -60,62 +61,30 @@ export function SearchShift() {
       </p>
 
       <div className="shift-modules">
-        {/* Modul 1: Die Bewegung */}
+        {/* Modul 1: Heute */}
         <div className="shift-card">
-          <h3 className="shift-card-title">KI-Suche wächst.</h3>
-          <p className="shift-card-label">2025 → 2029</p>
-          <svg
-            className="shift-card-visual shift-line-chart"
-            viewBox="0 0 270 150"
-            role="img"
-            aria-labelledby="shift-c1-title shift-c1-desc"
-          >
-            <title id="shift-c1-title">
-              KI-Suche wächst, klassische organische Suche verändert sich
-              (2025–2029)
-            </title>
-            <desc id="shift-c1-desc">
-              Qualitative Trenddarstellung ohne Semrush-Prozentwerte:
-              KI-Suche steigend, klassische organische Suche fallend.
-            </desc>
-            <AxisFrame />
-            <polyline
-              points="40,25 92,38 144,50 196,63 248,72"
-              className="search-shift-line search-shift-line--organic"
-            />
-            <polyline
-              points="40,95 92,78 144,60 196,42 248,25"
-              className="search-shift-line search-shift-line--ai"
-            />
-          </svg>
-          <ul className="shift-legend">
-            <li>
-              <span
-                className="shift-legend-swatch shift-legend-swatch--ai"
-                aria-hidden="true"
-              ></span>
-              KI-Suche
-            </li>
-            <li>
-              <span
-                className="shift-legend-swatch shift-legend-swatch--organic"
-                aria-hidden="true"
-              ></span>
-              Klassische organische Suche
-            </li>
-          </ul>
-          <p className="shift-chart-note">
-            Qualitativer Trend, indexiert – Semrush veröffentlicht keine
-            Prozentwerte je Jahr.
-          </p>
+          <h3 className="shift-card-title">Organische Suche dominiert – noch.</h3>
+          <p className="shift-card-label">Anteil an allen Website-Besuchen · 2025</p>
+          <dl className="shift-card-visual shift-figures" aria-hidden="true">
+            <div className="shift-figure">
+              <dt>Organische Suche</dt>
+              <dd>16,04%</dd>
+            </div>
+            <div className="shift-figure shift-figure--ai">
+              <dt>KI-Traffic</dt>
+              <dd>0,14%</dd>
+            </div>
+          </dl>
           <p className="shift-card-text">
-            Semrush erwartet, dass KI-Suche deutlich an Bedeutung gewinnt,
-            während sich der Anteil klassischer organischer Suche verändert.
+            Semrush wertete 2025 Milliarden Website-Besuche aus: Organische
+            Suche bleibt mit Abstand der größte Kanal. KI-Traffic wuchs im
+            gleichen Zeitraum um 66&nbsp;% – ausgehend von einem noch sehr
+            kleinen Anteil.
           </p>
-          <SourceLink />
+          <SourceLink href={CHANNEL_MIX_SOURCE_URL} />
         </div>
 
-        {/* Modul 2: Der mögliche Schnittpunkt */}
+        {/* Modul 2: Zukunft – möglicher Schnittpunkt */}
         <div className="shift-card">
           <h3 className="shift-card-title">2028*</h3>
           <p className="shift-card-label">Möglicher Schnittpunkt</p>
@@ -130,9 +99,9 @@ export function SearchShift() {
               organischer Suche
             </title>
             <desc id="shift-c2-desc">
-              Qualitative Darstellung: Semrush prognostiziert für die
-              untersuchten Themen einen möglichen Schnittpunkt Anfang 2028.
-              Keine veröffentlichten Prozentwerte.
+              Qualitative Darstellung ohne Semrush-Prozentwerte: KI-Suche
+              steigend, klassische organische Suche fallend, mit möglichem
+              Schnittpunkt Anfang 2028.
             </desc>
             <AxisFrame />
             <line
@@ -165,17 +134,34 @@ export function SearchShift() {
               Anfang 2028*
             </text>
           </svg>
+          <ul className="shift-legend">
+            <li>
+              <span
+                className="shift-legend-swatch shift-legend-swatch--ai"
+                aria-hidden="true"
+              ></span>
+              KI-Suche
+            </li>
+            <li>
+              <span
+                className="shift-legend-swatch shift-legend-swatch--organic"
+                aria-hidden="true"
+              ></span>
+              Klassische organische Suche
+            </li>
+          </ul>
           <p className="shift-card-text">
-            Semrush prognostiziert für die untersuchten Themen, dass
-            KI-Suchtraffic klassischen organischen Suchtraffic Anfang 2028
-            überholen könnte.
+            Semrush erwartet, dass KI-Suche deutlich an Bedeutung gewinnt,
+            während sich der Anteil klassischer organischer Suche verändert.
+            Für die untersuchten Themen prognostiziert Semrush einen
+            möglichen Schnittpunkt Anfang 2028.
           </p>
           <p className="check-note shift-card-footnote">
             * Prognose auf Basis von mehr als 500 untersuchten Themen und
             Unterthemen aus Digital Marketing und SEO. Nicht als
             allgemeingültiger Zeitpunkt für jede Branche zu verstehen.
           </p>
-          <SourceLink />
+          <SourceLink href={TREND_SOURCE_URL} />
         </div>
 
         {/* Modul 3: Qualität des Traffics */}
@@ -204,7 +190,7 @@ export function SearchShift() {
             Conversion-basierten Wert gegenüber traditionellem Organic
             Search – nicht auf die Trafficmenge.
           </p>
-          <SourceLink />
+          <SourceLink href={TREND_SOURCE_URL} />
         </div>
       </div>
 
@@ -214,16 +200,6 @@ export function SearchShift() {
           heute an mehr Orten als nur in den klassischen Suchergebnissen.
         </p>
       </div>
-
-      <a
-        className="btn-link detail-secondary-link source-link"
-        href="https://www.semrush.com/blog/traffic-channel-mix-study/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Semrush: How AI is reshaping traffic channels →{" "}
-        <span className="sr-only">(öffnet in neuem Tab)</span>
-      </a>
     </>
   );
 }

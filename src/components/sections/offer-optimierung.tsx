@@ -1,63 +1,50 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 
-const BAUSTEINE = [
+const PACKAGES = [
   {
-    label: "01 · Seiten- & Inhaltsstrategie",
-    price: "ab 390 €",
-    title: "Die richtige Struktur zuerst.",
+    name: "Kompakt S",
+    price: "590 €",
+    sub: "bis zu 2 bestehende Kernseiten",
     points: [
-      "URL- und Seitenstruktur prüfen",
-      "Themencluster definieren",
-      "fehlende Seiten identifizieren",
-      "zentrale Unternehmens-/Themenseiten schärfen",
-      "interne Verlinkung planen",
-      "priorisierten Contentplan erstellen",
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
     ],
-    note: "Du weißt anschließend, welche Seiten du brauchst, welche fehlen und wie sie zusammenhängen.",
+    scope: "Interner Scope-Rahmen: ca. 5 Suchbegriffe/Themen, ca. 10 Prompts/Fragen.",
   },
   {
-    label: "02 · Content-Optimierung",
-    price: "ab 690 €",
-    title: "Inhalte, die Menschen verstehen – und Maschinen einordnen können.",
+    name: "Fokus M",
+    price: "1.190 €",
+    sub: "bis zu 5 bestehende Kernseiten",
     points: [
-      "bestehende Kernseiten nach Suchintention optimieren",
-      "Title, H1–H3 und Meta-Daten",
-      "klare Entitäten und Zusammenhänge",
-      "zitierfähige Definitionen und Antworten",
-      "FAQ-Inhalte",
-      "Mission & Werte, wo relevant für Empfehlungen",
-      "Bildoptimierung (Alt-Texte, Dateigröße)",
-      "E-E-A-T-Signale (Erfahrung, Fachwissen, Vertrauenssignale)",
-      "Content Gaps schließen",
-      "menschliche Endredaktion",
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
     ],
-    note: "Der tatsächliche Umfang richtet sich nach Anzahl und Komplexität der Seiten.",
+    scope: "Interner Scope-Rahmen: ca. 15 Suchbegriffe/Themen, ca. 25 Prompts/Fragen.",
   },
   {
-    label: "03 · Technisches SEO & strukturierte Daten",
-    price: "ab 790 €",
-    title: "Maschinenlesbar statt nur schön.",
+    name: "Intensiv L",
+    price: "1.790 €",
+    sub: "bis zu 8 bestehende Kernseiten",
     points: [
-      "technischer SEO-Check",
-      "Indexierbarkeit, Canonicals, Sitemap, robots.txt, Redirects, Breadcrumbs",
-      "technische Zugänglichkeit für KI-Crawler",
-      "PageSpeed / Core Web Vitals analysieren und Optimierungsmaßnahmen definieren",
-      "strukturierte Daten / Schema.org / JSON-LD (Organization, Person, ggf. Product, BreadcrumbList)",
-      "strukturierte Daten validieren",
+      "SEO, GEO oder beides – abhängig vom Audit-Befund",
+      "relevante Suchbegriffe und Themen",
+      "typische Fragen in relevanten KI-Systemen",
     ],
-    note: "Technische Umsetzung kann je nach System und Aufwand separat kalkuliert werden.",
+    scope: "Interner Scope-Rahmen: ca. 30 Suchbegriffe/Themen, ca. 40 Prompts/Fragen.",
   },
 ];
 
 const FAQ = [
   {
-    q: "Muss ich alle drei Bausteine buchen?",
-    a: "Nein. Du kannst einzelne Bausteine buchen oder sie kombinieren – je nachdem, wo bei dir der größte Hebel liegt.",
+    q: "Woher weiß ich, welches Paket ich brauche?",
+    a: "Das klärt das Audit. Es zeigt, ob SEO, GEO oder beides sinnvoll ist und wie viele deiner Kernseiten relevant sind. Danach entscheidest du, welches Paket passt.",
   },
   {
-    q: "Kann ich nur Content optimieren lassen?",
-    a: "Ja, das ist möglich. Sinnvoll ist es, wenn Struktur und Technik bereits passen und der größte Hebel bei den Inhalten liegt.",
+    q: "Was zählt als Kernseite?",
+    a: "Eine bestehende Seite, die für dein Geschäft besonders relevant ist – zum Beispiel die Startseite, zentrale Leistungsseiten oder wichtige Kategorie- bzw. Themenseiten.",
   },
   {
     q: "Übernimmst du auch die technische Umsetzung?",
@@ -65,7 +52,7 @@ const FAQ = [
   },
   {
     q: "Muss meine Website neu gebaut werden?",
-    a: "In der Regel nicht. Es geht um gezielte Anpassungen an Struktur, Inhalten und Technik – nicht um einen Website-Relaunch.",
+    a: "In der Regel nicht. Es geht um gezielte Anpassungen an Struktur, Inhalten und Technik bestehender Seiten – nicht um einen Website-Relaunch.",
   },
   {
     q: "Was ist GEO-Optimierung konkret?",
@@ -99,8 +86,8 @@ export function OfferOptimierung() {
             für deine Sichtbarkeit tatsächlich relevant sind.
           </p>
           <p className="hero-sub">
-            Je nach Ausgangslage geht es um Struktur, Inhalte, Technik – oder eine
-            sinnvolle Kombination daraus.
+            Ob SEO, GEO oder beides sinnvoll ist, klärt vorher das Audit. Die
+            Paketgröße richtet sich nach der Anzahl deiner Kernseiten.
           </p>
           <div className="hero-actions">
             <Link href="/kontakt" className="btn btn-primary">
@@ -113,23 +100,33 @@ export function OfferOptimierung() {
       <Reveal className="section">
         <div className="wrap">
           <div className="check-head">
-            <h2>Drei Bereiche. Du brauchst nicht automatisch alle.</h2>
+            <h2>Drei Pakete. SEO, GEO oder beides – abhängig vom Audit.</h2>
+            <p className="lead">
+              Wenn dieselben Seiten für SEO und GEO optimiert werden, wird die Arbeit
+              nicht künstlich doppelt verkauft.
+            </p>
           </div>
           <div className="offer-paths">
-            {BAUSTEINE.map((b) => (
-              <div key={b.label} className="offer-path">
-                <span className="offer-path-label">{b.label}</span>
-                <div className="offer-path-price">{b.price}</div>
-                <h3>{b.title}</h3>
+            {PACKAGES.map((p) => (
+              <div key={p.name} className="offer-path">
+                <span className="offer-path-label">{p.sub}</span>
+                <h3>{p.name}</h3>
+                <div className="offer-path-price">{p.price}</div>
                 <ul>
-                  {b.points.map((point) => (
+                  {p.points.map((point) => (
                     <li key={point}>{point}</li>
                   ))}
                 </ul>
-                <p className="offer-path-idealfor">{b.note}</p>
+                <p className="offer-path-idealfor">{p.scope}</p>
               </div>
             ))}
           </div>
+          <p className="check-note" style={{ marginTop: 24 }}>
+            Nicht automatisch enthalten: vollständige Neuerstellung umfangreicher
+            Seiten, umfangreiche zusätzliche Texterstellung, Programmierung oder
+            größere technische Eingriffe. Für Projekte oberhalb von Intensiv L
+            erstelle ich ein individuelles Angebot.
+          </p>
         </div>
       </Reveal>
 
@@ -156,7 +153,10 @@ export function OfferOptimierung() {
             Dazu gehören auch Vertrauenssignale: Erfahrung, Fachwissen, Autorität und
             Vertrauenswürdigkeit (E-E-A-T) beschreiben, wie nachvollziehbar Kompetenz
             und Glaubwürdigkeit sichtbar werden – etwa durch klare Autorenschaft,
-            verlässliche Quellen und konsistente Unternehmensinformationen.
+            verlässliche Quellen und konsistente Unternehmensinformationen. Je nach
+            Befund kann dazugehören, zu prüfen, ob eine bestehende Unternehmensseite
+            bereits ausreichend Entity-Klarheit bietet – oder ob eine ergänzende
+            Grounding Page sinnvoll wäre.
           </p>
           <p className="check-text" style={{ marginTop: 12 }}>
             KI unterstützt meine Arbeit dabei – sie ersetzt nicht die fachliche Prüfung.
@@ -173,7 +173,7 @@ export function OfferOptimierung() {
           </div>
           <p className="check-text">Geeignet, wenn:</p>
           <ul className="detail-list">
-            <li>die Analyse klare Baustellen gezeigt hat</li>
+            <li>das Audit klare Baustellen gezeigt hat</li>
             <li>bestehende Inhalte Potenzial haben</li>
             <li>Seitenstruktur unklar ist</li>
             <li>technische SEO-Probleme bestehen</li>
@@ -181,7 +181,8 @@ export function OfferOptimierung() {
             <li>Wettbewerber bei wichtigen Themen sichtbarer sind</li>
           </ul>
           <p className="check-text" style={{ marginTop: 16 }}>
-            Auch einzelne Bausteine können gebucht werden.
+            Auch ein kleineres Paket lässt sich später erweitern, wenn sich zeigt,
+            dass mehr Kernseiten relevant sind.
           </p>
         </div>
       </Reveal>
@@ -189,31 +190,10 @@ export function OfferOptimierung() {
       <Reveal className="section">
         <div className="wrap-narrow">
           <div className="check-head">
-            <h2>Du möchtest Analyse, Content und Technik kombinieren?</h2>
-          </div>
-          <div className="compare-columns">
-            <div>
-              <h3 className="question-col-label">Starter</h3>
-              <p className="detail-price">1.490 €</p>
-            </div>
-            <div>
-              <h3 className="question-col-label">Komplett</h3>
-              <p className="detail-price">2.290 €</p>
-            </div>
-          </div>
-          <Link href="/angebote" className="btn-link detail-secondary-link">
-            Pakete vergleichen →
-          </Link>
-        </div>
-      </Reveal>
-
-      <Reveal className="section">
-        <div className="wrap-narrow">
-          <div className="check-head">
-            <h2>Was solltest du wirklich optimieren?</h2>
+            <h2>Du weißt noch nicht, welches Paket zu dir passt?</h2>
             <p className="lead">
-              Wenn du noch nicht weißt, welcher Baustein für dich sinnvoll ist, starten
-              wir mit der Analyse.
+              Dann starten wir mit dem Audit. Es zeigt, wo der größte Hebel liegt –
+              und ob überhaupt ein Optimierungspaket sinnvoll ist.
             </p>
           </div>
           <div className="detail-cta-row">
@@ -221,7 +201,7 @@ export function OfferOptimierung() {
               Optimierung anfragen →
             </Link>
             <Link href="/angebote/analyse" className="btn-link">
-              SEO- &amp; KI-Sichtbarkeitsanalyse ansehen →
+              SEO- &amp; KI-Sichtbarkeits-Audit ansehen →
             </Link>
           </div>
         </div>

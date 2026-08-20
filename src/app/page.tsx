@@ -3,6 +3,7 @@ import { SearchShift } from "@/components/sections/search-shift";
 import { Questions } from "@/components/sections/questions";
 import { Reveal } from "@/components/sections/reveal";
 import { MethodOverview } from "@/components/sections/method-overview";
+import { UseCasesTeaser } from "@/components/sections/use-cases-teaser";
 import { OffersOverview } from "@/components/sections/offers-overview";
 import { SocialProof } from "@/components/sections/social-proof";
 import { AboutTeaser } from "@/components/sections/about-teaser";
@@ -22,6 +23,7 @@ export default function HomePage() {
       </Reveal>
       <Marquee />
       <MethodOverview />
+      <UseCasesTeaser />
       <OffersOverview />
       <SocialProof />
       <AboutTeaser />
