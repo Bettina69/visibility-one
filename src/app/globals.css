@@ -1302,6 +1302,10 @@ p {
 .facts-eyebrow + h2 {
   margin-bottom: 8px;
 }
+.facts-eyebrow + h2 + .lead {
+  font-size: var(--fs-s);
+  max-width: 56ch;
+}
 .shift-modules {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1311,8 +1315,8 @@ p {
 .shift-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 28px;
+  gap: 6px;
+  padding: 20px;
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
@@ -1331,7 +1335,7 @@ p {
   color: var(--accent);
 }
 .shift-card-visual {
-  margin-top: 6px;
+  margin-top: 2px;
 }
 .shift-card-text {
   font-size: 13px;
@@ -1340,20 +1344,20 @@ p {
   flex-grow: 1;
 }
 .shift-card-source {
-  margin-top: 4px;
+  margin-top: 2px;
   align-self: flex-start;
 }
 .shift-figures {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 .shift-figure {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
   border-bottom: 1px solid var(--line);
 }
 .shift-figure dt {
@@ -1363,7 +1367,7 @@ p {
 .shift-figure dd {
   margin: 0;
   font-family: var(--font-serif);
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 350;
   color: var(--muted);
 }
@@ -1374,9 +1378,6 @@ p {
   .shift-modules {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  .shift-card {
-    padding: 20px;
   }
 }
 
