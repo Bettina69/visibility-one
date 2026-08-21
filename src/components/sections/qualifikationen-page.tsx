@@ -46,11 +46,38 @@ function EtsyIcon() {
   );
 }
 
+// Kein offizielles kasuwa-Markenicon in der bestehenden Library - bewusst ein
+// neutrales Marktkorb-Motiv statt einer Logo-Nachbildung.
+function MarketBasketIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M5 10h14l-1.5 9a2 2 0 0 1-2 1.7h-7a2 2 0 0 1-2-1.7L5 10z" />
+      <path d="M8 10a4 4 0 0 1 8 0" />
+      <path d="M9 13v5M12 13v5M15 13v5" />
+    </svg>
+  );
+}
+
+// Ebenfalls kein offizielles Markenicon verfügbar - neutrales
+// Storefront-Motiv statt Logo-Nachbildung.
+function StorefrontIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
+      <path d="M4 9l1-4h14l1 4" />
+      <path d="M4 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0" />
+      <path d="M5 9v10h14V9" />
+      <path d="M10 19v-5h4v5" />
+    </svg>
+  );
+}
+
 const PLATFORMS = [
   { name: "WordPress / WooCommerce", Icon: WordPressIcon },
   { name: "Shopify", Icon: ShopifyIcon },
   { name: "Amazon", Icon: AmazonIcon },
   { name: "Etsy", Icon: EtsyIcon },
+  { name: "kasuwa", Icon: MarketBasketIcon },
+  { name: "ZEIT Shop", Icon: StorefrontIcon },
 ];
 
 export function QualifikationenPage() {

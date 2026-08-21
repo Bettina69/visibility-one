@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 const FAQ = [
   {
@@ -32,6 +33,7 @@ export function OfferAnalyse() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Verstehen</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>
@@ -256,11 +258,8 @@ export function OfferAnalyse() {
             <li>Unternehmen, die wissen möchten, wie sie in KI-Systemen wahrgenommen werden</li>
             <li>Unternehmen, deren Wettbewerber häufiger genannt oder empfohlen werden</li>
           </ul>
-        </div>
-      </Reveal>
 
-      <Reveal className="section">
-        <div className="wrap-narrow">
+          <h3 className="offer-subhead">Was die Analyse nicht ist</h3>
           <ul className="detail-list">
             <li>keine automatisierte Standardauswertung</li>
             <li>keine 80-seitige Agenturpräsentation</li>

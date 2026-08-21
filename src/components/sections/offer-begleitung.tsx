@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 const FAQ = [
   {
@@ -32,6 +33,7 @@ export function OfferBegleitung() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Begleiten</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>
@@ -157,28 +159,28 @@ export function OfferBegleitung() {
 
       <Reveal className="section">
         <div className="wrap-narrow">
-          <p className="check-text">Was du jeden Monat bekommst:</p>
+          <h3 className="offer-subhead" style={{ marginTop: 0 }}>
+            Jeden Monat enthalten
+          </h3>
           <ul className="detail-list">
-            <li>Monitoring der wichtigsten SEO-Kennzahlen</li>
-            <li>Beobachtung relevanter KI-Prompts</li>
-            <li>Veränderungen bei Mentions, Citations, Recommendations und Sentiment</li>
-            <li>auffällige Entwicklungen bei Wettbewerbern</li>
-            <li>kurze monatliche Zusammenfassung</li>
-            <li>Top-Entwicklungen</li>
+            <li>SEO-Kennzahlen im Blick</li>
+            <li>relevante KI-Prompts beobachten</li>
+            <li>
+              Veränderungen bei Mentions, Citations, Recommendations, Share of
+              Voice und Sentiment
+            </li>
+            <li>auffällige Wettbewerbsentwicklungen</li>
+            <li>kurze Zusammenfassung mit Top-Entwicklungen</li>
             <li>priorisierte nächste Schritte</li>
-            <li>optional kurze Abstimmung</li>
+            <li>optionale kurze Abstimmung</li>
           </ul>
-        </div>
-      </Reveal>
 
-      <Reveal className="section">
-        <div className="wrap-narrow">
-          <p className="check-text">Geeignet:</p>
+          <h3 className="offer-subhead">Geeignet für</h3>
           <ul className="detail-list">
             <li>nach einem Audit oder einer Optimierung</li>
             <li>für Online-Shops und KMU ohne eigenes SEO-Team</li>
             <li>wenn intern niemand regelmäßig SEO-/KI-Daten einordnet</li>
-            <li>wenn Maßnahmen nicht einfach „laufen gelassen“ werden sollen</li>
+            <li>wenn Maßnahmen aktiv nachverfolgt werden sollen</li>
             <li>wenn Wettbewerbsentwicklungen relevant sind</li>
           </ul>
           <p className="check-text" style={{ marginTop: 20 }}>

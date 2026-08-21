@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { basePath } from "@/lib/site-config";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 const STATS = [
   { num: "18+ Jahre", lbl: "E-Commerce-Praxis" },
@@ -140,12 +141,13 @@ export function AboutPage() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <div className="about-hero-grid">
             <div>
               <span className="eyebrow">Über mich</span>
               <h1 className="hero-title" style={{ marginTop: 16 }}>
-                Unternehmerin. Strategin.
+                E-Commerce-Unternehmerin.
                 <br />
                 SEO- &amp; KI-Beraterin.
               </h1>

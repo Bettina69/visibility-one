@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { NetworkBg } from "./network-bg";
 import { RelatedReading } from "./related-reading";
 
 const AI_OVERVIEWS_LIST = [
@@ -109,6 +110,7 @@ export function GoogleAiOverviewsPage() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Wissen · Google AI</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>

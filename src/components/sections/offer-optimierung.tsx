@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 const PACKAGES = [
   {
@@ -60,7 +61,7 @@ const FAQ = [
   },
   {
     q: "Kann ich meine Texte selbst schreiben?",
-    a: "Ja. Ich kann Texte selbst schreiben, gemeinsam mit dir entwickeln oder deine vorhandenen Texte redigieren und für SEO und KI-Sichtbarkeit optimieren.",
+    a: "Ja. Du kannst deine Texte selbst schreiben. Ich kann sie anschließend redigieren und für SEO und KI-Sichtbarkeit optimieren. Alternativ entwickeln wir die Texte gemeinsam.",
   },
   {
     q: "Was bedeutet E-E-A-T?",
@@ -76,6 +77,7 @@ export function OfferOptimierung() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Optimieren</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>

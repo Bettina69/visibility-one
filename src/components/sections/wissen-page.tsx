@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { NetworkBg } from "./network-bg";
 
 const KI_BILDER_ARTICLE_HREF: string | undefined = "/ki-bilder-kennzeichnen";
 
@@ -29,6 +30,7 @@ export function WissenPage() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Wissen</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>

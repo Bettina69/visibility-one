@@ -5,6 +5,7 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { INTEREST_OPTIONS } from "@/lib/contact-options";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 type FormState = {
   name: string;
@@ -31,7 +32,8 @@ export function Contact() {
     setForm((f) => ({ ...f, [key]: value }));
 
   return (
-    <Reveal className="section contact-section">
+    <Reveal className="section contact-section network-accent">
+      <NetworkBg side="right" />
       <div className="wrap">
         <div className="section-head">
           <span className="eyebrow">Kontakt</span>

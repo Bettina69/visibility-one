@@ -2862,7 +2862,10 @@ p {
    automatic (and here uneven, 3-then-1-stretched) line breaks. Children
    are stage,connector,stage,connector,stage,connector,stage,connector,
    stage in source order; the middle connector (index 6, between stage 3
-   and stage 4) becomes the row-transition arrow. */
+   and stage 4) becomes the row-transition arrow. It sits above stage 4
+   (grid-column: 1, not a full-width center span) so the break reads as
+   an S-curve continuation from row 1's end into row 2's start, instead
+   of looking like two competing 3-then-2 process paths. */
 .seo-ai-flow--5 {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr;
@@ -2890,7 +2893,7 @@ p {
   grid-row: 1;
 }
 .seo-ai-flow--5 > :nth-child(6) {
-  grid-column: 1 / -1;
+  grid-column: 1;
   grid-row: 2;
   justify-self: center;
   transform: rotate(90deg);

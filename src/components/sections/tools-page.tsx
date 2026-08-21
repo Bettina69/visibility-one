@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Reveal } from "./reveal";
+import { NetworkBg } from "./network-bg";
 
 const CHECK_HIGHLIGHTS = [
   { num: "Google", lbl: "Sichtbarkeit" },
@@ -15,6 +16,7 @@ export function ToolsPage() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Kostenlose Tools</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>

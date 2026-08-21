@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Reveal } from "./reveal";
 import { AuthorModule } from "./author-module";
+import { NetworkBg } from "./network-bg";
 
 const LABEL_TERMS = [
   {
@@ -80,6 +81,7 @@ export function KiBilderKennzeichnenPage() {
   return (
     <>
       <section className="hero">
+        <NetworkBg />
         <div className="hero-inner">
           <span className="eyebrow">Wissen · KI-Bilder</span>
           <h1 className="hero-title" style={{ marginTop: 16 }}>
