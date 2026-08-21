@@ -110,10 +110,6 @@ export function OfferAnalyse() {
               <span className="check-num">03</span>
               <h3>Mentions, Citations, Recommendations &amp; Sentiment</h3>
               <p className="term" style={{ marginTop: 6 }}>
-                Das ist ein wichtiger Teil meiner GEO-Analyse (Generative Engine
-                Optimization – Sichtbarkeit in KI-generierten Antworten).
-              </p>
-              <p className="term">
                 <strong>Mentions – „Wirst du genannt?“:</strong> Wo und in welchem
                 Kontext wird deine Marke in KI-Antworten erwähnt?
               </p>
@@ -132,11 +128,9 @@ export function OfferAnalyse() {
                 Unternehmen in KI-Antworten eher positiv, neutral oder kritisch
                 dargestellt?
               </p>
-              <ul style={{ marginTop: 10 }}>
-                <li>Vergleich mit relevanten Wettbewerbern</li>
-                <li>Unterschiede bei Mentions, Citations, Recommendations und Sentiment</li>
-                <li>Quellen-/Citation-Gaps identifizieren</li>
-              </ul>
+              <p className="term" style={{ marginTop: 10 }}>
+                Ergänzend dazu: Quellen- und Citation-Gaps identifizieren.
+              </p>
             </div>
             <div className="check-item">
               <span className="check-num">04</span>
@@ -144,8 +138,9 @@ export function OfferAnalyse() {
               <ul>
                 <li>Welche Wettbewerber sind sichtbarer?</li>
                 <li>Bei welchen Themen?</li>
-                <li>Welche Quellen stärken sie?</li>
-                <li>Wo fehlen dir Signale?</li>
+                <li>Bei welchen Mentions, Citations und Recommendations liegen sie vorn?</li>
+                <li>Welche Quellen stärken ihre Sichtbarkeit?</li>
+                <li>Wo fehlen dir relevante Signale?</li>
                 <li>Welche Maßnahmen haben den größten Hebel?</li>
               </ul>
             </div>

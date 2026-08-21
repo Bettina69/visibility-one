@@ -62,6 +62,13 @@ export function OffersMain() {
   return (
     <Reveal className="section">
       <div className="wrap">
+        <div className="check-head">
+          <span className="eyebrow">Angebote</span>
+          <h2>Vom Befund zur passenden Unterstützung.</h2>
+          <p className="lead">
+            Erst verstehen, dann gezielt optimieren und bei Bedarf weiter begleiten.
+          </p>
+        </div>
         <div className="offer-paths offer-paths--main">
           {OFFERS.map((o) => (
             <div key={o.title} className="offer-path">

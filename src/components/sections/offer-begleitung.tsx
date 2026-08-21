@@ -115,6 +115,10 @@ export function OfferBegleitung() {
             <div className="check-item">
               <h3>Kurz erklärt</h3>
               <p className="term" style={{ marginTop: 6 }}>
+                <strong>Prompt-Sichtbarkeit:</strong> Bei welchen relevanten Fragen
+                taucht deine Marke in KI-Antworten auf?
+              </p>
+              <p className="term">
                 <strong>Brand Mentions:</strong> Wird deine Marke erwähnt?
               </p>
               <p className="term">
@@ -136,8 +140,8 @@ export function OfferBegleitung() {
             </div>
           </div>
           <p className="check-note">
-            Nicht nur beobachten, ob deine Marke genannt wird, sondern auch, ob sich die
-            Darstellung positiv, neutral oder kritisch entwickelt.
+            So wird sichtbar, wo sich deine KI-Sichtbarkeit verbessert – und wo
+            Wettbewerber an Boden gewinnen.
           </p>
         </div>
       </Reveal>
